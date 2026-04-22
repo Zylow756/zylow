@@ -51,7 +51,7 @@
 .menu-icon span {
   min-height: 3px;
   width: 100%;
-  background: #4c0803;
+  background: #192e80;
   border-radius: 2px;
   transition: 0.3s;
 }
@@ -81,17 +81,58 @@
 .nav-links a,
 .nav-links span {
   text-decoration: none;
-  color: #7a1d1d;  /* brown */
+  color: #192e80;  
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown span {
+  color: #192e80;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;   /* 👈 align directly under "Business" */
+  margin: 10px auto;
+  padding: 15px 15px;
+  background: white;
+  min-width: 200px;
+  border-radius: 5px;
+  list-style: none;
+  line-height: 1.8;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  z-index: 10000;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdownMenu li:hover {
+  background: #f0f4ff;
+}
+
+.dropdown svg {
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 
 /* Mobile View */
 @media (max-width: 768px) {
   .menu-icon {
-    display: flex; /* ✅ show hamburger */
+    display: flex; /* show hamburger */
   }
 
   .nav-links {

@@ -1,0 +1,56 @@
+.container {
+  font-family: sans-serif;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #192e80, #4b5ea8);
+  color: white;
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 20px;
+    color: white;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #192e80;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.services, .pricing, .testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features {
+  padding: 60px 20px;
+  background: #e6e9f7;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
