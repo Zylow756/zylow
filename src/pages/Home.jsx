@@ -1,79 +1,87 @@
 import React from "react";
-import styles from "../assets/css/Home.module.css";
-// eslint-disable-next-line
-import { motion } from "framer-motion";
+import styles from '../assets/css/Home.module.css';
 import Nav from '../components/Nav/Nav';
-import Footer from '../components/Footer/Footer';
+import Rectangle8 from '../assets/images/Rectangle 8.png';
+import Rectangle10 from '../assets/images/Rectangle 10.png';
+import Rectangle12 from '../assets/images/Rectangle 12.png';
+import Rectangle11 from '../assets/images/Rectangle 11.png';
+import Rectangle13 from '../assets/images/Rectangle 13.png';
+
+const services = [
+  {
+    title: "Cafe, Parlour, Restaurant and Hotel Website",
+    img: Rectangle10,
+  },
+  {
+    title: "Online Product Demonstration Websites for Retailers",
+    img: Rectangle11,
+  },
+  {
+    title: "School, Coaching & Library Customized Website",
+    img: Rectangle13,
+  },
+  {
+    title: "Tour & Travelling, Train Bus Booking Website",
+    img: Rectangle12,
+  },
+];
 
 const Home = () => {
+
+const handleRedirect = () => {
+  const destination = encodeURIComponent(
+    "267, Ganesh Nagar, Near Khade Ganesh Ji Temple, Kota Rajasthan 324010"
+  );
+
+  const url = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${destination}&travelmode=driving`;
+
+  window.open(url, "_blank");
+};
+
   return (
-        <div className={styles.mainRoot}>
-            <Nav />
-    <div className={styles.container}>
+    <div className={styles.homepage}>
+      {/* Header */}
+      <Nav />
 
-      {/* HERO */}
-      <motion.section 
-        className={styles.hero}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
-        <h1>Build Your Digital Future with Zylow</h1>
-        <p>Multi-utility platform for websites, apps & business solutions</p>
-        <button>Get Started</button>
-      </motion.section>
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
+        <div className={styles.heroImage}>
+          <img
+            src={Rectangle8}
+            alt="web development"
+          />
+        </div>
 
-      {/* SERVICES */}
-      <section className={styles.services}>
-        <h2>Our Services</h2>
-        <div className={styles.grid}>
-          <div className={styles.card}>🌐 Website Development</div>
-          <div className={styles.card}>📱 App Development</div>
-          <div className={styles.card}>🎨 UI/UX Design</div>
+        <div className={styles.heroContent}>
+          <h2>
+            We Build Your Website
+            <br />
+            With Zylow Web
+          </h2>
+
+          <p>
+            "We craft aesthetic, high-performance websites designed with your
+            users in mind to scale your business"
+          </p>
+
+         {/* <button>Start Now</button>*/}
+          <button onClick={handleRedirect}>Visit Us</button>
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section className={styles.features}>
-        <h2>Why Zylow?</h2>
-        <ul>
-        </ul>
-      </section>
+      {/* Expertise */}
+      <section className={styles.expertise}>
+        <h3>-- Our Expertise --</h3>
 
-      {/* PRICING */}
-      <section className={styles.pricing}>
-        <h2>Pricing Plans</h2>
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h3>Basic</h3>
-            <p>₹10000</p>
-            <p>Simple Website</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Standard</h3>
-            <p>₹15000</p>
-            <p>Business Website</p>
-          </div>
-          <div className={styles.card}>
-            <h3>Premium</h3>
-            <p>₹23000</p>
-            <p>Full App + Website</p>
-          </div>
+        <div className={styles.serviceGrid}>
+          {services.map((item, index) => (
+            <div className={styles.serviceCard} key={index}>
+              <img src={item.img} alt={item.title} />
+              <h4>{item.title}</h4>
+            </div>
+          ))}
         </div>
       </section>
-
-      {/* TESTIMONIALS */}
-      <section className={styles.testimonials}>
-        <h2>What Clients Say</h2>
-        <div className={styles.grid}>
-          <div className={styles.card}>⭐ Amazing service!</div>
-          <div className={styles.card}>⭐ Very professional</div>
-          <div className={styles.card}>⭐ Highly recommended</div>
-        </div>
-      </section>
-
-      
-    </div>
-    <Footer />
     </div>
   );
 };

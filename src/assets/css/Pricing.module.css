@@ -1,0 +1,4 @@
+.mainRoot {
+    display: flex;
+    flex-direction: column;
+}

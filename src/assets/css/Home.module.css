@@ -1,56 +1,167 @@
-.container {
-  font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #192e80, #4b5ea8);
-  color: white;
-}
-.hero h1 {
-  font-size: 36px;
-  font-weight: 700;
-  color: white;
+/* ===== ROOT SCALING VARIABLES ===== */
+:root {
+  --container-width: min(90%, 1800px);
+  --section-padding: clamp(40px, 5vw, 120px);
+  --gap: clamp(20px, 3vw, 80px);
 }
 
-.hero p {
-  font-size: 18px;
-  margin-top: 20px;
-    color: white;
+/* ===== BACKGROUND ===== */
+.homepage {
+  min-height: 100vh;
+  padding-bottom: clamp(40px, 4vw, 80px);
+  background-image: url("../images/backgroundImage.png");
 }
 
-.hero button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  border: none;
-  background: white;
-  color: #192e80;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.services, .pricing, .testimonials {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.features {
-  padding: 60px 20px;
-  background: #e6e9f7;
-  text-align: center;
-}
-
-.grid {
+/* ===== HERO SECTION ===== */
+.heroSection {
+  max-width: var(--container-width);
+  margin: auto;
+  padding: var(--section-padding);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap);
+  align-items: center;
 }
 
-.card {
-  padding: 20px;
-  border-radius: 10px;
+/* IMAGE */
+.heroImage img {
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: clamp(20px, 2vw, 40px);
+  box-shadow: 0 clamp(10px, 1vw, 30px) clamp(20px, 2vw, 60px) rgba(0,0,0,0.15);
+}
+
+/* CONTENT */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADING */
+.heroContent h2 {
+  font-size: clamp(28px, 6vw, 55px);
+  line-height: 1.2;
+  color: #2f8f68;
+  font-family: Georgia, serif;
+  margin-bottom: clamp(20px, 2vw, 40px);
+}
+
+/* PARAGRAPH */
+.heroContent p {
+  font-size: clamp(14px, 3.5vw, 24px);
+  line-height: 1.7;
+  color: #3d4ea3;
+  max-width: 60ch;
+  margin-bottom: clamp(20px, 2vw, 40px);
+}
+
+/* BUTTON */
+.heroContent button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: clamp(14px, 1.2vw, 28px) clamp(30px, 3vw, 90px);
+  font-size: clamp(16px, 1.2vw, 30px);
+  border-radius: clamp(8px, 1vw, 18px);
+  cursor: pointer;
+  transition: .3s;
+  align-self: flex-end;
+}
+
+.heroContent button:hover {
+  transform: scale(1.05);
+}
+
+/* ===== EXPERTISE SECTION ===== */
+.expertise {
+ /* max-width: var(--container-width);*/
+  margin: 0.5vw;
+  padding: 5vh;
+  border-top: 1px solid #aaa;
+}
+
+/* TITLE */
+.expertise h3 {
+  text-align: center;
+  font-size: clamp(22px, 3vw, 70px);
+  color: #44518a;
+  margin-bottom: clamp(30px, 3vw, 80px);
+}
+
+/* GRID */
+.serviceGrid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* CARD */
+.serviceCard {
   background: white;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-radius: clamp(20px, 2vw, 40px);
+  overflow: hidden;
+  width: 100%;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+}
+
+/* CARD IMAGE */
+.serviceCard img {
+  width: 100%;
+  height: clamp(200px, 20vw, 370px);
+  object-fit: fill;
+}
+
+/* CARD TEXT */
+.serviceCard h4 {
+  padding: clamp(16px, 2vw, 36px);
+  text-align: center;
+  font-size: clamp(18px, 1.5vw, 34px);
+  font-weight: 600;
+  color: #333;
+  min-height: clamp(80px, 8vw, 160px);
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroContent button {
+    align-self: center; /* fix button position */
+  }
+
+  .heroSection {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .homepage {
+    padding-bottom: 40px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+  .servicesGrid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  .servicesGrid{
+    grid-template-columns: 1fr;
+  }
 }

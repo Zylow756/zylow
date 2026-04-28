@@ -1,3 +1,8 @@
+.mainRoot {
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
   padding: 50px 20px;
   text-align: center;
