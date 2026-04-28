@@ -1,129 +1,162 @@
-.mainRoot {
-    display: flex;
-    flex-direction: column;
+/* ===== BACKGROUND ===== */
+.rootImage {
+  min-height: 100vh;
+  padding-bottom: clamp(40px, 4vw, 80px);
+  background-image: url("../images/backgroundImage.png");
 }
 
 .container {
   font-family: sans-serif;
+  padding: clamp(20px, 4vw, 80px);
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #192e80, #4b5ea8);
-  color: white;
+/* CONTACT CARDS GRID */
+.contactSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 25vw, 420px), 1fr));
+  gap: clamp(15px, 2vw, 40px);
 }
-.hero h1{
-    font-size: 36px;
-    font-weight: 700;
-    color: white;
+
+/* CARD */
+.card {
+  background: #fff;
+  padding: clamp(20px, 2vw, 40px);
+  border-radius: clamp(10px, 1vw, 20px);
+  box-shadow: 0 clamp(4px, 0.5vw, 12px) clamp(10px, 1vw, 25px) rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 clamp(6px, 0.7vw, 18px) clamp(16px, 1.5vw, 35px) rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #0e1e44;
+  margin-bottom: 10px;
+  font-size: clamp(18px, 1.5vw, 32px);
+}
+
+.card p {
+  line-height: 1.6;
+  margin: 5px 0;
+  font-size: clamp(14px, 1vw, 20px);
+}
+
+.directionBtn {
+  margin-bottom: 3vh;
 }
 
 /* WRAPPER */
 .contactWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 60px 20px;
-  gap: 40px;
+  display: flexbox;
+  grid-template-columns: 1fr 3fr;
+  gap: clamp(20px, 4vw, 80px);
 }
 
 /* LEFT SIDE */
 .info {
-  padding: 20px;
+  padding: clamp(10px, 2vw, 40px);
 }
 
 .details p {
   margin-top: 10px;
-  font-size: 15px;
+  font-size: clamp(14px, 1vw, 20px);
 }
 
+/* CONTACT BOX */
 .contact {
-  flex: 1;
   background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  margin-right: 20px;
+  padding: clamp(20px, 2vw, 50px);
+  border-radius: clamp(10px, 1vw, 20px);
+  box-shadow: 0 clamp(4px, 0.5vw, 15px) clamp(15px, 1.5vw, 35px) rgba(0, 0, 0, 0.1);
 }
 
 .contact h2 {
   margin-bottom: 20px;
+  font-size: clamp(20px, 2vw, 40px);
 }
 
 /* EACH ROW */
 .item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 15px;
+  gap: clamp(10px, 1.5vw, 25px);
+  margin-bottom: clamp(12px, 1.5vw, 25px);
 }
 
-.text{
-    line-height: 1.6;
-    color: black;
+.text {
+  line-height: 1.6;
+  color: black;
 }
-.text p{
-    margin: 0;
-    font-size: 18px;
-    color:#192e80;
+
+.text p {
+  margin: 0;
+  font-size: clamp(14px, 1.2vw, 22px);
+  color: #192e80;
 }
 
 /* ICON */
 .icon {
-  width: 22px;
-  font-size: 18px;
-  color: #192e80;
+  width: clamp(18px, 1.5vw, 30px);
+  font-size: clamp(16px, 1.5vw, 28px);
+  color: #ffbe93f8;
   flex-shrink: 0;
   margin-top: 3px;
 }
 
-.btn-icon{
+/* BUTTON */
+.btnIcon {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background-color: #192e80;
+  gap: clamp(6px, 1vw, 15px);
+  background-color: #ffbe93f8;
   color: #fff;
-  padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: clamp(5px, 0.5vw, 10px);
   text-decoration: none;
   font-weight: bold;
+  font-size: clamp(14px, 1vw, 20px);
+  margin: clamp(4px, 1vw, 50px);
 }
 
 /* FORM */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 30px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.9);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  gap: clamp(10px, 1.5vw, 25px);
+  margin-top: 5vh;
+  padding: clamp(20px, 3vw, 60px);
+  border-radius: clamp(10px, 1vw, 20px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 clamp(10px, 1vw, 30px) clamp(25px, 2vw, 60px) rgba(0, 0, 0, 0.1);
 }
 
 .form input,
 .form textarea {
-  padding: 12px;
-  border-radius: 6px;
+  padding: clamp(10px, 1vw, 20px);
+  border-radius: clamp(5px, 0.5vw, 10px);
   border: 1px solid #ddd;
   outline: none;
+  font-size: clamp(14px, 1vw, 18px);
 }
 
 .form button {
-  padding: 12px;
-  background: #192e80;
-  color: white;
+  padding: clamp(10px, 1vw, 20px);
+  background: #ffbe93f8;
+  color: black;
   border: none;
-  border-radius: 6px;
+  border-radius: clamp(6px, 0.5vw, 12px);
   cursor: pointer;
   transition: 0.3s;
+  font-size: clamp(14px, 1vw, 18px);
 }
 
 .form button:hover {
-  background: #4b5ea8;
+  background: #f8b588f8;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
   .contactWrapper {
     grid-template-columns: 1fr;
