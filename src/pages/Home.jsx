@@ -1,11 +1,13 @@
 import React from "react";
 import styles from '../assets/css/Home.module.css';
 import Nav from '../components/Nav/Nav';
+import Footer from '../components/Footer/Footer'
 import Rectangle8 from '../assets/images/Rectangle 8.png';
 import Rectangle10 from '../assets/images/Rectangle 10.png';
 import Rectangle12 from '../assets/images/Rectangle 12.png';
 import Rectangle11 from '../assets/images/Rectangle 11.png';
 import Rectangle13 from '../assets/images/Rectangle 13.png';
+import ExperienceSlider from '../components/Slider/Slider';
 
 const services = [
   {
@@ -39,7 +41,7 @@ const handleRedirect = () => {
 };
 
   return (
-    <div className={styles.homepage}>
+    <div className={styles.rootImage}>
       {/* Header */}
       <Nav />
 
@@ -82,6 +84,8 @@ const handleRedirect = () => {
           ))}
         </div>
       </section>
+      <ExperienceSlider />
+      <Footer />
     </div>
   );
 };

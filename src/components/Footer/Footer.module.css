@@ -1,87 +1,66 @@
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.8;
-}
-
-.cta {
-  padding: 60px 80px;
-  background: linear-gradient(135deg, #192e80, #0f1c4d);
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
+.footer {
+  padding: clamp(20px, 4vw, 80px);
+  background: rgba(255, 190, 147, 0.413);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* important for mobile */
+  gap: clamp(20px, 3vw, 60px);
 }
 
-.map iframe {
-  width: 100%;
-  height: 300px;
-  border-radius: 16px;
-  filter: grayscale(20%) contrast(1.1);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+/* LEFT TEXT */
+.footerBottom {
+  font-size: clamp(14px, 1.2vw, 22px);
+  color: black;
 }
 
-.footerRight {
+/* RIGHT SIDE */
+.footerLinks {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* controls spacing between Let's talk & Quick Links */
-  color: white;
+  align-items: flex-end;
+  gap: 10px;
 }
 
-/* remove extra margins that break alignment */
-.footerContact,
-.footerLinks {
+/* TITLE */
+.footerLinks p {
+  font-size: clamp(16px, 1.4vw, 26px);
+  font-weight: 600;
   margin: 0;
 }
 
-.footerContact h3,
-.footerLinks p {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.footerContact{
-    margin: 10px auto;
-}
-
-.footerLinks{
-    margin: 10px auto;
-    line-height: 1.5;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.footer-social-media {
+/* SOCIAL ICONS CONTAINER */
+.footerSocialMedia {
   display: flex;
-  gap: 15px;
-  margin-top: 10px;
+  gap: clamp(10px, 1.5vw, 25px);
 }
 
-.social-icons {
-  width: 40px;
-  height: 40px;
+/* ICON STYLE */
+.socialIcons {
+  width: clamp(35px, 3vw, 60px);
+  height: clamp(35px, 3vw, 60px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.888);
+  background: rgba(255, 255, 255, 0.9);
+  color: #ffbe93f8;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: clamp(14px, 1.2vw, 24px);
   transition: all 0.3s ease;
 }
 
-.social-icons:hover {
+.socialIcons:hover {
   background: white;
-  color: #192e80;
   transform: translateY(-5px) scale(1.1);
 }
 
-.footerBottom {
-  margin-top: 20px;
-  font-size: 14px;
-  opacity: 0.6;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding-top: 15px;
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerLinks {
+    align-items: center;
+  }
 }

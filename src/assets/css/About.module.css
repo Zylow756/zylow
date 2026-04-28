@@ -1,0 +1,74 @@
+/* ===== BACKGROUND ===== */
+.rootImage {
+  min-height: 100vh;
+  padding-bottom: clamp(40px, 4vw, 80px);
+  background-image: url("../images/backgroundImage.png");
+}
+
+.aboutContainer {
+  padding: clamp(20px, 5vw, 20px);
+  max-width: 1400px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  background-color: white;
+  color: black;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 100px);
+}
+
+.hero h1 {
+  font-size: clamp(28px, 3vw, 56px);
+}
+
+.hero p {
+  font-size: clamp(16px, 1.5vw, 24px);
+  color: #555;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: clamp(30px, 5vw, 80px);
+}
+
+.section h2 {
+  font-size: clamp(22px, 2vw, 40px);
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: clamp(14px, 1.2vw, 20px);
+  color: #444;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+  background: rgba(255, 190, 147, 0.2);
+  padding: clamp(20px, 3vw, 60px);
+  border-radius: 20px;
+  margin-bottom: clamp(30px, 5vw, 80px);
+}
+
+/* LIST */
+.list {
+  padding-left: 20px;
+}
+
+.list li {
+  font-size: clamp(14px, 1.2vw, 20px);
+  margin-bottom: 8px;
+}
+
+/* FOOTER NOTE */
+.footerNote {
+  text-align: center;
+  margin-top: clamp(40px, 6vw, 100px);
+}
+
+.footerNote h3 {
+  font-size: clamp(20px, 2vw, 32px);
+}

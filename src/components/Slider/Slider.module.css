@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f7f6f6;
+}
+
+.heading {
+  color: black;
+  text-align: center;
+  font-size: clamp(28px, 3vw, 42px);
+  margin-bottom: 40px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1a1a1a, #000);
+  color: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.4s ease;
+  transform: scale(0.9);
+  opacity: 0.6;
+}
+
+/* Active center card */
+.swiper-slide-active .card {
+  transform: scale(1.1);
+  opacity: 1;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* Side cards */
+.swiper-slide-prev .card,
+.swiper-slide-next .card {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.card h3 {
+  font-size: 24px;
+}
+
+.card p {
+  margin-top: 10px;
+  color: #bbb;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background: #888;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+}

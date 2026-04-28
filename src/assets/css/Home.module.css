@@ -13,7 +13,7 @@
 }
 
 /* ===== BACKGROUND ===== */
-.homepage {
+.rootImage {
   min-height: 100vh;
   padding-bottom: clamp(40px, 4vw, 80px);
   background-image: url("../images/backgroundImage.png");
@@ -147,7 +147,7 @@
     gap: 20px;
   }
 
-  .homepage {
+  .rootImage {
     padding-bottom: 40px;
   }
 }

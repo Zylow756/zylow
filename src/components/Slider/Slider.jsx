@@ -1,0 +1,67 @@
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// modules
+import { Autoplay, Pagination } from "swiper/modules";
+
+// styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import styles from "./Slider.module.css";
+
+const data = [
+  {
+    title: "2+ Years Experience",
+    desc: "Building scalable and modern web applications",
+  },
+  {
+    title: "50+ Projects",
+    desc: "Delivered high-quality UI/UX solutions",
+  },
+  {
+    title: "10+ Clients",
+    desc: "Worked with clients across industries",
+  },
+  {
+    title: "Full Stack Dev",
+    desc: "React, Node, MongoDB expert",
+  },
+];
+
+const Slider = () => {
+  return (
+    <div className={styles.wrapper}>
+      <h2 className={styles.heading}>Our Experience</h2>
+
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        spaceBetween={30}
+        slidesPerView={3}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 1.5 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {data.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className={styles.card}>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
+
+export default Slider;
