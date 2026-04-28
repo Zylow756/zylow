@@ -50,6 +50,10 @@
   }
 }
 
+html {
+  font-size: clamp(14px, 0.9vw, 18px);
+}
+
 body {
   margin: 0;
 }

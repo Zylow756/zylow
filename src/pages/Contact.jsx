@@ -68,7 +68,7 @@ const Contact = () => {
         </div>
 
         {/* RIGHT FORM */}
-        <form
+        {/*<form
           className={styles.form}>
           <h2>Send Us a Message</h2>
           <input type="text" placeholder="Your Name" required />
@@ -77,7 +77,7 @@ const Contact = () => {
           <textarea placeholder="Your Message..." rows="5"></textarea>
 
           <button type="submit">Send Message</button>
-        </form>
+        </form>*/}
 
       </div>
       <Footer />

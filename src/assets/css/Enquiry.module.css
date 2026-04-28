@@ -1,0 +1,63 @@
+.rootImage {
+  min-height: 100vh;
+  padding-bottom: clamp(40px, 4vw, 80px);
+  background-image: url("../images/backgroundImage.png");
+}
+
+.container {
+  max-width: 90vw;
+  margin: 10vh;
+  padding: 5vh;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+button {
+  background: #ffbe93f8;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #fab586f8;
+}
+
+span {
+  color: red;
+  font-size: 12px;
+}
+
+.success {
+  color: green;
+  text-align: center;
+}

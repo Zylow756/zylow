@@ -5,6 +5,7 @@ import About from "./pages/About";
 import BusinessBranding from "./pages/BusinessBranding";
 import BusinessPromotion from "./pages/BusinessPromotion";
 import Pricing from "./pages/Pricing";
+import Enquiry from "./pages/Enquiry";
 import { Routes, Route } from 'react-router-dom'; 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/branding" element={<BusinessBranding />} />
         <Route path="/promotion" element={<BusinessPromotion />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/enquiry" element={<Enquiry />} />
     </Routes>
   )
 }

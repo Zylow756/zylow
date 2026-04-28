@@ -17,7 +17,7 @@ const Nav = () => {
             <Link to="/about">Show Case</Link>
             <Link to="/about">Career</Link>
             <Link to="/contact">Contact Us</Link>
-            <Link to="/about">Enquiry</Link>
+            <Link to="/enquiry">Enquiry</Link>
           </nav>
         </header>
   );
