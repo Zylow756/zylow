@@ -80,57 +80,7 @@
   transform: scale(1.05);
 }
 
-/* ===== EXPERTISE SECTION ===== */
-.expertise {
- /* max-width: var(--container-width);*/
-  margin: 0.5vw;
-  padding: 5vh;
-  border-top: 1px solid #aaa;
-}
 
-/* TITLE */
-.expertise h3 {
-  text-align: center;
-  font-size: clamp(22px, 3vw, 70px);
-  color: #44518a;
-  margin-bottom: clamp(30px, 3vw, 80px);
-}
-
-/* GRID */
-.serviceGrid {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* CARD */
-.serviceCard {
-  background: white;
-  border-radius: clamp(20px, 2vw, 40px);
-  overflow: hidden;
-  width: 100%;
-}
-
-.serviceCard:hover {
-  transform: translateY(-10px);
-}
-
-/* CARD IMAGE */
-.serviceCard img {
-  width: 100%;
-  height: clamp(200px, 20vw, 370px);
-  object-fit: fill;
-}
-
-/* CARD TEXT */
-.serviceCard h4 {
-  padding: clamp(16px, 2vw, 36px);
-  text-align: center;
-  font-size: clamp(18px, 1.5vw, 34px);
-  font-weight: 600;
-  color: #333;
-  min-height: clamp(80px, 8vw, 160px);
-}
 
 @media (max-width: 768px) {
   .heroContent {
@@ -149,19 +99,5 @@
 
   .rootImage {
     padding-bottom: 40px;
-  }
-}
-
-/* Tablet */
-@media (max-width: 1024px){
-  .servicesGrid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px){
-  .servicesGrid{
-    grid-template-columns: 1fr;
   }
 }

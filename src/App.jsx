@@ -6,6 +6,7 @@ import BusinessBranding from "./pages/BusinessBranding";
 import BusinessPromotion from "./pages/BusinessPromotion";
 import Pricing from "./pages/Pricing";
 import Enquiry from "./pages/Enquiry";
+import ShowCase from "./pages/ShowCasePage";
 import { Routes, Route } from 'react-router-dom'; 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/promotion" element={<BusinessPromotion />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/enquiry" element={<Enquiry />} />
+        <Route path="/showCasePage" element= {<ShowCase />}/>
     </Routes>
   )
 }
