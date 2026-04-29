@@ -1,63 +1,110 @@
-.rootImage {
-  min-height: 100vh;
-  padding-bottom: clamp(40px, 4vw, 80px);
-  background-image: url("../images/backgroundImage.png");
-}
-
-.container {
-  max-width: 90vw;
-  margin: 10vh;
-  padding: 5vh;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  text-align: left;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: clamp(10px, 1vw, 10px);
 }
 
-input,
-textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 14px;
+.form p {
+  font-size: clamp(12px, 1vw, 16px);
 }
 
-textarea {
-  min-height: 100px;
-  resize: none;
+/* Responsive Popup */
+.popup {
+  background: white;
+  padding: 2vw;              /* Scales with screen */
+  border-radius: 0.8vw;
+  width: 90%;
+  max-width: 500px;          /* Bigger for 4K */
+  position: relative;
+  animation: fadeIn 0.3s ease;
 }
 
-button {
+/* Inputs */
+.popup textarea,
+.popup input {
+  width: 100%;
+  margin: 0.1vw 0;
+  padding: 0.8vw;
+  font-size: 0.9rem;
+}
+
+/* Button */
+.popup button {
+  width: 100%;
+  padding: 0.8vw;
+  font-size: 1rem;
   background: #ffbe93f8;
-  color: black;
-  padding: 12px;
+  color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.4vw;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-button:hover {
-  background: #fab586f8;
+/* Close Button */
+.close {
+  position: absolute;
+  top: 0.8vw;
+  right: 1vw;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-span {
+/* Error Text */
+.error {
   color: red;
-  font-size: 12px;
+  font-size: 0.8rem;
+  margin-top: -0.3vw;
+  margin-bottom: 0.5vw;
 }
 
-.success {
-  color: green;
-  text-align: center;
+/* Animation */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*  Extra: Ultra-large screens (4K+) */
+@media (min-width: 2560px) {
+  .popup {
+    max-width: 650px;
+    padding: 1.5vw;
+  }
+
+  .popup input {
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  .loginBtn {
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  .close {
+    font-size: 28px;
+  }
+
+  .error {
+    font-size: 14px;
+  }
 }

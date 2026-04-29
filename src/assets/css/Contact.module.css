@@ -2,7 +2,13 @@
 .rootImage {
   min-height: 100vh;
   padding-bottom: clamp(40px, 4vw, 80px);
-  background-image: url("../images/backgroundImage.png");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../images/backgroundImage.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .container {

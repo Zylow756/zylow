@@ -1,19 +1,26 @@
-.mainRoot {
-    display: flex;
-    flex-direction: column;
+/* ===== BACKGROUND ===== */
+.rootImage {
+  min-height: 100vh;
+  padding-bottom: clamp(40px, 4vw, 80px);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../images/backgroundImage.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
   padding: 50px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #f5f0ff, #ffffff);
   min-height: 100vh;
 }
 
 .hero h1 {
   font-size: 38px;
   font-weight: 700;
-  color: #192e80;
+  color: #3d4ea3;
 }
 
 .hero p {
@@ -23,7 +30,7 @@
 
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   margin-top: 40px;
 }
@@ -49,24 +56,6 @@
 }
 
 .card p {
-  color: #777;
-}
-
-.cta {
-  margin-top: 60px;
-}
-
-.cta button {
-  padding: 14px 30px;
-  background: linear-gradient(135deg, #192e80, #4b5ea8);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.cta button:hover {
-  transform: scale(1.05);
+  color: #3d4ea3;
+  white-space: pre-line;
 }
