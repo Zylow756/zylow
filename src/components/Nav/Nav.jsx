@@ -4,17 +4,45 @@ import logoImage from '../../assets/images/logo.png';
 import React, { useState } from "react";
 import Career from '../../pages/Career';
 import Enquiry from '../../pages/Enquiry';
+import { motion as Motion } from "framer-motion";
+const text = "Zylow - Web";
+
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showCareer, setShowCareer] = useState(false);
   const [showEnquiry, setShowEnquiry] = useState(false);
-
   return (
     <header className={styles.heroHeader}>
       <div className={styles.logo}>
+        {/* <Motion.img
+  src={logoImage} // your logo path
+  alt="logo"
+  initial={{ scale: 0, rotate: -180 }}
+  animate={{ scale: 1, rotate: 0 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  whileHover={{ rotate: 10, scale: 1.1 }}
+  className={styles.logo}
+/>*/}
         <img src={logoImage}></img>
-        <h1>Zylow - Web</h1>
+        <div className={styles.titleWrapper}>
+          <Motion.h1 className={styles.title}>
+            {text.split("").map((char, index) => (
+              <Motion.span
+                key={index}
+                animate={{ y: [0, -8, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  delay: index * 0.1
+                }}
+                style={{ display: "inline-block" }}
+              >
+                {char}
+              </Motion.span>
+            ))}
+          </Motion.h1>
+        </div>
       </div>
       {/* Hamburger Menu */}
       <div

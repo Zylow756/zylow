@@ -3,12 +3,23 @@
   text-align: center;
   padding: 3vh 0 15px;
   border-bottom: 1px solid #aaa;
+  overflow: visible;
+}
+
+.titleWrapper {
+  height: 60px;        /*  fixed space so animation never cuts */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
 }
 
 .logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center; 
+   overflow: visible;  
 }
 
 .logo img {
@@ -16,17 +27,23 @@
   padding: 4vh;
 }
 
-.logo h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 0.5vh;
-  padding: 6vh 2vh;
-  background: linear-gradient(90deg, #7a8cff, #ff7d61, #ffbe3d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  line-height: 1;
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.4;        
+  padding-top: 10px;      
+  overflow: visible;   
+   background: linear-gradient(90deg, #7a8cff, #ff7d61, #ffbe3d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;   
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
 }
 
 /* Hamburger */
