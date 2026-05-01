@@ -23,7 +23,7 @@
 }
 
 .logo img {
-  max-height: 25vh;
+  max-height: 15vh;
   padding: 4vh;
 }
 
@@ -101,9 +101,8 @@
 }
 
 .navbar a:hover {
-  /*background:#e2e0df85;
-transform:translateY(-3px);*/
-  border-bottom: 1px solid #aaa;
+  background:#e2e0df85;
+transform:translateY(-3px);
 }
 
 .navbar span{

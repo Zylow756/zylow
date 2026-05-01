@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../assets/css/Enquiry.module.css";
+import styles from "../assets/css/Career.module.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 

@@ -6,9 +6,18 @@ const router = express.Router();
 
 router.post("/send-enquiry", async (req, res) => {
   try {
-    const { name, phone, email, message } = req.body;
+    const { name, phone, email, message, company, projectType, timeline } = req.body;
 
-    const data = [{ Name: name, Phone: phone, Email: email, Message: message }];
+    const data = [{
+      Name: name || "",
+      Phone: phone || "",
+      Email: email || "",
+      Company: company || "",
+      ProjectType: projectType || "",
+      Timeline: timeline || "",
+      Message: message || "",
+      Date: new Date().toLocaleString()
+    }];
 
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
@@ -29,7 +38,6 @@ router.post("/send-enquiry", async (req, res) => {
       from: "officezylow1991@gmail.com",
       to: "zylow0744@gmail.com",
       subject: "New Enquiry Form",
-      text: "New enquiry received",
       attachments: [
         {
           filename: "enquiry.xlsx",

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../assets/css/Enquiry.module.css";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 const Enquiry = ({ onClose }) => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -11,15 +12,16 @@ const Enquiry = ({ onClose }) => {
     };
   }, []);
 
-
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     message: "",
+    company: "",
+    projectType: "",
+    timeline: ""
   });
 
-  const navigate = useNavigate();
   const [errors, setErrors] = useState({});
 
   // Handle input
@@ -34,33 +36,36 @@ const Enquiry = ({ onClose }) => {
   const validate = () => {
     let newErrors = {};
 
-    // Name
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
+      newErrors.name = "Full name is required";
     }
 
-    // - Must be 10 digits
-    // - Must start with 6, 7, 8, or 9
     const phoneRegex = /^[6-9]\d{9}$/;
-
     if (!formData.phone) {
-      newErrors.phone = "Phone number is required";
+      newErrors.phone = "Phone number required";
     } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = "Enter valid Indian mobile number";
+      newErrors.phone = "Enter valid Indian number";
     }
 
-    // Email Validation (proper RFC-like pattern)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
     if (!formData.email) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email required";
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Enter valid email address";
+      newErrors.email = "Invalid email";
+    }
+
+    if (!formData.projectType) {
+      newErrors.projectType = "Select project type";
+    }
+
+    if (!formData.timeline) {
+      newErrors.timeline = "Select start time";
     }
 
     return newErrors;
   };
 
+  // Submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -80,75 +85,137 @@ const Enquiry = ({ onClose }) => {
         body: JSON.stringify(formData),
       });
 
-      const data = await res.json(); // parse first
+      const data = await res.json();
 
       if (!res.ok || !data.success) {
-        throw new Error("Failed to send enquiry");
+        throw new Error("Failed");
       }
 
-      //  Optional: reset form
+      // ✅ reset correctly
       setFormData({
         name: "",
         phone: "",
         email: "",
         message: "",
+        company: "",
+        projectType: "",
+        timeline: ""
       });
 
-      //  Close popup (important UX)
       onClose();
-      alert("Message sent successfully");
-      // Redirect to home AFTER success
+      alert("Request sent successfully ✅");
       navigate("/", { replace: true });
 
-    } catch (error) {
-      console.log(error);
-      alert("Something went wrong ❌");
+    } catch (err) {
+      alert("Something went wrong ❌ " + err.message);
     }
   };
 
   return (
-    <div className={styles.overlay}>
+    <div className={styles.overlay} onClick={onClose}>
       <div className={styles.popup} onClick={(e) => e.stopPropagation()}>
-        <span className={styles.close} onClick={onClose}>
-          &times;
-        </span>
-        <h2>Enquiry Form</h2>
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {errors.name && <span className={styles.error}>{errors.name}</span>}
 
-          <input
-            type="text"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          {errors.phone && <span className={styles.error}>{errors.phone}</span>}
+        {/* Close Button */}
+        <span className={styles.close} onClick={onClose}>×</span>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && <span className={styles.error}>{errors.email}</span>}
+        <h2>Tell Us About Your Business Project</h2>
+        <p className={styles.subtitle}>
+          Fill out the form and our team will get back to you within 24 hours
+        </p>
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-          />
+        <form onSubmit={handleSubmit} className={styles.formGrid}>
 
-          <button type="submit">Submit Now</button>
+          {/* Left */}
+          <div className={styles.formGroup}>
+            <label>Full Name*</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your full name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            {errors.name && <span className={styles.error}>{errors.name}</span>}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label>Email ID*</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email ID"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            {errors.email && <span className={styles.error}>{errors.email}</span>}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label>Phone Number*</label>
+            <input
+              type="text"
+              name="phone"
+              placeholder="+91 XXXXX XXXXX"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            {errors.phone && <span className={styles.error}>{errors.phone}</span>}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label>Company Name</label>
+            <input
+              type="text"
+              name="company"
+              placeholder="Your Company Name"
+              value={formData.company}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className={styles.formGroup}>
+            <label>What Do You Want to Build*</label>
+            <select name="projectType" value={formData.projectType} onChange={handleChange}>
+              <option value="">--Please choose an option--</option>
+              <option>Website</option>
+              <option>Web App</option>
+              <option>E-commerce</option>
+              <option>Mobile App</option>
+            </select>
+            {errors.projectType && <span className={styles.error}>{errors.projectType}</span>}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label>When Do You Want to Start?*</label>
+            <select name="timeline" value={formData.timeline} onChange={handleChange}>
+              <option value="">--Please choose an option--</option>
+              <option>Immediately</option>
+              <option>1-2 Weeks</option>
+              <option>1 Month</option>
+              <option>Later</option>
+            </select>
+            {errors.timeline && <span className={styles.error}>{errors.timeline}</span>}
+          </div>
+
+          {/* Full Width */}
+          <div className={`${styles.formGroup} ${styles.fullWidth}`}>
+            <label>Project Description</label>
+            <textarea
+              name="message"
+              placeholder="Briefly describe your business requirement..."
+              value={formData.message}
+              onChange={handleChange}
+            />
+          </div>
+
+          <p className={styles.note}>
+            Hiring or job enquiries are not accepted through this form
+          </p>
+
+          <button type="submit" className={styles.submitBtn}>
+            Request Project Consultation
+          </button>
+
         </form>
       </div>
     </div>

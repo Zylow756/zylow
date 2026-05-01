@@ -6,7 +6,7 @@ import Rectangle8 from '../assets/images/Rectangle 8.png';
 import ExperienceSlider from '../components/Slider/Slider';
 import ShowCase from '../components/ShowCase/ShowCase';
 import { motion as Motion } from "framer-motion";
-import { useEffect } from "react";
+
 
 const Home = () => {
 
@@ -20,38 +20,13 @@ const handleRedirect = () => {
   window.open(url, "_blank");
 };
 
-useEffect(() => {
-  const handleMouseMove = (e) => {
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
-
-    document.querySelectorAll(".parallax").forEach((el) => {
-      const speed = el.getAttribute("data-speed");
-      el.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-    });
-  };
-
-  window.addEventListener("mousemove", handleMouseMove);
-  return () => window.removeEventListener("mousemove", handleMouseMove);
-}, []);
-
   return (
     <div className={styles.rootImage}>
       {/* Header */}
-  <div className={styles.globalBg}>
-    <div className={`${styles.blob} ${styles.blob1} parallax`} data-speed="20"></div>
-    <div className={`${styles.blob} ${styles.blob2} parallax`} data-speed="-30"></div>
-    <div className={`${styles.blob} ${styles.blob3} parallax`} data-speed="15"></div>
-  </div>
       <Nav />
-
       {/* Hero Section */}
       <section className={styles.heroSection}>
-<div className={styles.floatingContainer}>
-  <div className={styles.circle}></div>
-  <div className={styles.square}></div>
-  <div className={styles.triangle}></div>
-</div>
+
   {/* Image Animation */}
   <Motion.div
     className={styles.heroImage}
