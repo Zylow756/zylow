@@ -5,8 +5,7 @@ import Footer from '../components/Footer/Footer';
 
 const About = () => {
   return (
-  <div className={styles.rootImage}>
-    <Nav />
+  <>
     <div className={styles.aboutContainer}>
       {/* HERO */}
       <section className={styles.hero}>
@@ -115,8 +114,7 @@ const About = () => {
         <p>Zylow — Empowering Local, Connecting Global.</p>
       </section>
     </div>
-<Footer />
-    </div>
+    </>
   );
 };
 

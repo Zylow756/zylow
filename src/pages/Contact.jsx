@@ -5,8 +5,7 @@ import Footer from '../components/Footer/Footer';
 
 const Contact = () => {
   return (
-    <div className={styles.rootImage}>
-      <Nav />
+    <>
       <div className={styles.container}>
         {/* MAIN SECTION */}
         <div className={styles.contactWrapper}>
@@ -67,21 +66,8 @@ const Contact = () => {
 
         </div>
 
-        {/* RIGHT FORM */}
-        {/*<form
-          className={styles.form}>
-          <h2>Send Us a Message</h2>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Email Address" required />
-          <input type="text" placeholder="Mobile Number" />
-          <textarea placeholder="Your Message..." rows="5"></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>*/}
-
       </div>
-      <Footer />
-    </div>
+      </>
   );
 };
 

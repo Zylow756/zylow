@@ -18,9 +18,7 @@ const cardVariants = {
 
 const Pricing = () => {
   return (
-    <div className={styles.rootImage}>
-      <Nav />
-
+<>
       <div className={styles.pricingContainer}>
         {/* Title Animation */}
         <Motion.h1
@@ -150,9 +148,7 @@ const Pricing = () => {
 
 </div>
       </div>
-
-      <Footer />
-    </div>
+</>
   );
 };
 

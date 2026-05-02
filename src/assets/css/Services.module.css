@@ -59,3 +59,20 @@
   color: #3d4ea3;
   white-space: pre-line;
 }
+
+.viewBtn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.viewBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}

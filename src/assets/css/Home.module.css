@@ -1,31 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-/* ===== ROOT SCALING VARIABLES ===== */
-:root {
-  --container-width: min(90%, 1800px);
-  --section-padding: clamp(40px, 5vw, 120px);
-  --gap: clamp(20px, 3vw, 80px);
-}
-
-
-/* ===== SPACE BACKGROUND ===== */
-.rootImage {
-  min-height: 100vh;
-  padding-bottom: clamp(40px, 4vw, 80px);
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url("../images/backgroundImage.png");
-  background-size: cover;
-  background-position: center;
-}
-
 /* ===== HERO SECTION ===== */
 .heroSection {
   max-width: var(--container-width);
