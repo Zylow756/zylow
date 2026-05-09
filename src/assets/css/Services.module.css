@@ -20,7 +20,7 @@
 .hero h1 {
   font-size: 38px;
   font-weight: 700;
-  color: #3d4ea3;
+  color: #ffbe93f8;
 }
 
 .hero p {
@@ -56,15 +56,15 @@
 }
 
 .card p {
-  color: #3d4ea3;
+  color: black;
   white-space: pre-line;
 }
 
 .viewBtn {
   margin-top: 20px;
   padding: 12px 28px;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  color: white;
+  background: linear-gradient(135deg, #ffbe93f8, #ffbe9375);
+  color: black;
   border: none;
   border-radius: 30px;
   font-size: 16px;

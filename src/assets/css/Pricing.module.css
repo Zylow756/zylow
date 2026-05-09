@@ -1,15 +1,3 @@
-.rootImage {
-  min-height: 100vh;
-  padding-bottom: clamp(40px, 4vw, 80px);
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url("../images/backgroundImage.png");
-  background-size: cover;
-  background-position: center;
-}
-
 .pricingContainer {
   padding: 100px 20px;
   background: white;
@@ -38,10 +26,8 @@
   width: 320px;
   padding: 40px 30px;
   border-radius: 16px;
-
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-
   text-align: left;
   position: relative;
 }
@@ -50,11 +36,12 @@
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  border: 2px solid #ffbe93f8;
 }
 
 /* POPULAR */
 .popular {
-  border: 2px solid #635bff;
+  border: 2px solid #ffbe93f8;
 }
 
 /* RIBBON */
@@ -62,7 +49,7 @@
   position: absolute;
   top: -12px;
   left: 20px;
-  background: #635bff;
+  background: #ffbe93f8;
   color: #fff;
   padding: 4px 10px;
   font-size: 12px;
@@ -81,6 +68,8 @@
   font-weight: 700;
   margin: 10px 0;
   color: #0a2540;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .price span {
@@ -100,17 +89,15 @@
   padding: 12px;
   border-radius: 8px;
   border: none;
-
-  background: #635bff;
+  background: #ffbe93f8;
   color: white;
   font-weight: 600;
-
   margin-bottom: 20px;
   cursor: pointer;
 }
 
 .primaryBtn:hover {
-  background: #4f46e5;
+  background: #ffbe93f8;
 }
 
 /* FEATURES */

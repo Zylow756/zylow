@@ -7,7 +7,8 @@
 }
 
 .titleWrapper {
-  height: 60px;        /*  fixed space so animation never cuts */
+  height: 60px;
+  /*  fixed space so animation never cuts */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,8 +19,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; 
-   overflow: visible;  
+  align-items: center;
+  overflow: visible;
 }
 
 .logo img {
@@ -31,19 +32,24 @@
   font-size: 40px;
   font-weight: bold;
   margin: 0;
-  line-height: 1.4;        
-  padding-top: 10px;      
-  overflow: visible;   
-   background: linear-gradient(90deg, #7a8cff, #ff7d61, #ffbe3d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;   
+  line-height: 1.4;
+  padding-top: 10px;
+  overflow: visible;
+  background: linear-gradient(90deg, #7a8cff, #ff7d61, #ffbe3d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 @keyframes gradientMove {
-  0% { background-position: 0%; }
-  100% { background-position: 300%; }
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
 }
 
 /* Hamburger */
@@ -101,13 +107,13 @@
 }
 
 .navbar a:hover {
-  background:#e2e0df85;
-transform:translateY(-3px);
+  background: #e2e0df85;
+  transform: translateY(-3px);
 }
 
-.navbar span{
+.navbar span {
   font-size: 1.1rem;
-    text-decoration: none;
+  text-decoration: none;
   background: transparent;
   color: black;
   padding: 2vh 3vh;
@@ -116,7 +122,8 @@ transform:translateY(-3px);
 }
 
 .navbar span:hover {
-  border-bottom: 1px solid #aaa;
+  background: #e2e0df85;
+  transform: translateY(-3px);
 }
 
 .overlay {
@@ -125,7 +132,7 @@ transform:translateY(-3px);
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 
@@ -171,6 +178,5 @@ transform:translateY(-3px);
 
   .navbar.active {
     right: 0;
-    /* slide in */
   }
 }

@@ -91,7 +91,7 @@ const Enquiry = ({ onClose }) => {
         throw new Error("Failed");
       }
 
-      // ✅ reset correctly
+      //  reset correctly
       setFormData({
         name: "",
         phone: "",
@@ -103,7 +103,7 @@ const Enquiry = ({ onClose }) => {
       });
 
       onClose();
-      alert("Request sent successfully ✅");
+      alert("Request sent successfully");
       navigate("/", { replace: true });
 
     } catch (err) {

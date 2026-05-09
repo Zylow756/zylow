@@ -20,9 +20,31 @@ const Home = () => {
 
   return (
   <>
+<section className={styles.videoSection}>
+        <video
+    className={styles.video}
+    src="/videos/intro.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    disablePictureInPicture
+  />
+
+        {/* Overlay Content */}
+        <div className={styles.overlay}>
+          <h1>Welcome to Dhanvii Accounting Institute</h1>
+          <p>Learn Professional Accounting with 100% Practical Training</p>
+
+          <button>Join Now</button>
+        </div>
+      </section>
+
+
+
       {/* Hero Section */}
       <section className={styles.heroSection}>
-
         {/* Image Animation */}
         <Motion.div
           className={styles.heroImage}
