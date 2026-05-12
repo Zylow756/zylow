@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.9);
-  color: #ffbe93f8;
+  color: #fca56bf8;
   border-radius: 50%;
   font-size: clamp(14px, 1.2vw, 24px);
   transition: all 0.3s ease;

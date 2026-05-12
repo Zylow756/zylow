@@ -1,0 +1,258 @@
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffbe9375;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 6rem;
+  background: linear-gradient(135deg, #ffbe93f8, #ffbe9375);
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 1600px;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #595858;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* SERVICES */
+
+.services {
+  padding: 8rem 6rem;
+}
+
+.services h2,
+.marketing h2,
+.plans h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 5rem;
+  font-weight: 700;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.card {
+  background: white;
+  padding: 3rem;
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  transition: 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: #f6cbae75;
+}
+
+.card h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  line-height: 1;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  color: #807e7cf8;
+}
+
+/* MARKETING */
+
+.marketing {
+  padding: 8rem 6rem;
+  background: #fbb78ae2;
+}
+
+.taglineContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.tagline {
+  padding: 3rem;
+  border-radius: 25px;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  background: white;
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* PLANS */
+
+.plans {
+  padding: 8rem 6rem;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.planCard {
+  background:  #fbb78ae2;;
+  border-radius: 30px;
+  padding: 4rem 3rem;
+  text-align: center;
+  transition: 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.planCard:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0, 119, 255, 0.2);
+}
+
+.planCard h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 2.4rem;
+  color: black;
+}
+
+.planCard span {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.planCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.planCard ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.planCard button {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  background: white;
+  color: #ffbe93f8;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.planCard button:hover {
+  transform: scale(1.05);
+}
+
+/* 4K SCREENS */
+
+@media screen and (min-width: 2560px) {
+  .hero h1 {
+    font-size: 7rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+
+  .services h2,
+  .marketing h2,
+  .plans h2 {
+    font-size: 5rem;
+  }
+
+  .card h3,
+  .planCard h3 {
+    font-size: 3rem;
+  }
+
+  .card p,
+  .planCard ul li,
+  .tagline {
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+  }
+
+  .planCard button {
+    font-size: 1.4rem;
+    padding: 1.5rem 4rem;
+  }
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  .serviceGrid,
+  .planGrid,
+  .taglineContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .services,
+  .marketing,
+  .plans,
+  .hero {
+    padding: 5rem 2rem;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .services h2,
+  .marketing h2,
+  .plans h2 {
+    font-size: 2.5rem;
+  }
+
+  .card,
+  .planCard,
+  .tagline {
+    padding: 2rem;
+  }
+}

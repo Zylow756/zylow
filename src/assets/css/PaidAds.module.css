@@ -1,0 +1,368 @@
+.page {
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 8%;
+  background:  #f8995ae1 ;
+}
+
+.heroContent {
+  max-width: 1600px;
+  text-align: center;
+}
+
+.tag {
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  background: white;
+  color: #ffbe93f8;
+}
+
+.hero h1 {
+  font-size: 6rem;
+  margin-top: 2rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: black;
+}
+
+/* Sections */
+.section,
+.sectionDark {
+    background-color: #ffbe93f8;
+  padding: 8rem 8%;
+}
+
+.sectionDark {
+  background: #f3975ae1;
+  padding: 8rem 8%;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.sectionHeader h2 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader p {
+  font-size: 1.4rem;
+  color: #868686;
+  line-height: 2.2rem;
+}
+
+/* Cards */
+.cards {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card,
+.cardDark {
+  padding: 3rem;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+
+.card {
+  background: white;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.cardDark {
+  background: white;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card:hover,
+.cardDark:hover {
+  transform: translateY(-10px);
+}
+
+.card h3,
+.cardDark h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+  line-height: 2.2rem;
+}
+
+.card p,
+.cardDark p {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  color: #878686;
+}
+
+/* Plans */
+.planWrapper {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.planCard,
+.planCardFeatured {
+  position: relative;
+  padding: 4rem;
+  border-radius: 35px;
+  background: white;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.4s;
+}
+
+.planCardFeatured {
+  background: white;
+  border: 1px solid #ffbe936c;
+}
+
+.planCard:hover,
+.planCardFeatured:hover {
+  transform: scale(1.03);
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  background: #f88e46de;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  color:white;
+}
+
+.planCard h3,
+.planCardFeatured h3 {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.planCard span,
+.planCardFeatured span {
+  display: block;
+  margin-top: 1rem;
+  color: #787878;
+  font-size: 1.1rem;
+}
+
+.planCard ul,
+.planCardFeatured ul {
+  margin-top: 2rem;
+}
+
+.planCard ul li,
+.planCardFeatured ul li {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: #f9a871f8;
+}
+
+.planCard button,
+.planCardFeatured button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ffbe93f8, #ffbe9375);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Membership */
+.membership {
+  padding: 8rem 8%;
+  text-align: center;
+  background-color: #f9b283cb ;
+}
+
+.membership h2 {
+  font-size: 4rem;
+}
+
+.membership p {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #908f8f;
+}
+
+.membershipCards {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.memberCard,
+.memberCardGold {
+  width: 500px;
+  padding: 4rem;
+  border-radius: 35px;
+  background: white;
+  transition: 0.4s;
+}
+
+.memberCardGold {
+  background: linear-gradient(
+    135deg,
+     white,
+  );
+}
+
+.memberCard:hover,
+.memberCardGold:hover {
+  transform: translateY(-10px);
+}
+
+.memberCard h3,
+.memberCardGold h3 {
+  font-size: 2rem;
+  color: black;
+}
+
+.memberCard h1,
+.memberCardGold h1 {
+  margin: 2rem 0;
+  font-size: 4rem;
+  color:  #ffbe93f8;
+}
+
+.memberCard ul li,
+.memberCardGold ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color:black;
+}
+
+.memberCard button,
+.memberCardGold button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg,  #fea061f8, #ffbe9375);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* 4K Screens */
+@media screen and (min-width: 2560px) {
+  .hero h1 {
+    font-size: 8rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .sectionHeader h2,
+  .membership h2 {
+    font-size: 5rem;
+  }
+
+  .card h3,
+  .cardDark h3,
+  .planCard h3,
+  .planCardFeatured h3 {
+    font-size: 3rem;
+  }
+
+  .card p,
+  .cardDark p,
+  .planCard ul li,
+  .planCardFeatured ul li {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .memberCard,
+  .memberCardGold {
+    width: 650px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .cards,
+  .planWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-top: 12rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .sectionHeader h2,
+  .membership h2 {
+    font-size: 2.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .membershipCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .memberCard,
+  .memberCardGold {
+    width: 100%;
+  }
+}

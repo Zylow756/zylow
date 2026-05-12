@@ -38,7 +38,7 @@
 .card {
   padding: 25px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.6);
+  background: #ffbe93f8;
   backdrop-filter: blur(10px);
   border: 1px solid #eee;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
@@ -63,7 +63,7 @@
 .viewBtn {
   margin-top: 20px;
   padding: 12px 28px;
-  background: linear-gradient(135deg, #ffbe93f8, #ffbe9375);
+  background: white;
   color: black;
   border: none;
   border-radius: 30px;

@@ -63,11 +63,6 @@ const Services = () => {
               desc: "",
                path: "/seoOptimization",
             },
-            {
-              title: <>Social Media <br /> Marketing</>,
-              desc: "",
-               path: "/socialMediaMarketing",
-            },
 
           ].map((item, i) => (
             <Motion.div

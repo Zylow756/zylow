@@ -4,9 +4,6 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import BusinessBranding from "./pages/BusinessBranding";
-import BusinessPromotion from "./pages/BusinessPromotion";
-import Pricing from "./pages/Pricing";
 import Enquiry from "./pages/Enquiry";
 import ShowCase from "./pages/ShowCasePage";
 import Career from "./pages/Career";
@@ -18,7 +15,6 @@ import PaidAdvertisement from "./pages/services/PaidAdvertisement";
 import BulkWhatsappMarketing from "./pages/services/BulkWhatsappMarketing";
 import ContentMarketing from "./pages/services/ContentMarketing";
 import SeoOptimization from "./pages/services/SeoOptimization";
-import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
 
 function App() {
 
@@ -29,9 +25,6 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path="/branding" element={<BusinessBranding />} />
-        <Route path="/promotion" element={<BusinessPromotion />} />
-        <Route path="/pricing" element={<Pricing />} />
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/showCasePage" element={<ShowCase />} />
         <Route path="/career" element={<Career />} />
@@ -43,7 +36,6 @@ function App() {
         <Route path="/bulkWhatsappMarketing" element={<BulkWhatsappMarketing />} />
         <Route path="/contentMarketing" element={<ContentMarketing />} />
         <Route path="/seoOptimization" element={<SeoOptimization />} />
-        <Route path="/socialMediaMarketing" element={<SocialMediaMarketing />} />
       </Route>
     </Routes>
   )
