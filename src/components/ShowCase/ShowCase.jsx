@@ -2,7 +2,7 @@ import styles from "./ShowCase.module.css";
 import Rectangle10 from '../../assets/images/Rectangle 10.png';
 import Rectangle12 from '../../assets/images/Rectangle 12.png';
 import Rectangle11 from '../../assets/images/Rectangle 11.png';
-import Rectangle13 from '../../assets/images/Rectangle 13.png';
+import coaching from '../../assets/images/showcase-coaching.png';
 
 const services = [
   {
@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: "School, Coaching & Library Customized Website",
-    img: Rectangle13,
+    img: coaching,
   },
   {
     title: "Tour & Travelling, Train Bus Booking Website",

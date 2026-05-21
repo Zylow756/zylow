@@ -19,29 +19,27 @@ const Home = () => {
   };
 
   return (
-  <>
-<section className={styles.videoSection}>
+    <>
+      <section className={styles.videoSection}>
         <video
-    className={styles.video}
-    src="/videos/intro.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="auto"
-    disablePictureInPicture
-  />
+          className={styles.video}
+          src="/videos/intro.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+        />
 
         {/* Overlay Content */}
         <div className={styles.overlay}>
-          <h1>Welcome to Dhanvii Accounting Institute</h1>
-          <p>Learn Professional Accounting with 100% Practical Training</p>
+          <h1>Welcome to Zylow Web Solutions</h1>
+          <p>Transform your online presence with our cutting-edge web development services.</p>
 
           <button>Join Now</button>
         </div>
       </section>
-
-
 
       {/* Hero Section */}
       <section className={styles.heroSection}>
@@ -91,12 +89,11 @@ const Home = () => {
           >
             Visit Us
           </Motion.button>
-
         </Motion.div>
       </section>
       <ShowCase />
       <ExperienceSlider />
-      </>
+    </>
   );
 };
 

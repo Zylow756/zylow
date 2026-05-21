@@ -8,7 +8,6 @@
 
 .titleWrapper {
   height: 60px;
-  /*  fixed space so animation never cuts */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +157,6 @@
 
   .menuIcon {
     display: flex;
-    /* ✅ show hamburger */
   }
 
   .navbar {

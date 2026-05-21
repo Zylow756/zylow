@@ -186,6 +186,7 @@
   margin-bottom: 1.2rem;
   font-size: 1.1rem;
   color: #f9a871f8;
+  list-style: '✓ ';
 }
 
 .planCard button,
@@ -265,6 +266,8 @@
   margin-bottom: 1rem;
   font-size: 1.1rem;
   color:black;
+  list-style: '✓ ';
+  text-align: left;
 }
 
 .memberCard button,
