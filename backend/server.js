@@ -1,7 +1,10 @@
 import express from "express";
 import cors from "cors";
 import enquiryRoute from "./routes/enquiry.js";
-import careerRoute from "./routes/career.js"
+import careerRoute from "./routes/career.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 

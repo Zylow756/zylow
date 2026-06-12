@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import styles from './Nav.module.css';
 import logoImage from '../../assets/images/logo.png';
 import React, { useState } from "react";
-import Career from '../../pages/Career';
+import Enquiry from '../../pages/Enquiry';
 import { motion as Motion } from "framer-motion";
 const text = "Zylow-Web-Solution";
 
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showCareer, setShowCareer] = useState(false);
+    const [showEnquiry, setShowEnquiry] = useState(false);
 
   return (
     <header className={styles.heroHeader}>
@@ -66,11 +66,11 @@ const Nav = () => {
         <Link to="/about">About Us</Link>
         <Link to="/services">Services</Link>
         <Link to="/showCasePage">Show Case</Link>
-        <span onClick={() => setShowCareer(true)} className={styles.careerBtn}>Career</span>
+        <span onClick={() => setShowEnquiry(true)}>Enquiry</span>
         <Link to="/contact">Contact Us</Link>
         <Link to="/jobVacancies">Job Vacancies</Link>
       </nav>
-      {showCareer && <Career onClose={() => setShowCareer(false)} />}
+      {showEnquiry && <Enquiry onClose={() => setShowEnquiry(false)} />}
     </header>
   );
 };

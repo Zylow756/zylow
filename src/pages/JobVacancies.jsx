@@ -1,9 +1,9 @@
 import styles from '../assets/css/JobVacancies.module.css';
 import React, { useState } from "react";
-import Enquiry from '../pages/Enquiry';
+import Career from '../pages/Career';
 
 const JobVacancies = () => {
-    const [showEnquiry, setShowEnquiry] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
 
   const vacancies = [
     {
@@ -83,22 +83,27 @@ const JobVacancies = () => {
               <span className={styles.badge}>Openings: {job.openings}</span>
               <span className={styles.badgeSalary}>Salary: {job.salary}</span>
             </div>
-            
+
             <div className={styles.jobDetails}>
               <p><strong>Experience:</strong> {job.experience}</p>
               <p><strong>About the Role:</strong> {job.description}</p>
               <p><strong>Skills Required:</strong> {job.skills}</p>
             </div>
-            
-            <button 
-              className={styles.applyBtn} 
-               onClick={() => setShowEnquiry(true)}
+
+            <button
+              className={styles.applyBtn}
+              onClick={() => setSelectedJob(job)}
             >
               Apply Now
             </button>
-      {showEnquiry && <Enquiry onClose={() => setShowEnquiry(false)} />}
           </div>
         ))}
+        {selectedJob && (
+          <Career
+            job={selectedJob}
+            onClose={() => setSelectedJob(null)}
+          />
+        )}
       </div>
     </div>
   );

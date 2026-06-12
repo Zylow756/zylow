@@ -158,6 +158,7 @@ const Enquiry = ({ onClose }) => {
               placeholder="+91 XXXXX XXXXX"
               value={formData.phone}
               onChange={handleChange}
+              maxLength={10}
             />
             {errors.phone && <span className={styles.error}>{errors.phone}</span>}
           </div>

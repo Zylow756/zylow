@@ -1,6 +1,7 @@
 import express from "express";
 import nodemailer from "nodemailer";
 import XLSX from "xlsx";
+import process from "process";
 
 const router = express.Router();
 
@@ -29,14 +30,14 @@ router.post("/send-enquiry", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "officezylow1991@gmail.com",
-        pass: "qjli difu jejb mffu",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: "officezylow1991@gmail.com",
-      to: "zylow0744@gmail.com",
+      from: process.env.EMAIL_USER,
+      to: "enquiryzylowweb@gmail.com",
       subject: "New Enquiry Form",
       attachments: [
         {

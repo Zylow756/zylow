@@ -6,7 +6,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--gap);
-  align-items: center;
+  align-items: center;  
+  border-bottom: 1px solid #aaa;
 }
 
 /* IMAGE */

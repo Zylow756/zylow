@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styles from "../assets/css/Career.module.css";
-import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const Career = ({ onClose }) => {
+const Career = ({ onClose, job }) => {
     useEffect(() => {
         document.body.style.overflow = "hidden";
         return () => {
@@ -15,11 +14,10 @@ const Career = ({ onClose }) => {
         name: "",
         phone: "",
         email: "",
-        designation: "",
+        designation: job?.title || "",
         resume: null,
     });
 
-    const navigate = useNavigate();
     const [errors, setErrors] = useState({});
 
     // Handle input
@@ -96,40 +94,39 @@ const Career = ({ onClose }) => {
 
     // Submit
     const handleSubmit = async (e) => {
-    e.preventDefault();
+        e.preventDefault();
 
-    const validationErrors = validate();
+        const validationErrors = validate();
 
-    if (Object.keys(validationErrors).length > 0) {
-        setErrors(validationErrors);
-        return;
-    }
-
-    const data = new FormData();
-    data.append("name", formData.name);
-    data.append("phone", formData.phone);
-    data.append("email", formData.email);
-    data.append("designation", formData.designation);
-    data.append("resume", formData.resume);
-
-    try {
-        const res = await fetch("http://localhost:5000/api/send-email", {
-            method: "POST",
-            body: data,
-        });
-
-        const result = await res.json();
-
-        if (result.success) {
-             onClose();
-            alert("Email sent successfully!");
-            navigate("/", { replace: true });
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            return;
         }
-    } catch (error) {
-        console.error(error);
-        alert("Failed to send email");
-    }
-};
+
+        const data = new FormData();
+        data.append("name", formData.name);
+        data.append("phone", formData.phone);
+        data.append("email", formData.email);
+        data.append("designation", formData.designation);
+        data.append("resume", formData.resume);
+
+        try {
+            const res = await fetch("http://localhost:5000/api/send-email", {
+                method: "POST",
+                body: data,
+            });
+
+            const result = await res.json();
+
+            if (result.success) {
+                onClose();
+                alert("Email sent successfully!");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Failed to send email");
+        }
+    };
 
     return (
         <div className={styles.overlay} onClick={onClose}>
@@ -155,6 +152,7 @@ const Career = ({ onClose }) => {
                         placeholder="Phone Number"
                         value={formData.phone}
                         onChange={handleChange}
+                        maxLength={10}
                     />
                     {errors.phone && <span className={styles.error}>{errors.phone}</span>}
 
@@ -171,7 +169,7 @@ const Career = ({ onClose }) => {
                         name="designation"
                         placeholder="Your Designation"
                         value={formData.designation}
-                        onChange={handleChange}
+                        readOnly
                     >
                     </input>
                     {errors.designation && <span className={styles.error}>{errors.designation}</span>}
