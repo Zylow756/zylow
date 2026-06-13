@@ -84,7 +84,7 @@ const PaidAdvertisement = () => {
                 <li>Campaign Monitoring</li>
               </ul>
 
-              <button>Get Quote</button>
+              {/*<button>Get Quote</button>*/}
             </div>
 
             <div className={styles.planCardFeatured}>
@@ -101,7 +101,7 @@ const PaidAdvertisement = () => {
                 <li>Performance Optimization</li>
               </ul>
 
-              <button>Get Quote</button>
+              {/*<button>Get Quote</button>*/}
             </div>
           </div>
         </section>
@@ -162,7 +162,7 @@ const PaidAdvertisement = () => {
                 <li>Basic Engagement Support</li>
               </ul>
 
-              <button>Get Quote</button>
+              {/*<button>Get Quote</button>*/}
             </div>
 
             <div className={styles.planCardFeatured}>
@@ -179,7 +179,7 @@ const PaidAdvertisement = () => {
                 <li>High Engagement Campaigns</li>
               </ul>
 
-              <button>Get Quote</button>
+             {/*<button>Get Quote</button>*/}
             </div>
           </div>
         </section>
@@ -204,7 +204,7 @@ const PaidAdvertisement = () => {
                 <li>Basic Visibility</li>
               </ul>
 
-              <button>Get Started</button>
+              {/*<button>Get Started</button>*/}
             </div>
 
             <div className={styles.memberCardGold}>
@@ -218,7 +218,7 @@ const PaidAdvertisement = () => {
                 <li>Featured Visibility</li>
               </ul>
 
-              <button>Join Premium</button>
+              {/*<button>Join Premium</button>*/}
             </div>
           </div>
         </section>

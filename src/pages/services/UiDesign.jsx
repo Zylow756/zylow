@@ -37,7 +37,7 @@ const services = [
 
 const plans = [
   {
-    name: <>Essential<br />UI</>,
+    name: "Essential UI",
     audience: "Startups / Small Shops",
     features: [
       "Landing Page Design",
@@ -65,7 +65,6 @@ const plans = [
     ],
   },
 ];
-
 
 const UiDesign = () => { 
     return (
@@ -159,7 +158,7 @@ const UiDesign = () => {
                   ))}
                 </ul>
 
-                <button>Get Quote</button>
+                {/*<button>Get Quote</button>*/}
               </Motion.div>
             ))}
           </div>

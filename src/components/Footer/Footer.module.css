@@ -1,6 +1,6 @@
 .footer {
-  padding: clamp(20px, 4vw, 80px);
-  background: rgba(255, 190, 147, 0.413);
+  padding: clamp(5px, 4vw, 20px);
+  background: #f28237cb;
   display: flex;
   justify-content: space-between;
   align-items: center;

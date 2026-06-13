@@ -12,7 +12,7 @@
 }
 
 .card {
-  background: linear-gradient(135deg, #ffbe93f8, #ffbe9375);
+  background: linear-gradient(135deg, #f28237f8, #ffbe93ca);
   color: black;
   padding: 40px 30px;
   border-radius: 20px;
@@ -38,11 +38,11 @@
 
 .card h3 {
   font-size: 24px;
+  color: black;
 }
 
 .card p {
   margin-top: 10px;
-  color: #323131;
 }
 
 /* Pagination dots */

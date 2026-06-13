@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from '../../assets/css/SeoOptimization.module.css';
-import { useNavigate } from "react-router-dom";
+import Enquiry from '../Enquiry';
 
 const plans = [
     {
@@ -69,7 +69,7 @@ const coreFeatures = [
 ];
 
 const SeoOptimization = () => {
-  const navigate = useNavigate();
+    const [showEnquiry, setShowEnquiry] = useState(false);
   
     return (
         <div className={styles.seoPage}>
@@ -121,7 +121,7 @@ const SeoOptimization = () => {
                                 ))}
                             </ul>
 
-                            <button className={styles.planBtn}>Get Quote</button>
+                            {/*<button className={styles.planBtn}>Get Quote</button>*/}
                         </div>
                     ))}
                 </div>
@@ -211,8 +211,9 @@ const SeoOptimization = () => {
                     rankings in 2026.
                 </p>
 
-                <button onClick={() => {navigate("/contact")}}>Book Consultation</button>
+                <button onClick={() => setShowEnquiry(true)}>Book Consultation</button>
             </section>
+            {showEnquiry && <Enquiry onClose={() => setShowEnquiry(false)} />}
         </div>
     );
 };

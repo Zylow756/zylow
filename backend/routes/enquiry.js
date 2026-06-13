@@ -38,7 +38,7 @@ router.post("/send-enquiry", async (req, res) => {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: "enquiryzylowweb@gmail.com",
-      subject: "New Enquiry Form",
+      subject: "New Enquiry Form from Zylow Web Solution",
       attachments: [
         {
           filename: "enquiry.xlsx",

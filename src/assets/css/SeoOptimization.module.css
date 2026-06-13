@@ -21,7 +21,7 @@ body {
 /* HERO SECTION */
 
 .hero {
-  min-height: 95vh;
+  min-height: 75vh;
   padding: 0 8%;
   display: flex;
   align-items: center;
@@ -49,12 +49,12 @@ body {
 
 .tag {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 8px 8px;
   background: white;
   border-radius: 40px;
   color: #ff6b00;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -74,7 +74,6 @@ body {
 }
 
 /* SECTION COMMON */
-
 .sectionHeading {
   text-align: center;
   margin-bottom: 70px;
@@ -92,9 +91,8 @@ body {
 }
 
 /* PLANS SECTION */
-
 .plansSection {
-  padding: 120px 8%;
+  padding: 2rem 2rem;
   background-color: #ffbe9375;
 }
 
@@ -187,7 +185,7 @@ body {
 
 /* CORE FEATURES */
 .coreSection {
-  padding: 120px 8%;
+  padding: 2rem 2rem;
   background: #ff6a0076;
 }
 
@@ -199,7 +197,7 @@ body {
 
 .coreCard {
   background: #f9fafb;
-  padding: 35px;
+  padding: 30px;
   border-radius: 24px;
   transition: 0.4s;
   border: 1px solid #ececec;
@@ -224,7 +222,7 @@ body {
 
 /* SUCCESS SECTION */
 .successSection {
-  padding: 120px 8%;
+  padding: 2rem 3rem;
 }
 
 .successContainer {
@@ -293,7 +291,7 @@ body {
 
 /* CTA SECTION */
 .ctaSection {
-  padding: 120px 8%;
+  padding: 2rem 2rem;
   text-align: center;
   background: linear-gradient(135deg, #ffbe93f8, #ffbe9375);
   color: white;
@@ -305,7 +303,7 @@ body {
 }
 
 .ctaSection p {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
   color: #6f6f6f;
   line-height: 2;

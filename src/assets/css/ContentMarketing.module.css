@@ -13,17 +13,16 @@
 }
 
 /* HERO */
-
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   background: linear-gradient(90deg, #ffbe93f8, #ffbe9375),
     url("https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2073&auto=format&fit=crop")
       center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 10rem;
+  padding: 4rem 6rem;
 }
 
 .overlay {
@@ -75,7 +74,7 @@
 /* COMMON */
 .sectionHeader {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .sectionHeader span {
@@ -94,7 +93,7 @@
 
 /* INTRO */
 .intro {
-  padding: 8rem 10rem;
+  padding: 5rem 6rem;
   text-align: center;
 }
 
@@ -108,7 +107,7 @@
 
 /* SERVICES */
 .services {
-  padding: 8rem 10rem;
+  padding: 6rem 7rem;
   background-color: #ffbe93f8;
 }
 
@@ -153,7 +152,7 @@
 
 /* PRICING */
 .pricing {
-  padding: 8rem 10rem;
+  padding: 4rem 6rem;
   background-color: #fbc9a775;
 }
 
@@ -161,6 +160,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin-top: 3rem;
 }
 
 .planCard {
@@ -211,7 +211,7 @@
 }
 
 .planCard ul li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.4rem;
   color: black;
   line-height: 1.8;
   font-size: 1.1rem;
@@ -232,7 +232,7 @@
 
 /* WHY CHOOSE */
 .whyChoose {
-  padding: 8rem 10rem;
+  padding: 5rem 6rem;
   background-color: #f8ab77e1;
 }
 
@@ -275,7 +275,7 @@
 
 /* CTA */
 .cta {
-  padding: 8rem 3rem;
+  padding: 5rem 3rem;
   text-align: center;
   background: #f6c4a2f8;
 }

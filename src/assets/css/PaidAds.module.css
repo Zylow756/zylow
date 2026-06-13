@@ -7,11 +7,11 @@
 
 /* HERO */
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 8%;
+  padding: 2rem 2rem;
   background:  #f8995ae1 ;
 }
 
@@ -26,7 +26,7 @@
   border-radius: 50px;
   font-size: 1.1rem;
   background: white;
-  color: #ffbe93f8;
+  color: #f19252f8;
 }
 
 .hero h1 {
@@ -53,12 +53,12 @@
 .section,
 .sectionDark {
     background-color: #ffbe93f8;
-  padding: 8rem 8%;
+  padding: 2rem 2rem;
 }
 
 .sectionDark {
   background: #f3975ae1;
-  padding: 8rem 8%;
+  padding: 4rem 2rem;
 }
 
 .sectionHeader {
@@ -69,7 +69,7 @@
 
 .sectionHeader h2 {
   font-size: 4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .sectionHeader p {
@@ -88,7 +88,7 @@
 
 .card,
 .cardDark {
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 30px;
   transition: 0.4s;
 }
@@ -185,7 +185,7 @@
 .planCardFeatured ul li {
   margin-bottom: 1.2rem;
   font-size: 1.1rem;
-  color: #f9a871f8;
+  color: #fc934df8;
   list-style: '✓ ';
 }
 
@@ -204,7 +204,7 @@
 
 /* Membership */
 .membership {
-  padding: 8rem 8%;
+  padding: 2rem 2rem;
   text-align: center;
   background-color: #f9b283cb ;
 }

@@ -38,6 +38,9 @@
   border-radius: clamp(20px, 2vw, 40px);
   overflow: hidden;
   width: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .serviceCard:hover {

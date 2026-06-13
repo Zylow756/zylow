@@ -136,7 +136,7 @@ const BulkWhatsappMarketing = () => {
                 ))}
               </ul>
 
-              <button>Get Quote</button>
+              {/*<button>Get Quote</button>*/}
             </div>
           ))}
         </div>
@@ -214,7 +214,7 @@ const BulkWhatsappMarketing = () => {
       </section>
 
       {/* CTA */}
-      <section className={styles.cta}>
+      {/*<section className={styles.cta}>
         <h2>Ready to Grow Your Business?</h2>
 
         <p>
@@ -223,7 +223,7 @@ const BulkWhatsappMarketing = () => {
         </p>
 
         <button>Chat on WhatsApp</button>
-      </section>
+      </section>*/}
     </div>
         </>
     )

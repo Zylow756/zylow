@@ -34,12 +34,14 @@ const WebsiteDevelopment = () => {
           {[
             {
               title: "Static",
-              price: "Starting from ₹2999",
+              price: "Starting from ₹4999",
               subtitle: "Perfect for small websites",
               features: [
                 "Up to 5 pages",
                 "Responsive design",
-                "Basic SEO"
+                "Basic SEO",
+                "Free Domain",
+                "Free Hosting",
               ]
             },
             {
@@ -49,7 +51,9 @@ const WebsiteDevelopment = () => {
               features: [
                 "Admin dashboard",
                 "Database integration",
-                "Custom features"
+                "Custom features",
+                "Free Domain",
+                "Free Hosting",
               ],
               popular: true
             },
@@ -60,7 +64,9 @@ const WebsiteDevelopment = () => {
               features: [
                 "Payment gateway",
                 "Order management",
-                "Inventory system"
+                "Inventory system",
+                "Free Domain",
+                "Free Hosting",
               ]
             }
           ].map((plan, i) => (
@@ -85,7 +91,7 @@ const WebsiteDevelopment = () => {
 
               <p className={styles.subtitle}>{plan.subtitle}</p>
 
-              <button className={styles.primaryBtn}>Get Quote</button>
+              {/*<button className={styles.primaryBtn}>Get Quote</button>*/}
 
               <ul>
                 {plan.features.map((f, idx) => (
@@ -120,10 +126,10 @@ const WebsiteDevelopment = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h3>Annual Costs</h3>
+            <h3>Annual Maintenance Charges [AMC]</h3>
             <ul>
-              <li>🌐 Domain Price: Starting from – ₹599*/- [per year]</li>
-              <li>☁️ Hosting: Starting from – ₹149*/- [per month]</li>
+              <li>🌐 Domain: As per actual</li>
+              <li>☁️ Hosting: Rs1500/year</li>
             </ul>
           </Motion.div>
 

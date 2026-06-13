@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from '../assets/css/Home.module.css';
 import Rectangle8 from '../assets/images/Rectangle 8.png';
 import ExperienceSlider from '../components/Slider/Slider';
 import ShowCase from '../components/ShowCase/ShowCase';
 import { motion as Motion } from "framer-motion";
-
+import Enquiry from './Enquiry';
 
 const Home = () => {
+    const [showEnquiry, setShowEnquiry] = useState(false);
 
   const handleRedirect = () => {
     const destination = encodeURIComponent(
@@ -20,7 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <section className={styles.videoSection}>
+      {/*<section className={styles.videoSection}>
         <video
           className={styles.video}
           src="/videos/intro.mp4"
@@ -32,18 +33,15 @@ const Home = () => {
           disablePictureInPicture
         />
 
-        {/* Overlay Content */}
         <div className={styles.overlay}>
           <h1>Welcome to Zylow Web Solutions</h1>
           <p>Transform your online presence with our cutting-edge web development services.</p>
 
-          <button>Join Now</button>
+          <button onClick={() => setShowEnquiry(true)}>Join Now</button>
         </div>
-      </section>
+      </section>*/}
 
-      {/* Hero Section */}
       <section className={styles.heroSection}>
-        {/* Image Animation */}
         <Motion.div
           className={styles.heroImage}
           initial={{ opacity: 0, x: -100 }}
@@ -53,7 +51,6 @@ const Home = () => {
           <img src={Rectangle8} alt="web development" />
         </Motion.div>
 
-        {/* Text Animation */}
         <Motion.div
           className={styles.heroContent}
           initial={{ opacity: 0, x: 100 }}
@@ -93,6 +90,7 @@ const Home = () => {
       </section>
       <ShowCase />
       <ExperienceSlider />
+            {showEnquiry && <Enquiry onClose={() => setShowEnquiry(false)} />}
     </>
   );
 };

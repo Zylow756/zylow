@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../assets/css/ContentMarketing.module.css";
-import { useNavigate } from "react-router-dom";
+import Enquiry from '../Enquiry';
 
 const plans = [
   {
@@ -79,11 +79,11 @@ const reasons = [
   },
 ];
 
-const ContentMarketing = () => { 
-  const navigate = useNavigate();
-  
-    return (
-        <div className={styles.container}>
+const ContentMarketing = () => {
+  const [showEnquiry, setShowEnquiry] = useState(false);
+
+  return (
+    <div className={styles.container}>
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.overlay}></div>
@@ -150,9 +150,8 @@ const ContentMarketing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`${styles.planCard} ${
-                plan.featured ? styles.featured : ""
-              }`}
+              className={`${styles.planCard} ${plan.featured ? styles.featured : ""
+                }`}
             >
               {plan.featured && (
                 <div className={styles.popular}>
@@ -190,7 +189,7 @@ const ContentMarketing = () => {
                 </li>
               </ul>
 
-              <button>Get Quote</button>
+              {/*<button>Get Quote</button>*/}
             </div>
           ))}
         </div>
@@ -225,9 +224,10 @@ const ContentMarketing = () => {
           converts, and grows your business online.
         </p>
 
-        <button onClick={() => {navigate("/contact")}}>Contact Us Today</button>
+        <button onClick={() => setShowEnquiry(true)}>Contact Us Today</button>
       </section>
+      {showEnquiry && <Enquiry onClose={() => setShowEnquiry(false)} />}
     </div>
-    )
+  )
 }
 export default ContentMarketing;

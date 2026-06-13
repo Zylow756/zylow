@@ -85,7 +85,7 @@ const AppDevelopment = () => {
         
                       <p className={styles.subtitle}>{plan.subtitle}</p>
         
-                      <button className={styles.primaryBtn}>Get Quote</button>
+                      {/*<button className={styles.primaryBtn}>Get Quote</button>*/}
         
                       <ul>
                         {plan.features.map((f, idx) => (
