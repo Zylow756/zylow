@@ -136,23 +136,34 @@
 }
 
 @media (max-width: 768px) {
-  .logo img {
-    max-height: 10vh;
-    padding: 1vh;
-    margin-top: 6vh;
+  .logo {
+    flex-direction: wrap;
+    align-items: center;
   }
 
-  .logo h1 {
-    font-size: 2rem;
+  .logo img {
+    max-height: 60px;
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  .title  {
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-top: 5vh;
-    padding: 3vh 2vh;
+    padding-left: 0;
     background: linear-gradient(90deg, #7a8cff, #ff7d61, #ffbe3d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
     line-height: 1;
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .titleWrapper {
+    width: 100%;
+    height: auto;
   }
 
   .menuIcon {
@@ -164,7 +175,7 @@
     top: 0;
     right: -100%;
     width: 70%;
-    height: 100vh;
+    height: 75vh;
     background: white;
     flex-direction: column;
     align-items: center;
@@ -176,5 +187,9 @@
 
   .navbar.active {
     right: 0;
+  }
+
+  .heroHeader {
+    padding-top: 60px;
   }
 }

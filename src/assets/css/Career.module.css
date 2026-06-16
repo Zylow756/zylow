@@ -31,6 +31,7 @@
   max-width: 500px;          /* Bigger for 4K */
   position: relative;
   animation: fadeIn 0.3s ease;
+  color-scheme: light;
 }
 
 /* Inputs */
@@ -38,19 +39,18 @@
 .popup input {
   width: 100%;
   margin: 0.1vw 0;
-  padding: 0.8vw;
   font-size: 0.9rem;
 }
 
 /* Button */
 .popup button {
   width: 100%;
-  padding: 0.8vw;
+  padding: 1vw;
   font-size: 1rem;
   background: #ffbe93f8;
   color: white;
   border: none;
-  border-radius: 0.4vw;
+  border-radius: 2vw;
   cursor: pointer;
 }
 

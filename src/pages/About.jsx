@@ -5,7 +5,6 @@ import Footer from '../components/Footer/Footer';
 
 const About = () => {
   return (
-  <>
     <div className={styles.aboutContainer}>
       {/* HERO */}
       <section className={styles.hero}>
@@ -20,13 +19,9 @@ const About = () => {
           In today’s rapidly changing era, this is truly the age of startups.
           The world of E-Commerce and Online Marketing is constantly evolving 
           with new innovations.
-        </p>
-        <p>
           One such innovation began in 2013 with <strong>“Look8Us”</strong>, 
           marking the start of a remarkable journey. In 2025, that vision took 
           its full and evolved form as <strong>Zylow</strong>.
-        </p>
-        <p>
           Unlike ordinary e-commerce platforms, Zylow represents a revolutionary 
           approach. We empower local entrepreneurs, strengthen the Indian economy, 
           and bridge the gap between traditional business and modern technology.
@@ -39,8 +34,6 @@ const About = () => {
         <p>
           Most online platforms prioritize global corporations, while local 
           businesses struggle due to lack of digital presence.
-        </p>
-        <p>
           Many shopkeepers and small business owners find it difficult to survive 
           as customers increasingly look beyond their own cities, ignoring local markets.
         </p>
@@ -52,8 +45,6 @@ const About = () => {
         <p>
           Zylow is a multi-purpose ecosystem designed to help customers find what 
           they need within their own local area—often at better prices than large platforms.
-        </p>
-        <p>
           We don’t just list businesses—we empower them to own their digital future.
         </p>
       </section>
@@ -65,8 +56,6 @@ const About = () => {
           Every business deserves a powerful digital presence. Zylow provides expert 
           website development services to help local traders, professionals, and startups 
           go online.
-        </p>
-        <p>
           We create high-performance, customized websites that make your business visible 
           not just locally—but globally.
         </p>
@@ -101,8 +90,6 @@ const About = () => {
         <p>
           Zylow’s mission is national progress. From students to homemakers, 
           we enable individuals to become self-reliant and digitally empowered.
-        </p>
-        <p>
           Every business can build its identity, and every local market can grow 
           from <strong>Local to Global</strong>.
         </p>
@@ -114,7 +101,6 @@ const About = () => {
         <p>Zylow — Empowering Local, Connecting Global.</p>
       </section>
     </div>
-    </>
   );
 };
 

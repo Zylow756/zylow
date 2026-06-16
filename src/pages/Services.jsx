@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 const Services = () => {
   const navigate = useNavigate();
 
-
   return (
     <>
       <div className={styles.container}>

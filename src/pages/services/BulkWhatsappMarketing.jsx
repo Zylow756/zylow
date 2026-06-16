@@ -81,8 +81,6 @@ const BulkWhatsappMarketing = () => {
         <div className={styles.container}>
       {/* HERO SECTION */}
       <section className={styles.hero}>
-        <div className={styles.overlay}></div>
-
         <div className={styles.heroContent}>
           <h1>
             Bulk WhatsApp Marketing <span>Services</span>
@@ -108,8 +106,11 @@ const BulkWhatsappMarketing = () => {
         <div className={styles.featureGrid}>
           {features.map((item, index) => (
             <div className={styles.featureCard} key={index}>
-              <div className={styles.icon}>{item.icon}</div>
-              <h3>{item.title}</h3>
+              <div className={styles.icon}>
+                {item.icon} 
+                <h3>{item.title}</h3>
+                </div>
+             
               <p>{item.desc}</p>
             </div>
           ))}

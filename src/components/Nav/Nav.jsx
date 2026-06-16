@@ -9,7 +9,11 @@ const text = "Zylow-Web-Solution";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-    const [showEnquiry, setShowEnquiry] = useState(false);
+  const [showEnquiry, setShowEnquiry] = useState(false);
+
+  const handleNavClick = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <header className={styles.heroHeader}>
@@ -62,13 +66,20 @@ const Nav = () => {
       )}
 
       <nav className={`${styles.navbar} ${menuOpen ? styles["active"] : ""}`}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/showCasePage">Show Case</Link>
-        <span onClick={() => setShowEnquiry(true)}>Enquiry</span>
-        <Link to="/contact">Contact Us</Link>
-        <Link to="/jobVacancies">Job Vacancies</Link>
+        <Link to="/" onClick={handleNavClick}>Home</Link>
+        <Link to="/about" onClick={handleNavClick}>About Us</Link>
+        <Link to="/services" onClick={handleNavClick}>Services</Link>
+        <Link to="/showCasePage" onClick={handleNavClick}>Show Case</Link>
+        <span
+          onClick={() => {
+            setShowEnquiry(true);
+            setMenuOpen(false);
+          }}
+        >
+          Enquiry
+        </span>
+        <Link to="/contact" onClick={handleNavClick}>Contact Us</Link>
+        <Link to="/jobVacancies" onClick={handleNavClick}>Job Vacancies</Link>
       </nav>
       {showEnquiry && <Enquiry onClose={() => setShowEnquiry(false)} />}
     </header>

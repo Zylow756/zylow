@@ -16,7 +16,7 @@ const cardVariants = {
   })
 };
 
-const WebsiteDevelopment = () => { 
+const WebsiteDevelopment = () => {
   return (
     <>
       <div className={styles.pricingContainer}>
@@ -143,12 +143,14 @@ const WebsiteDevelopment = () => {
             <h3>Basic Plan Includes</h3>
 
             <div className={styles.grid}>
-              <div>✔ Free Domain Name</div>
-              <div>✔ 5 Pages (Dynamic Website)</div>
-              <div>✔ Business Email ID</div>
-              <div>✔ Unlimited Images/Videos</div>
-              <div>✔ Unlimited Bandwidth</div>
-              <div>✔ 100% Responsive Design</div>
+              <ul>
+                <li>✔ Free Domain Name</li>
+                <li>✔ 5 Pages (Dynamic Website)</li>
+                <li>✔ Business Email ID</li>
+                <li>✔ Unlimited Images/Videos</li>
+                <li>✔ Unlimited Bandwidth</li>
+                <li>✔ 100% Responsive Design</li>
+              </ul>
             </div>
           </Motion.div>
 

@@ -41,6 +41,8 @@
   color: #3d4ea3;
   max-width: 60ch;
   margin-bottom: clamp(20px, 2vw, 40px);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* BUTTON */
@@ -83,8 +85,6 @@
 .heroImage img {
   animation: floatImage 5s ease-in-out infinite;
 }
-
-
 
 .videoSection {
   position: relative;

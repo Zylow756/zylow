@@ -73,6 +73,8 @@
   color: #4a5568;
   margin-bottom: 8px;
   line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .applyBtn {

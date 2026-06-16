@@ -18,7 +18,7 @@ const PaidAdvertisement = () => {
             <span className={styles.tag}>Zylow Digital Growth Solutions</span>
 
             <h1>
-              Paid Advertisement & <span>Social Media Marketing</span>
+              Paid Advertisement & Social Media Marketing
             </h1>
 
             <p>

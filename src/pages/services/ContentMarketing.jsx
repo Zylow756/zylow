@@ -86,8 +86,6 @@ const ContentMarketing = () => {
     <div className={styles.container}>
       {/* HERO SECTION */}
       <section className={styles.hero}>
-        <div className={styles.overlay}></div>
-
         <div className={styles.heroContent}>
           <p className={styles.tag}>Zylow Web Solution</p>
 

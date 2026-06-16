@@ -75,19 +75,15 @@ const SeoOptimization = () => {
         <div className={styles.seoPage}>
             {/* HERO SECTION */}
             <section className={styles.hero}>
-                <div className={styles.heroOverlay}></div>
-
                 <div className={styles.heroContent}>
                     <p className={styles.tag}>Zylow Web Solution</p>
 
                     <h1>
-                        Smart SEO Solutions <br />
-                        For 2026 Businesses
+                        Smart SEO Solutions For 2026 Businesses
                     </h1>
 
                     <p className={styles.heroText}>
-                        Rank higher, generate quality leads, dominate AI search results,
-                        and grow your business with modern SEO strategies.
+                        Rank higher, generate quality leads, dominate AI search results, and grow your business with modern SEO strategies.
                     </p>
                 </div>
             </section>

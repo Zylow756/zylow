@@ -109,7 +109,7 @@
 .card ul li {
   margin: 10px 0;
   color: #425466;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /* SECTION WRAPPER */
@@ -133,12 +133,16 @@
 
 /* BIG CARD */
 .detailCardWide {
-  width: 600px;
+  width: 400px;
   background: #fff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   text-align: left;
+}
+
+.detailCardWide h3, .detailCard h3 {
+  color: #0a2540;
 }
 
 /* TEXT */
@@ -163,7 +167,15 @@
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 15px;
+  margin-top: 5px;
+}
+
+.grid ul {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: column;
+  }
 }

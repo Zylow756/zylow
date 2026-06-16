@@ -15,7 +15,7 @@
 /* HERO */
 .hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
   background: linear-gradient(90deg, #ffbe93f8, #ffbe9375),
     url("https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2073&auto=format&fit=crop")
       center/cover no-repeat;
@@ -52,7 +52,7 @@
 }
 
 .heroContent h1 {
-  font-size: 6rem;
+  font-size: 3rem;
   line-height: 1.1;
   font-weight: 800;
   margin-bottom: 2rem;
@@ -64,8 +64,8 @@
 }
 
 .subtitle {
-  font-size: 1.7rem;
-  color: #757576;
+  font-size: 1.3rem;
+  color: #242424;
   line-height: 1.8;
   max-width: 1100px;
   margin: auto;
@@ -87,8 +87,9 @@
 
 .sectionHeader h2 {
   margin-top: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
+  color: black;
 }
 
 /* INTRO */
@@ -100,9 +101,11 @@
 .intro p {
   max-width: 1200px;
   margin: auto;
-  color: #787979;
+  color: #3d3d3d;
   line-height: 2;
   font-size: 1.4rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* SERVICES */
@@ -120,7 +123,7 @@
 .serviceCard {
   background: white;
   border: 1px solid #ffbe93f8;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 30px;
   transition: 0.4s;
   backdrop-filter: blur(10px);
@@ -148,6 +151,8 @@
   color: #7e7f81;
   line-height: 1.8;
   font-size: 1.1rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* PRICING */
@@ -196,7 +201,7 @@
 .planCard h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color:#ffbe93f8;
+  color:#f3ad7ef8;
 }
 
 .planCard h1 {
@@ -244,7 +249,7 @@
 
 .reasonCard {
   background: white;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 30px;
   transition: 0.4s;
   border: 1px solid #f88940f8;
@@ -265,31 +270,38 @@
   margin: 1rem 0;
   font-size: 2rem;
   color: black;
+  line-height: 2rem;
 }
 
 .reasonCard p {
   color: #787a7b;
-  line-height: 1.8;
+  line-height: 1.4;
   font-size: 1.1rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* CTA */
 .cta {
-  padding: 5rem 3rem;
+  padding: 2rem 2rem;
   text-align: center;
   background: #f6c4a2f8;
 }
 
 .cta h2 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   max-width: 1200px;
   margin: auto;
+  color: black;
+  font-weight: 700;
 }
 
 .cta p {
   margin-top: 2rem;
   color: #818284;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .cta button {
@@ -305,7 +317,6 @@
 }
 
 /* 4K RESPONSIVE */
-
 @media (min-width: 2560px) {
   .heroContent h1 {
     font-size: 8rem;
@@ -351,7 +362,7 @@
   .services,
   .pricing,
   .whyChoose {
-    padding: 5rem 3rem;
+    padding: 2rem 2rem;
   }
 
   .heroContent h1 {

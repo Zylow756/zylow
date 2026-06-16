@@ -26,6 +26,7 @@
 .footerLinks p {
   font-size: clamp(16px, 1.4vw, 26px);
   font-weight: 600;
+  color: black;
   margin: 0;
 }
 

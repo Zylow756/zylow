@@ -22,21 +22,21 @@
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 2rem;
-  background: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: black;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 2.5rem;
   color: #595858;
   max-width: 1200px;
   margin: auto;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* SERVICES */
@@ -47,8 +47,9 @@
 .services h2,
 .marketing h2,
 .plans h2 {
+  color: black;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   font-weight: 700;
 }
@@ -84,6 +85,8 @@
   font-size: 1.1rem;
   line-height: 2rem;
   color: #807e7cf8;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* MARKETING */
@@ -121,7 +124,7 @@
 }
 
 .planCard {
-  background:  #fbb78ae2;;
+  background:  white;
   border-radius: 30px;
   padding: 2rem 2rem;
   text-align: center;
@@ -131,7 +134,7 @@
 
 .planCard:hover {
   transform: translateY(-12px);
-  box-shadow: 0 15px 40px rgba(0, 119, 255, 0.2);
+  border: 2px solid #f1843ae2;
 }
 
 .planCard h3 {
@@ -142,7 +145,7 @@
 }
 
 .planCard span {
-  color: white;
+  color: #f1843ae2;
   font-size: 1.1rem;
 }
 
@@ -177,7 +180,7 @@
 
 @media screen and (min-width: 2560px) {
   .hero h1 {
-    font-size: 7rem;
+    font-size: 3.5rem;
   }
 
   .hero p {
@@ -218,21 +221,21 @@
   }
 
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 
   .services,
   .marketing,
   .plans,
   .hero {
-    padding: 5rem 2rem;
+    padding: 2rem 2rem;
   }
 }
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .hero p {

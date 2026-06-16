@@ -62,9 +62,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            We Build Your Website
-            <br />
-            With Zylow Web
+            We Build Your Website With Zylow Web
           </Motion.h2>
 
           <Motion.p
