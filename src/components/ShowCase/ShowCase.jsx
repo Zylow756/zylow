@@ -1,8 +1,8 @@
 import styles from "./ShowCase.module.css";
 import Rectangle10 from '../../assets/images/Rectangle 10.png';
 import Rectangle12 from '../../assets/images/Rectangle 12.png';
-import Rectangle11 from '../../assets/images/Rectangle 11.png';
 import coaching from '../../assets/images/showcase-coaching.png';
+import ecommerse from '../../assets/images/zylow.png';
 
 const services = [
   {
@@ -11,7 +11,8 @@ const services = [
   },
   {
     title: "Online Product Demonstration Websites for Retailers",
-    img: Rectangle11,
+    img: ecommerse,
+    link: "https://zylow.in/",
   },
   {
     title: "School, Coaching & Library Customized Website",
@@ -28,7 +29,6 @@ const ShowCase = () => {
   return (
     <section className={styles.expertise}>
       <h3>Our Expertise</h3>
-
       <div className={styles.serviceGrid}>
         {services.map((item, index) => (
           <a

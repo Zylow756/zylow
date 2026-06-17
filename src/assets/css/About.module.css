@@ -89,3 +89,9 @@ font-weight: bold;
 .footerNote h3 {
   font-size: clamp(20px, 2vw, 32px);
 }
+
+@media (max-width: 768px) {
+  .rootImage {
+  background-image: url("../images/backgroundImage.png");
+}
+}

@@ -16,11 +16,7 @@
 /* ===== SPACE BACKGROUND ===== */
 .rootImage {
   min-height: 100vh;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url("/src/assets/images/backgroundImage.png");
+  background-image: url("/src/assets/images/backgroundImage.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -30,4 +26,11 @@
 .content {
   flex: 1;
   padding-bottom: 40px;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .rootImage {
+  background-image: url("../images/backgroundImage.png");
+}
 }

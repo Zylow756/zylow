@@ -27,7 +27,7 @@ const Career = ({ onClose, job }) => {
         if (name === "resume") {
             setFormData({
                 ...formData,
-                resume: files[0], // 👈 store file
+                resume: files[0], // store file
             });
         } else {
             setFormData({
@@ -111,7 +111,7 @@ const Career = ({ onClose, job }) => {
         data.append("resume", formData.resume);
 
         try {
-            const res = await fetch("http://localhost:5000/api/send-email", {
+            const res = await fetch("https://api.zylowebs.in/api/send-email", {
                 method: "POST",
                 body: data,
             });

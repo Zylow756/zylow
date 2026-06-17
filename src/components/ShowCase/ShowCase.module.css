@@ -2,11 +2,7 @@
 .rootImage {
   min-height: 100vh;
   padding-bottom: clamp(40px, 4vw, 80px);
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url("../../assets/images/backgroundImage.png");
+  background-image: url("../../assets/images/backgroundImage.png");
   background-size: cover;
   background-position: center;
 }
@@ -45,23 +41,24 @@
 
 .serviceCard:hover {
   transform: translateY(-10px);
+  border: 1.5px solid #f28237f8;
 }
 
 /* CARD IMAGE */
 .serviceCard img {
   width: 100%;
-  height: clamp(200px, 20vw, 370px);
+  height: clamp(150px, 20vw, 270px);
   object-fit: fill;
 }
 
 /* CARD TEXT */
 .serviceCard h4 {
-  padding: clamp(16px, 2vw, 36px);
+  padding-top: 1vh;
+  padding-bottom: 1.5vh;
   text-align: center;
   font-size: clamp(18px, 1.5vw, 34px);
   font-weight: 600;
   color: #333;
-  min-height: clamp(80px, 8vw, 160px);
 }
 
 /* Tablet */
@@ -72,8 +69,12 @@
 }
 
 /* Mobile */
-@media (max-width: 600px){
+@media (max-width: 768px){
   .servicesGrid{
     grid-template-columns: 1fr;
   }
+
+  .rootImage {
+  background-image: url("../images/backgroundImage.png");
+}
 }
