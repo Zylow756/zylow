@@ -111,7 +111,8 @@ const Career = ({ onClose, job }) => {
         data.append("resume", formData.resume);
 
         try {
-            const res = await fetch("https://api.zylowebs.in/api/send-email", {
+      const API = import.meta.env.VITE_API_URL;
+            const res = await fetch(`${API}/api/send-email`, {
                 method: "POST",
                 body: data,
             });

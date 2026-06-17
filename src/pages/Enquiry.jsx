@@ -77,7 +77,8 @@ const Enquiry = ({ onClose }) => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/send-enquiry", {
+      const API = import.meta.env.VITE_API_URL;
+      const res = await fetch(`${API}/api/send-enquiry`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
