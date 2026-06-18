@@ -112,10 +112,14 @@ const Career = ({ onClose, job }) => {
 
         try {
       const API = import.meta.env.VITE_API_URL;
-            const res = await fetch(`${API}/api/send-email`, {
+      const res = await fetch("/api/send-email", {
+  method: "POST",
+  body: data,
+});
+            /*const res = await fetch(`${API}/api/send-email`, {
                 method: "POST",
                 body: data,
-            });
+            });*/
 
             const result = await res.json();
 
