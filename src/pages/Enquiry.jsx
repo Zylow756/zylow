@@ -78,17 +78,13 @@ const Enquiry = ({ onClose }) => {
 
     try {
       const API = import.meta.env.VITE_API_URL;
-      const res = await fetch("/api/send-enquiry", {
-  method: "POST",
-  body: data,
-});
-      /*(`${API}/api/send-enquiry`, {
+      const res = await fetch(`${API}/api/send-enquiry`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      });*/
+      });
 
       const data = await res.json();
 
