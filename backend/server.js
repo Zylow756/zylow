@@ -24,8 +24,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api", enquiryRoute);
-app.use("/api", careerRoute);
+app.use("/", enquiryRoute);
+app.use("/", careerRoute);
 
 app.get("/", (req, res) => {
   res.send("Server working");
