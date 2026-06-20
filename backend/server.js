@@ -1,4 +1,4 @@
-/* eslint-env node */
+/* global process */
 import express from "express";
 import cors from "cors";
 import enquiryRoute from "./routes/enquiry.js";
@@ -24,10 +24,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", enquiryRoute);
-app.use("/", careerRoute);
+app.use("/api", enquiryRoute);
+app.use("/api", careerRoute);
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Server working");
 });
 

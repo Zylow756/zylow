@@ -1,4 +1,4 @@
-/* eslint-env node */
+/* global process */
 import express from "express";
 import nodemailer from "nodemailer";
 import XLSX from "xlsx";
