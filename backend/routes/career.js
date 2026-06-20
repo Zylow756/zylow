@@ -1,7 +1,7 @@
 import express from "express";
 import nodemailer from "nodemailer";
 import multer from "multer";
-import process from "process";
+import process from "node:process";
 
 const router = express.Router();
 

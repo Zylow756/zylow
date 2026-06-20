@@ -3,7 +3,7 @@ import cors from "cors";
 import enquiryRoute from "./routes/enquiry.js";
 import careerRoute from "./routes/career.js";
 import dotenv from "dotenv";
-import process from "process";
+import process from "node:process";
 
 dotenv.config();
 
@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
   res.send("Server working");
 });
 
-app.get("/api/test", (req, res) => {
+app.get("/test", (req, res) => {
   res.json({
     success: true,
     message: "Node server is running",
