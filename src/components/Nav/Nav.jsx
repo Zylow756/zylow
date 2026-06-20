@@ -33,15 +33,15 @@ const Nav = () => {
             {text.split("").map((char, index) => (
               <Motion.span
                 key={index}
-                animate={{ y: [0, -8, 0] }}
+                animate={{ y: [0, -6, 0], }}
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
                   delay: index * 0.1
                 }}
-                style={{ display: "inline-block" }}
+                className={styles.letter}
               >
-                {char}
+                {char === " " ? "\u00A0" : char}
               </Motion.span>
             ))}
           </Motion.h1>

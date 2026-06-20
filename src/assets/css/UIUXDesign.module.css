@@ -159,6 +159,7 @@
   margin-bottom: 1rem;
   font-size: 1.1rem;
   color: black;
+  text-align: left;
 }
 
 .planCard button {
@@ -177,7 +178,6 @@
 }
 
 /* 4K SCREENS */
-
 @media screen and (min-width: 2560px) {
   .hero h1 {
     font-size: 3.5rem;
@@ -228,7 +228,7 @@
   .marketing,
   .plans,
   .hero {
-    padding: 2rem 2rem;
+    padding: 0rem 2rem;
   }
 }
 

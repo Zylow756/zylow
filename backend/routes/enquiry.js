@@ -44,9 +44,9 @@ router.post("/send-enquiry", async (req, res) => {
         Phone: ${phone}
         Email: ${email}
         Company: ${company}
-      ProjectType: ${projectType}
-      Timeline: ${timeline}
-      Message: ${message}
+        ProjectType: ${projectType}
+        Timeline: ${timeline}
+        Message: ${message}
       `,
       attachments: [
         {

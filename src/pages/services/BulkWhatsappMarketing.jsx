@@ -83,7 +83,7 @@ const BulkWhatsappMarketing = () => {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>
-            Bulk WhatsApp Marketing <span>Services</span>
+            Bulk WhatsApp Marketing Services
           </h1>
 
           <p>

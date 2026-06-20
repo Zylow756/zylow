@@ -19,7 +19,6 @@ body {
 
 /* HERO SECTION */
 .hero {
-  min-height: 75vh;
   padding: 2rem 2rem;
   display: flex;
   align-items: center;
@@ -73,7 +72,7 @@ body {
 
 .sectionHeading p {
   font-size: 1.1rem;
-  color: #6b7280;
+  color: #424242;
   text-align: justify;
   text-justify: inter-word;
 }

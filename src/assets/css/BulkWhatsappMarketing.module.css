@@ -37,10 +37,6 @@
   margin-bottom: 2rem;
 }
 
-.heroContent h1 span {
-  color: black;
-}
-
 .heroContent p {
   font-size: 1.3rem;
   color: #515152;
@@ -164,6 +160,7 @@
 .planCard ul {
   list-style: none;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 .planCard ul li {
@@ -216,7 +213,7 @@
 }
 
 .keyCard p {
-  color: #9b9c9e;
+  color: #676768;
   line-height: 1.3;
   text-align: justify;
   text-justify: inter-word;

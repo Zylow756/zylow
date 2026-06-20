@@ -26,6 +26,7 @@ const Contact = () => {
               <h3>Customer Support</h3>
               <p>📞 +91-94688-70744</p>
               <p>✉️ zylowwebsolution@gmail.com</p>
+              <p>✉️ enquiryzylowweb@gmail.com</p>
               <p>Mon–Sat: 10 AM – 7 PM</p>
             </div>
 
@@ -33,12 +34,14 @@ const Contact = () => {
               <h3>Business & Seller Support</h3>
               <p>📞 +91-94688-70744</p>
               <p>✉️ zylowwebsolution@gmail.com</p>
+              <p>✉️ enquiryzylowweb@gmail.com</p>
               <p>📱 WhatsApp: +91-94688-70744</p>
             </div>
 
             <div className={styles.card}>
               <h3>Partnership & Collaboration</h3>
               <p>✉️ zylowwebsolution@gmail.com</p>
+              <p>✉️ enquiryzylowweb@gmail.com</p>
               <p>For marketing, sponsorships & business tie-ups</p>
             </div>
 
@@ -46,12 +49,14 @@ const Contact = () => {
               <h3>Community & Welfare Assistance</h3>
               <p>📞 +91-94688-70744</p>
               <p>✉️ zylowwebsolution@gmail.comm</p>
+              <p>✉️ enquiryzylowweb@gmail.com</p>
               <p>Emergency help (blood/plasma assistance)</p>
             </div>
 
             <div className={styles.card}>
               <h3>Careers</h3>
               <p>✉️ zylowwebsolution@gmail.com</p>
+              <p>✉️ enquiryzylowweb@gmail.com</p>
               <p>Join the Zylow team and grow with us</p>
             </div>
 

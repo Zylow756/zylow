@@ -1,12 +1,3 @@
-/* ===== BACKGROUND ===== */
-.rootImage {
-  min-height: 100vh;
-  padding-bottom: clamp(40px, 4vw, 80px);
-  background-image:  url("../images/backgroundImage.png");
-  background-size: cover;
-  background-position: center;
-}
-
 .container {
   font-family: sans-serif;
   padding: clamp(20px, 4vw, 80px);
@@ -49,6 +40,10 @@
 
 .directionBtn {
   margin-bottom: 3vh;
+}
+
+.directionBtn a {
+  color: blue;
 }
 
 /* WRAPPER */
@@ -164,8 +159,4 @@
   .contactWrapper {
     grid-template-columns: 1fr;
   }
-
-  .rootImage {
-  background-image: url("../images/backgroundImage.png");
-}
 }
