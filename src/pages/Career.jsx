@@ -111,7 +111,7 @@ const Career = ({ onClose, job }) => {
         data.append("resume", formData.resume);
 
         try {
-      const API = import.meta.env.VITE_API_URL;
+            const API = import.meta.env.VITE_API_URL;
             const res = await fetch(`${API}/api/send-email`, {
                 method: "POST",
                 body: data,
