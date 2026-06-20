@@ -1,7 +1,7 @@
+/* eslint-env node */
 import express from "express";
 import nodemailer from "nodemailer";
 import XLSX from "xlsx";
-import process from "node:process";
 
 const router = express.Router();
 

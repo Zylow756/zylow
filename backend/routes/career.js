@@ -1,13 +1,18 @@
+/* eslint-env node */
 import express from "express";
 import nodemailer from "nodemailer";
 import multer from "multer";
-import process from "node:process";
 
 const router = express.Router();
 
 const upload = multer({ dest: "uploads/" });
 
+router.get("/check", (req, res) => {
+  res.send("Career route working");
+});
+
 router.post("/send-email", upload.single("resume"), async (req, res) => {
+  console.log("Career route loaded");
   try {
     const { name, phone, email, designation } = req.body;
 
@@ -29,12 +34,12 @@ router.post("/send-email", upload.single("resume"), async (req, res) => {
         Email: ${email}
         Designation: ${designation}
       `,
-      attachments: [
-        {
-          filename: req.file.originalname,
-          path: req.file.path,
-        },
-      ],
+      attachments: req.file
+  ? [{
+      filename: req.file.originalname,
+      path: req.file.path,
+    }]
+  : [],
     });
 
     res.json({ success: true });

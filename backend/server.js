@@ -1,9 +1,9 @@
+/* eslint-env node */
 import express from "express";
 import cors from "cors";
 import enquiryRoute from "./routes/enquiry.js";
 import careerRoute from "./routes/career.js";
 import dotenv from "dotenv";
-import process from "node:process";
 
 dotenv.config();
 
