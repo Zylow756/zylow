@@ -27,7 +27,7 @@ router.post("/send-email", upload.single("resume"), async (req, res) => {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to:  "enquiryzylowweb@gmail.com",
-      subject: "New Career Form Submission",
+      subject: "New Career Form Submission from Zylow Web Solution",
       text: `
         Name: ${name}
         Phone: ${phone}

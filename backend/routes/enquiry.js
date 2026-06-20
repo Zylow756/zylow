@@ -39,6 +39,15 @@ router.post("/send-enquiry", async (req, res) => {
       from: process.env.EMAIL_USER,
       to: "enquiryzylowweb@gmail.com",
       subject: "New Enquiry Form from Zylow Web Solution",
+      text: `
+        Name: ${name}
+        Phone: ${phone}
+        Email: ${email}
+        Company: ${company}
+      ProjectType: ${projectType}
+      Timeline: ${timeline}
+      Message: ${message}
+      `,
       attachments: [
         {
           filename: "enquiry.xlsx",
