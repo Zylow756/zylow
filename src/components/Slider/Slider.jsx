@@ -1,13 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// modules
 import { Autoplay, Pagination } from "swiper/modules";
-
-// styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import styles from "./Slider.module.css";
 
 const data = [
@@ -33,7 +28,6 @@ const Slider = () => {
   return (
     <div className={styles.wrapper}>
       <h2 className={styles.heading}>Our Experience</h2>
-
       <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={30}

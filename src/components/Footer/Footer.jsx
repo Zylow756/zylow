@@ -1,26 +1,87 @@
 import styles from './Footer.module.css';
-import {
-    FaFacebookF,
-    FaLinkedinIn,
-    FaInstagram,
-    FaYoutube
-} from "react-icons/fa";
+import React, { useState } from "react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import EnquiryPopup from '../../pages/Enquiry';
 
 const Footer = () => {
+    const [showEnquiry, setShowEnquiry] = useState(false);
+
     return (
         <footer className={styles.footer}>
-                <p className={styles.footerBottom}>
-                    © 2025 Zylow. All rights reserved.
-                </p>
-                <div className={styles.footerLinks}>
-                    <p>Quick Links</p>
-                    <div className={styles.footerSocialMedia}>
+            <div className={styles.container}>
+
+                {/* Left Section */}
+                <div className={styles.left}>
+                    <h3>Contact Us</h3>
+                    <div className={styles.info}>
+
+                        <div className={styles.contactItem}>
+                            <FaMapMarkerAlt className={styles.contactIcon} />
+                            <div className={styles.contactText}>
+                                <strong>Address</strong>
+                                <p>
+                                    267, Ganesh Nagar,<br />
+                                    Near Khade Ganesh Ji Temple,<br />
+                                    Kota [Rajasthan] - 324010
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className={styles.contactItem}>
+                            <FaPhoneAlt className={styles.contactIcon} />
+                            <div className={styles.contactText}>
+                                <strong>Call Us</strong>
+                                <p>+91-94688-70744</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* Quick Links */}
+                <div className={styles.links}>
+                    <h3>Quick Links</h3>
+                    <div className={styles.linkList}>
+                        <div className={styles.linkSeparatorLeft}>
+                            <Link to="/">Home</Link>
+                            <Link to="/about">About Us</Link>
+                            <Link to="/services">Services</Link>
+                        </div>
+                        <div className={styles.linkSeparatorRight}>
+                            <Link to="/showCasePage">Show Case</Link>
+                            <Link to="/contact">Contact Us</Link>
+                            <Link to="/jobVacancies">Job Vacancies</Link>
+                        </div>
+                    </div>
+                </div>
+                <section className={styles.footerCTA}>
+                    <h2>Ready to Grow Your Bussiness?</h2>
+                    <button onClick={() => setShowEnquiry(true)}>Enroll Now</button>
+                </section>
+
+                {/* Social */}
+                <div className={styles.social}>
+                    <h3>Get in Touch</h3>
+                    <div className={styles.socialIcons}>
                         <a href="https://www.facebook.com/profile.php?id=61586426829152" className={styles.socialIcons}><FaFacebookF /></a>
                         <a href="https://www.linkedin.com/in/zylow-community-2022203a6" className={styles.socialIcons}><FaLinkedinIn /></a>
                         <a href="https://www.instagram.com/zylow.in/" className={styles.socialIcons}><FaInstagram /></a>
                         <a href="https://www.youtube.com/@zylow-t1t" className={styles.socialIcons}><FaYoutube /></a>
                     </div>
                 </div>
+
+            </div>
+
+            {/* Bottom Bar */}
+            <div className={styles.bottomBar}>
+                <p>© 2025 Zylow. All rights reserved.</p>
+            </div>
+            {showEnquiry && (
+                <EnquiryPopup
+                    onClose={() => setShowEnquiry(false)}
+                />
+            )}
         </footer>
     );
 };

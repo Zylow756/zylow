@@ -16,7 +16,12 @@
 /* ===== SPACE BACKGROUND ===== */
 .rootImage {
   min-height: 100vh;
-  background-image: url("/src/assets/images/backgroundImage.png");
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("/src/assets/images/backgroundImage.png");
   background-size: cover;
   background-position: center;
   display: flex;

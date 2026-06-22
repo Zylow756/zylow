@@ -25,7 +25,6 @@ const Services = () => {
 
         {/* SERVICES */}
         <div className={styles.services}>
-
           {[
             {
               title: <>Website Development</>,

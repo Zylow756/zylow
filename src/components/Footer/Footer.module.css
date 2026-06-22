@@ -2,66 +2,249 @@
   padding: clamp(5px, 4vw, 20px);
   background: #f28237cb;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* important for mobile */
-  gap: clamp(20px, 3vw, 60px);
-}
-
-/* LEFT TEXT */
-.footerBottom {
-  font-size: clamp(14px, 1.2vw, 22px);
-  color: black;
-}
-
-/* RIGHT SIDE */
-.footerLinks {
-  display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
+  align-items: center;   
+  width: 100%;
 }
 
-/* TITLE */
-.footerLinks p {
-  font-size: clamp(16px, 1.4vw, 26px);
-  font-weight: 600;
-  color: black;
+.container {
+  width: min(95%, 2200px);
+  margin: 1rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(1rem, 3vw, 4rem);
+  border-bottom: 1px solid white;
+}
+
+.left,
+.social {
+  flex: 1;
+}
+
+.info {
+  width: 100%;
+  max-width: 25rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.contactIcon {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.contactText {
+  color: #fff;
+  line-height: 1.6;
+}
+
+.contactText strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.contactText p {
   margin: 0;
+  color: rgba(255, 255, 255, 0.753);
 }
 
-/* SOCIAL ICONS CONTAINER */
-.footerSocialMedia {
-  display: flex;
-  gap: clamp(10px, 1.5vw, 25px);
+.icon {
+  color: white;
 }
 
-/* ICON STYLE */
-.socialIcons {
-  width: clamp(35px, 3vw, 60px);
-  height: clamp(35px, 3vw, 60px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.9);
-  color: #f9873af8;
-  border-radius: 50%;
-  font-size: clamp(14px, 1.2vw, 24px);
+.links {
+  text-align: left;
+  flex: 1.5;
+}
+
+.links h3,
+.social h3,
+.left h3 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.links h3::after,
+.social h3::after,
+.left h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: clamp(50px, 4vw, 80px);
+  height: 3px;
+  background: white;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
   transition: all 0.3s ease;
 }
 
-.socialIcons:hover {
+.links a:hover {
+  text-decoration: underline;
+  transform: translateX(6px);
+}
+
+.linkList {
+  display: flex;
+  gap: 1rem;
+}
+
+.linkSeparatorLeft,
+.linkSeparatorRight {
+  flex: 1;
+}
+
+.socialIcons {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 15px;
+  align-items: center;
+}
+
+.socialIcons a {
+  width: clamp(45px, 3vw, 65px);
+  height: clamp(45px, 3vw, 65px);
   background: white;
-  transform: translateY(-5px) scale(1.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f28237cb;
+  font-size: clamp(16px, 1.2vw, 24px);
+  transition: 0.3s;
+}
+
+.socialIcons a:hover {
+  transform: translateY(-6px);
+  background: #f7cbafcb;
+  color: white;
+  box-shadow: 0 10px 20px rgba(255, 204, 51, 0.3);
+}
+
+.bottomBar {
+  margin-top: 1rem;
+  padding: 0.8rem 0;
+  text-align: center;
+}
+
+.bottomBar p {
+  color: white;
+  font-size: clamp(14px, 1vw, 20px);
+}
+
+.footerCTA {
+  flex: 0 0 260px;
+  max-width: 280px;
+  max-height: 180px;
+  text-align: center;
+  padding: 0.8rem;
+  background: #fff7f2;
+  border-radius: 1rem;
+}
+
+.footerCTA h2 {
+  color: #f86c0fcb;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+.footerCTA button {
+  background: #f28237cb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .footer {
+  .container {
     flex-direction: column;
+    text-align: center;
+    width: 95%;
+  }
+
+  .links,
+  .social,
+  .left {
+    width: 100%;
+  }
+
+  .links {
     text-align: center;
   }
 
-  .footerLinks {
-    align-items: center;
+  .info {
+    max-width: 100%;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .contactItem {
+    justify-content: flex-start;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .linkList {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .bottomBar {
+    text-align: center;
+  }
+
+  .footerCTA {
+    flex: none;
+    width: fit-content;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .container {
+    width: min(90%, 2600px);
+  }
+
+  .links a,
+  .info p {
+    font-size: 1.3rem;
+  }
+
+  .links h3,
+  .social h3,
+  .left h3 {
+    font-size: 2rem;
   }
 }

@@ -8,6 +8,7 @@
   color: #f28237f8;
   text-align: center;
   font-size: clamp(28px, 3vw, 42px);
+  font-weight: bold;
   margin-bottom: 40px;
 }
 

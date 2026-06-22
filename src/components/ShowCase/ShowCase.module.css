@@ -47,7 +47,7 @@
 /* CARD IMAGE */
 .serviceCard img {
   width: 100%;
-  height: clamp(150px, 20vw, 270px);
+  height: clamp(150px, 20vw, 200px);
   object-fit: fill;
 }
 
