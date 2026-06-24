@@ -45,177 +45,206 @@ const plans = [
 const features = [
   {
     icon: <FaWhatsapp />,
-    title: "Massive Reach",
+    title: <>Massive<br /> Reach</>,
     desc: "Send promotional campaigns, updates, and alerts to thousands instantly.",
+    bg: "#FEF2F2",
+    headingColor: "#DC2626",
+    subHeadingColor: "#991B1B",
   },
   {
     icon: <FaChartLine />,
     title: "Real-time Analytics",
     desc: "Track message delivery, open rates, and customer engagement in real time.",
+    bg: "#EEF2FF",
+    headingColor: "#4F46E5",
+    subHeadingColor: "#312E81",
   },
   {
     icon: <FaRobot />,
     title: "Smart Automation",
     desc: "Automate customer interactions with AI-powered WhatsApp chatbots.",
+    bg: "#ECFEFF",
+    headingColor: "#0891B2",
+    subHeadingColor: "#155E75",
   },
   {
     icon: <FaShieldAlt />,
     title: "Official API Integration",
     desc: "Safe and secure messaging through official WhatsApp Business API.",
+    bg: "#FDF4FF",
+    headingColor: "#C026D3",
+    subHeadingColor: "#86198F",
   },
   {
     icon: <FaUsers />,
     title: "Audience Segmentation",
     desc: "Target customers based on interests, location, and buying behavior.",
+    bg: "#F0FDF4",
+    headingColor: "#16A34A",
+    subHeadingColor: "#14532D",
   },
   {
     icon: <FaCheckCircle />,
     title: "Compliance & Security",
     desc: "100% compliant with Meta Policies, TRAI, and DPDP Act 2023.",
+    bg: "#EFF6FF",
+    headingColor: "#2563EB",
+    subHeadingColor: "#1E3A8A",
   },
 ];
 
-const BulkWhatsappMarketing = () => { 
-    return (
-        <>
-        <div className={styles.container}>
-      {/* HERO SECTION */}
-      <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1>
-            Bulk WhatsApp Marketing Services
-          </h1>
+const keyCard = [
 
-          <p>
-            Empower your business with high-conversion WhatsApp marketing
-            solutions by Zylow Web Solution. Reach customers instantly with
-            secure, scalable, and engaging campaigns.
-          </p>
-        </div>
-      </section>
+  {
+    title: "Interactive Buttons",
+    desc: "Add direct CTA buttons like “Visit Website” or “Call Now”.",
+    bg: "#FDF4FF",
+    headingColor: "#C026D3",
+    subHeadingColor: "#86198F",
+  },
+  {
+    title: "Green Tick Verification",
+    desc: "Assistance for official WhatsApp verification badge.",
+    bg: "#F0FDF4",
+    headingColor: "#16A34A",
+    subHeadingColor: "#14532D",
+  },
+  {
+    title: "Schedule & Forget",
+    desc: "Schedule campaigns in advance with automated delivery.",
+    bg: "#EFF6FF",
+    headingColor: "#2563EB",
+    subHeadingColor: "#1E3A8A",
+  },
+  {
+    title: "Rich Media Support",
+    desc: "Send PDFs, images, videos, and interactive messages.",
+    bg: "#FFF1F2",
+    headingColor: "#E11D48",
+    subHeadingColor: "#9F1239",
+  },
+]
 
-      {/* WHY CHOOSE */}
-      <section className={styles.whyChoose}>
-        <div className={styles.sectionTitle}>
-          <h2>Why Choose Our WhatsApp Marketing?</h2>
-          <p>
-            Powerful tools designed to maximize engagement and business growth.
-          </p>
-        </div>
+const BulkWhatsappMarketing = () => {
+  return (
+    <>
+      <div className={styles.container}>
+        {/* HERO SECTION */}
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <h1>
+              Bulk WhatsApp Marketing Services
+            </h1>
 
-        <div className={styles.featureGrid}>
-          {features.map((item, index) => (
-            <div className={styles.featureCard} key={index}>
-              <div className={styles.icon}>
-                {item.icon} 
-                <h3>{item.title}</h3>
+            <p>
+              Empower your business with high-conversion WhatsApp marketing
+              solutions by Zylow Web Solution. Reach customers instantly with
+              secure, scalable, and engaging campaigns.
+            </p>
+          </div>
+        </section>
+
+        {/* WHY CHOOSE */}
+        <section className={styles.whyChoose}>
+          <div className={styles.sectionTitle}>
+            <h2>Why Choose Our WhatsApp Marketing?</h2>
+            <p>
+              Powerful tools designed to maximize engagement and business growth.
+            </p>
+          </div>
+
+          <div className={styles.featureGrid}>
+            {features.map((item, index) => (
+              <div className={styles.featureCard} key={index} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
+                <div className={styles.icon} style={{ color: item.headingColor }}>
+                  {item.icon}
+                  <h3 style={{ color: item.headingColor }}>{item.title}</h3>
                 </div>
-             
-              <p>{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      {/* PRICING */}
-      <section className={styles.pricing}>
-        <div className={styles.sectionTitle}>
-          <h2>Our Service Plans (2026 Standard)</h2>
-          <p>Choose the perfect package for your business needs.</p>
-        </div>
+                <p style={{ color: item.subHeadingColor }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        <div className={styles.pricingGrid}>
-          {plans.map((plan, index) => (
-            <div className={styles.planCard} key={index}>
-              <h3>{plan.title}</h3>
-              <h4>{plan.price}</h4>
-              <span>{plan.best}</span>
-
-              <ul>
-                {plan.features.map((feature, i) => (
-                  <li key={i}>✔ {feature}</li>
-                ))}
-              </ul>
-
-              {/*<button>Get Quote</button>*/}
-            </div>
-          ))}
-        </div>
-
-        <p className={styles.note}>
-          * Official Meta conversation charges (₹0.15 - ₹0.90/message)
-          apply separately as per latest 2026 guidelines.
-        </p>
-      </section>
-
-      {/* KEY FEATURES */}
-      <section className={styles.keyFeatures}>
-        <div className={styles.sectionTitle}>
-          <h2>Key Features for Your Business</h2>
-        </div>
-
-        <div className={styles.keyGrid}>
-          <div className={styles.keyCard}>
-            <h3>Interactive Buttons</h3>
-            <p>
-              Add direct CTA buttons like “Visit Website” or “Call Now”.
-            </p>
+        {/* PRICING */}
+        <section className={styles.pricing}>
+          <div className={styles.sectionTitle}>
+            <h2>Our Service Plans (2026 Standard)</h2>
+            <p>Choose the perfect package for your business needs.</p>
           </div>
 
-          <div className={styles.keyCard}>
-            <h3>Green Tick Verification</h3>
-            <p>
-              Assistance for official WhatsApp verification badge.
-            </p>
+          <div className={styles.pricingGrid}>
+            {plans.map((plan, index) => (
+              <div className={styles.planCard} key={index}>
+                <h3>{plan.title}</h3>
+                <h4>{plan.price}</h4>
+                <span>{plan.best}</span>
+
+                <ul>
+                  {plan.features.map((feature, i) => (
+                    <li key={i}>✔ {feature}</li>
+                  ))}
+                </ul>
+
+                {/*<button>Get Quote</button>*/}
+              </div>
+            ))}
           </div>
 
-          <div className={styles.keyCard}>
-            <h3>Schedule & Forget</h3>
-            <p>
-              Schedule campaigns in advance with automated delivery.
-            </p>
-          </div>
-
-          <div className={styles.keyCard}>
-            <h3>Rich Media Support</h3>
-            <p>
-              Send PDFs, images, videos, and interactive messages.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* COMPLIANCE */}
-      <section className={styles.compliance}>
-        <div className={styles.complianceBox}>
-          <h2>Compliance & Security</h2>
-
-          <p>
-            We ensure every campaign follows the latest regulations and
-            privacy standards.
+          <p className={styles.note}>
+            * Official Meta conversation charges (₹0.15 - ₹0.90/message)
+            apply separately as per latest 2026 guidelines.
           </p>
+        </section>
 
-          <div className={styles.complianceList}>
-            <div>
-              <span>1</span>
-              <p>TRAI Regulations with DND filtering</p>
-            </div>
+        {/* KEY FEATURES */}
+        <section className={styles.keyFeatures}>
+          <div className={styles.sectionTitle}>
+            <h2>Key Features for Your Business</h2>
+          </div>
 
-            <div>
-              <span>2</span>
-              <p>DPDP Act 2023 compliant data handling</p>
-            </div>
+          <div className={styles.keyGrid}>
+            {keyCard.map((item, i) => (
+              <div className={styles.keyCard} key={i} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
+                <h3 style={{ color: item.headingColor }}>{item.title}</h3>
+                <p style={{ color: item.subHeadingColor }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-            <div>
-              <span>3</span>
-              <p>Official Meta-approved channels only</p>
+        {/* COMPLIANCE */}
+        <section className={styles.compliance}>
+          <div className={styles.complianceBox}>
+            <h2>Compliance & Security</h2>
+
+            <p>
+              We ensure every campaign follows the latest regulations and
+              privacy standards.
+            </p>
+
+            <div className={styles.complianceList}>
+              <div>
+                <span>1</span>
+                <p>TRAI Regulations with DND filtering</p>
+              </div>
+
+              <div>
+                <span>2</span>
+                <p>DPDP Act 2023 compliant data handling</p>
+              </div>
+
+              <div>
+                <span>3</span>
+                <p>Official Meta-approved channels only</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      {/*<section className={styles.cta}>
+        {/* CTA */}
+        {/*<section className={styles.cta}>
         <h2>Ready to Grow Your Business?</h2>
 
         <p>
@@ -225,8 +254,8 @@ const BulkWhatsappMarketing = () => {
 
         <button>Chat on WhatsApp</button>
       </section>*/}
-    </div>
-        </>
-    )
+      </div>
+    </>
+  )
 }
 export default BulkWhatsappMarketing;

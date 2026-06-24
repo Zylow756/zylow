@@ -13,7 +13,7 @@
 }
 
 
-/* ===== SPACE BACKGROUND ===== */
+/* ===== BACKGROUND ===== */
 .rootImage {
   min-height: 100vh;
   background-image:
@@ -31,4 +31,13 @@
 .content {
   flex: 1;
   padding-bottom: 40px;
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px){
+  .rootImage {
+  background-image: url("../images/backgroundImage.png");
+}
 }

@@ -7,31 +7,49 @@ const services = [
     title: "User Research & Strategy",
     description:
       "Analyzing target audiences to understand their pain points, behavior, and business goals.",
+    bg: "#FEF2F2",
+    headingColor: "#DC2626",
+    subHeadingColor: "#991B1B",
   },
   {
     title: "Wireframing & Prototyping",
     description:
       "Creating structured blueprints and interactive prototypes before development begins.",
+    bg: "#EEF2FF",
+    headingColor: "#4F46E5",
+    subHeadingColor: "#312E81",
   },
   {
     title: "Visual Design (UI)",
     description:
       "Crafting visually stunning interfaces with modern typography, colors, and branding.",
+    bg: "#ECFEFF",
+    headingColor: "#0891B2",
+    subHeadingColor: "#155E75",
   },
   {
     title: "Interaction Design",
     description:
       "Designing engaging interactions, smooth animations, and intuitive navigation systems.",
+    bg: "#FDF4FF",
+    headingColor: "#C026D3",
+    subHeadingColor: "#86198F",
   },
   {
     title: "Usability Testing",
     description:
       "Testing with real users to identify friction points and improve user satisfaction.",
+    bg: "#F0FDF4",
+    headingColor: "#16A34A",
+    subHeadingColor: "#14532D",
   },
   {
     title: "Responsive Design",
     description:
       "Ensuring seamless experiences across desktop, tablet, and mobile devices.",
+    bg: "#EFF6FF",
+    headingColor: "#2563EB",
+    subHeadingColor: "#1E3A8A",
   },
 ];
 
@@ -66,10 +84,10 @@ const plans = [
   },
 ];
 
-const UiDesign = () => { 
-    return (
-        <>
-         <div className={styles.container}>
+const UiDesign = () => {
+  return (
+    <>
+      <div className={styles.container}>
         {/* Hero Section */}
         <section className={styles.hero}>
           <Motion.div
@@ -98,13 +116,14 @@ const UiDesign = () => {
               <Motion.div
                 key={index}
                 className={styles.card}
+                style={{ backgroundColor: service.bg, border: `3px solid ${service.subHeadingColor}`, }}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
+                <h3 style={{ color: service.headingColor, }}>{service.title}</h3>
+                <p style={{ color: service.subHeadingColor, }}>{service.description}</p>
               </Motion.div>
             ))}
           </div>
@@ -115,20 +134,20 @@ const UiDesign = () => {
           <h2>Why Choose Zylow?</h2>
 
           <div className={styles.taglineContainer}>
-            <div className={styles.tagline}>
+            <div className={styles.tagline1}>
               "Design That Speaks, Experience That Works."
             </div>
 
-            <div className={styles.tagline}>
+            <div className={styles.tagline2}>
               "Your Business Deserves More Than Just a Website."
             </div>
 
-            <div className={styles.tagline}>
+            <div className={styles.tagline3}>
               "From Concept to Conversion: UI/UX Solutions Tailored for Local
               Businesses."
             </div>
 
-            <div className={styles.tagline}>
+            <div className={styles.tagline4}>
               "Smarter Designs for Faster Growth."
             </div>
           </div>
@@ -165,7 +184,7 @@ const UiDesign = () => {
         </section>
       </div>
 
-        </>
-    )
+    </>
+  )
 }
 export default UiDesign;

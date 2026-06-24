@@ -15,18 +15,15 @@
   background: #fff;
   padding: clamp(20px, 2vw, 40px);
   border-radius: clamp(10px, 1vw, 20px);
-  box-shadow: 0 clamp(4px, 0.5vw, 12px) clamp(10px, 1vw, 25px) rgba(0, 0, 0, 0.08);
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 clamp(6px, 0.7vw, 18px) clamp(16px, 1.5vw, 35px) rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
   margin-top: 0;
-  color: #0e1e44;
   margin-bottom: 10px;
   font-size: clamp(18px, 1.5vw, 32px);
 }
@@ -35,14 +32,10 @@
   line-height: 1.6;
   margin: 5px 0;
   font-size: clamp(14px, 1vw, 20px);
-  color: rgb(44, 44, 44);
 }
 
 .directionBtn {
   margin-bottom: 3vh;
-}
-
-.directionBtn a {
   color: blue;
 }
 
@@ -51,107 +44,6 @@
   display: flexbox;
   grid-template-columns: 1fr 3fr;
   gap: clamp(20px, 4vw, 80px);
-}
-
-/* LEFT SIDE */
-.info {
-  padding: clamp(10px, 2vw, 40px);
-}
-
-.details p {
-  margin-top: 10px;
-  font-size: clamp(14px, 1vw, 20px);
-}
-
-/* CONTACT BOX */
-.contact {
-  background: #fff;
-  padding: clamp(20px, 2vw, 50px);
-  border-radius: clamp(10px, 1vw, 20px);
-  box-shadow: 0 clamp(4px, 0.5vw, 15px) clamp(15px, 1.5vw, 35px) rgba(0, 0, 0, 0.1);
-}
-
-.contact h2 {
-  margin-bottom: 20px;
-  font-size: clamp(20px, 2vw, 40px);
-}
-
-/* EACH ROW */
-.item {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(10px, 1.5vw, 25px);
-  margin-bottom: clamp(12px, 1.5vw, 25px);
-}
-
-.text {
-  line-height: 1.6;
-  color: black;
-}
-
-.text p {
-  margin: 0;
-  font-size: clamp(14px, 1.2vw, 22px);
-  color: #192e80;
-}
-
-/* ICON */
-.icon {
-  width: clamp(18px, 1.5vw, 30px);
-  font-size: clamp(16px, 1.5vw, 28px);
-  color: #ffbe93f8;
-  flex-shrink: 0;
-  margin-top: 3px;
-}
-
-/* BUTTON */
-.btnIcon {
-  display: flex;
-  align-items: center;
-  gap: clamp(6px, 1vw, 15px);
-  background-color: #ffbe93f8;
-  color: #fff;
-  border-radius: clamp(5px, 0.5vw, 10px);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: clamp(14px, 1vw, 20px);
-  margin: clamp(4px, 1vw, 50px);
-}
-
-/* FORM */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10px, 1.5vw, 25px);
-  margin-top: 5vh;
-  padding: clamp(20px, 3vw, 60px);
-  border-radius: clamp(10px, 1vw, 20px);
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 clamp(10px, 1vw, 30px) clamp(25px, 2vw, 60px) rgba(0, 0, 0, 0.1);
-}
-
-.form input,
-.form textarea {
-  padding: clamp(10px, 1vw, 20px);
-  border-radius: clamp(5px, 0.5vw, 10px);
-  border: 1px solid #ddd;
-  outline: none;
-  font-size: clamp(14px, 1vw, 18px);
-}
-
-.form button {
-  padding: clamp(10px, 1vw, 20px);
-  background: #ffbe93f8;
-  color: black;
-  border: none;
-  border-radius: clamp(6px, 0.5vw, 12px);
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: clamp(14px, 1vw, 18px);
-}
-
-.form button:hover {
-  background: #f8b588f8;
 }
 
 /* MOBILE */

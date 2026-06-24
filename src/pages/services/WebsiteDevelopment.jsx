@@ -2,6 +2,7 @@ import styles from '../../assets/css/Pricing.module.css';
 import Nav from '../../components/Nav/Nav';
 import Footer from '../../components/Footer/Footer';
 import { motion as Motion } from "framer-motion";
+import { FaGlobe, FaCloud } from 'react-icons/fa';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 60 },
@@ -128,8 +129,8 @@ const WebsiteDevelopment = () => {
           >
             <h3>Annual Maintenance Charges [AMC]</h3>
             <ul>
-              <li>🌐 Domain: As per actual</li>
-              <li>☁️ Hosting: Rs1500/year</li>
+              <li><FaGlobe /> Domain: As per actual</li>
+              <li><FaCloud /> Hosting: Rs1500/year</li>
             </ul>
           </Motion.div>
 

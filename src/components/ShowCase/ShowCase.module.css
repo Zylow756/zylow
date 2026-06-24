@@ -1,12 +1,3 @@
-/* ===== BACKGROUND ===== */
-.rootImage {
-  min-height: 100vh;
-  padding-bottom: clamp(40px, 4vw, 80px);
-  background-image: url("../../assets/images/backgroundImage.png");
-  background-size: cover;
-  background-position: center;
-}
-
 .expertise {
  /* max-width: var(--container-width);*/
   margin: 0.5vw;
@@ -30,7 +21,6 @@
 
 /* CARD */
 .serviceCard {
-  background: white;
   border-radius: clamp(20px, 2vw, 40px);
   overflow: hidden;
   width: 100%;
@@ -48,7 +38,7 @@
 .serviceCard img {
   width: 100%;
   height: clamp(150px, 20vw, 200px);
-  object-fit: fill;
+  object-fit: cover;
 }
 
 /* CARD TEXT */
@@ -58,7 +48,26 @@
   text-align: center;
   font-size: clamp(18px, 1.5vw, 34px);
   font-weight: 600;
-  color: #333;
+}
+
+.viewMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.viewMoreBtn {
+  padding: 12px 30px;
+  background: #f28c38;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.viewMoreBtn:hover {
+  opacity: 0.9;
 }
 
 /* Tablet */
@@ -73,8 +82,4 @@
   .servicesGrid{
     grid-template-columns: 1fr;
   }
-
-  .rootImage {
-  background-image: url("../images/backgroundImage.png");
-}
 }

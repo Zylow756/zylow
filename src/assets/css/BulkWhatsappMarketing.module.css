@@ -51,19 +51,12 @@
 .sectionTitle {
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: 0;
 }
 
 .sectionTitle h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
   font-weight: 700;
-}
-
-.sectionTitle p {
-  color: #78797b;
-  font-size: 1.4rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 /* WHY CHOOSE */
@@ -79,34 +72,28 @@
 }
 
 .featureCard {
-  background: white;
   padding: 2rem;
   border-radius: 30px;
   transition: 0.4s;
-  border: 1px solid #1f2937;
 }
 
 .featureCard:hover {
   transform: translateY(-10px);
-  border-color: 1px solid #fa9958f8;
 }
 
 .icon {
   display: flex;
   gap: 2rem;
   font-size: 3rem;
-  color: #f99e61f8;
 }
 
 .featureCard h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: black;
   line-height: 2rem;
 }
 
 .featureCard p {
-  color: rgb(144, 139, 139);
   line-height: 1.8;
   font-size: 1.1rem;
   text-align: justify;
@@ -188,32 +175,28 @@
 
 /* KEY FEATURES */
 .keyFeatures {
-  padding: 6rem 7rem;
+  padding: 3rem 3rem;
   background-color: #fed3b575;
 }
 
 .keyGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .keyCard {
-  background: white;
   padding: 2rem;
   border-radius: 25px;
-  border-left: 6px solid #ffbe93f8;
 }
 
 .keyCard h3 {
   font-size: 1.8rem;
   line-height: 1;
   margin-bottom: 1rem;
-  color: black;
 }
 
 .keyCard p {
-  color: #676768;
   line-height: 1.3;
   text-align: justify;
   text-justify: inter-word;

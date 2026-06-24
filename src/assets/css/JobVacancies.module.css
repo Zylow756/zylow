@@ -28,23 +28,18 @@
 }
 
 .jobCard {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .jobCard:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .jobTitle {
   font-size: 20px;
-  color: #1a202c;
   margin-bottom: 10px;
 }
 
@@ -54,23 +49,18 @@
   margin-bottom: 15px;
 }
 
-.badge {
-  background-color: #edf2f7;
-  color: #4a5568;
+.badge,
+.badgeSalary {
   padding: 4px 10px;
   border-radius: 4px;
   font-size: 13px;
   font-weight: 600;
-}
-
-.badgeSalary {
-  background-color: #def7ec;
-  color: #03543f;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .jobDetails p {
-  font-size: 14px;
-  color: #4a5568;
+  font-size: 1rem;
   margin-bottom: 8px;
   line-height: 1.5;
   text-align: justify;
@@ -80,18 +70,14 @@
 .applyBtn {
   margin-top: 12px;
   padding: 8px 16px;
-  background-color: #ffbe93f8;
-  color: black;
   border: none;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
-}
-
-.applyBtn:hover {
-  background-color: #fcb484f8;
+  color: white;
+  border-radius: 8px;
 }
 
 /* Responsive breakpoint for mobile devices */

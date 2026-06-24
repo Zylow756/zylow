@@ -2,10 +2,59 @@ import React from "react";
 import styles from "../../assets/css/PaidAds.module.css";
 import { motion as Motion } from "framer-motion";
 
-const PaidAdvertisement = () => { 
-    return (
-        <>
-        <div className={styles.page}>
+const PaidAdvertisement = () => {
+
+  const card = [
+    {
+      title: "Direct Lead Generation",
+      desc: "Capture customer details like names, phone numbers, and emails directly through optimized platform forms.",
+      bg: "#EEF2FF",
+      headingColor: "#4F46E5",
+      subHeadingColor: "#312E81",
+    },
+    {
+      title: <>Targeted<br /> Reach</>,
+      desc: "Reach the right audience using advanced demographics, geo-targeting, and behavioral segmentation.",
+      bg: "#ECFEFF",
+      headingColor: "#0891B2",
+      subHeadingColor: "#155E75",
+    },
+    {
+      title: "Conversion Optimization",
+      desc: "High-performance creatives and landing pages designed to turn viewers into paying customers.",
+      bg: "#FDF4FF",
+      headingColor: "#C026D3",
+      subHeadingColor: "#86198F",
+    },
+  ];
+
+  const cardDark = [
+    {
+      title: "Content Management",
+      desc: "Creative graphics, reels, and videos aligned with your brand’s identity and audience expectations.",
+      bg: "#F0FDF4",
+      headingColor: "#16A34A",
+      subHeadingColor: "#14532D",
+    },
+    {
+      title: "Audience Engagement",
+      desc: "Professional handling of comments, messages, and community interaction to strengthen customer relationships.",
+      bg: "#EFF6FF",
+      headingColor: "#2563EB",
+      subHeadingColor: "#1E3A8A",
+    },
+    {
+      title: "Brand Awarenes",
+      desc: "Maintain consistent visibility across Instagram, Facebook, and WhatsApp for maximum local impact.",
+      bg: "#FFF1F2",
+      headingColor: "#E11D48",
+      subHeadingColor: "#9F1239",
+    },
+  ];
+
+  return (
+    <>
+      <div className={styles.page}>
         {/* Hero Section */}
         <section className={styles.hero}>
           <Motion.div
@@ -46,29 +95,12 @@ const PaidAdvertisement = () => {
           </Motion.div>
 
           <div className={styles.cards}>
-            <div className={styles.card}>
-              <h3>Direct Lead Generation</h3>
-              <p>
-                Capture customer details like names, phone numbers, and emails
-                directly through optimized platform forms.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <h3>Targeted<br /> Reach</h3>
-              <p>
-                Reach the right audience using advanced demographics,
-                geo-targeting, and behavioral segmentation.
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <h3>Conversion Optimization</h3>
-              <p>
-                High-performance creatives and landing pages designed to turn
-                viewers into paying customers.
-              </p>
-            </div>
+            {card.map((item, i) => (
+              <div className={styles.card} key={i} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
+                <h3 style={{ color: item.headingColor, }}> {item.title} </h3>
+                <p style={{ color: item.subHeadingColor, }}>{item.desc}</p>
+              </div>
+            ))}
           </div>
 
           {/* Plans */}
@@ -124,29 +156,12 @@ const PaidAdvertisement = () => {
           </Motion.div>
 
           <div className={styles.cards}>
-            <div className={styles.cardDark}>
-              <h3>Content Management</h3>
-              <p>
-                Creative graphics, reels, and videos aligned with your brand’s
-                identity and audience expectations.
-              </p>
-            </div>
-
-            <div className={styles.cardDark}>
-              <h3>Audience Engagement</h3>
-              <p>
-                Professional handling of comments, messages, and community
-                interaction to strengthen customer relationships.
-              </p>
-            </div>
-
-            <div className={styles.cardDark}>
-              <h3>Brand Awareness</h3>
-              <p>
-                Maintain consistent visibility across Instagram, Facebook, and
-                WhatsApp for maximum local impact.
-              </p>
-            </div>
+            {cardDark.map((item, i) => (
+              <div className={styles.cardDark} key={i} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
+                <h3 style={{ color: item.headingColor }}>{item.title}</h3>
+                <p style={{ color: item.subHeadingColor }}>{item.desc}</p>
+              </div>
+            ))}
           </div>
 
           {/* Plans */}
@@ -179,7 +194,7 @@ const PaidAdvertisement = () => {
                 <li>High Engagement Campaigns</li>
               </ul>
 
-             {/*<button>Get Quote</button>*/}
+              {/*<button>Get Quote</button>*/}
             </div>
           </div>
         </section>
@@ -223,7 +238,7 @@ const PaidAdvertisement = () => {
           </div>
         </section>
       </div>
-        </>
-    )
+    </>
+  )
 }
 export default PaidAdvertisement;

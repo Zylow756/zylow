@@ -66,12 +66,10 @@
   border-radius: 30px;
   backdrop-filter: blur(15px);
   transition: 0.4s ease;
-  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .card:hover {
   transform: translateY(-10px);
-  background: #f8bc95e8;
 }
 
 .card h3 {
@@ -101,15 +99,39 @@
   gap: 2rem;
 }
 
-.tagline {
+  .tagline1 {
+    background-color: #FDF4FF;
+    color: #C026D3;
+    border: 3px solid #86198F;
+  }
+
+  .tagline2 {
+    background-color: #ECFEFF;
+    color: #0891B2;
+    border: 3px solid #155E75;
+  }
+
+  .tagline3 {
+    background-color: #F0FDF4;
+    color: #16A34A;
+    border: 3px solid #14532D;
+  }
+
+  .tagline4 {
+    background-color: #EFF6FF;
+    color: #2563EB;
+    border: 3px solid #1E3A8A;
+  }
+
+.tagline1,
+  .tagline2,
+  .tagline3,
+  .tagline4 {
   padding: 3rem;
   border-radius: 25px;
   font-size: 1.6rem;
   line-height: 2.5rem;
   font-weight: 500;
-  background: white;
-  color: black;
-  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* PLANS */
@@ -201,7 +223,10 @@
 
   .card p,
   .planCard ul li,
-  .tagline {
+  .tagline1,
+  .tagline2,
+  .tagline3,
+  .tagline4 {
     font-size: 1.5rem;
     line-height: 2.8rem;
   }
@@ -251,7 +276,10 @@
 
   .card,
   .planCard,
-  .tagline {
+  .tagline1,
+  .tagline2,
+  .tagline3,
+  .tagline4 {
     padding: 2rem;
   }
 }

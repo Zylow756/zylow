@@ -71,10 +71,9 @@
   margin: auto;
 }
 
-/* COMMON */
 .sectionHeader {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .sectionHeader span {
@@ -86,7 +85,6 @@
 }
 
 .sectionHeader h2 {
-  margin-top: 1rem;
   font-size: 3rem;
   font-weight: 700;
   color: black;
@@ -110,7 +108,7 @@
 
 /* SERVICES */
 .services {
-  padding: 6rem 7rem;
+  padding: 2rem 2rem;
   background-color: #ffbe93f8;
 }
 
@@ -121,8 +119,6 @@
 }
 
 .serviceCard {
-  background: white;
-  border: 1px solid #ffbe93f8;
   padding: 2rem;
   border-radius: 30px;
   transition: 0.4s;
@@ -131,24 +127,20 @@
 
 .serviceCard:hover {
   transform: translateY(-10px);
-  border-color: black;
 }
 
 .cardNumber {
   font-size: 4rem;
   font-weight: 800;
-  color: #f79d61c7;
 }
 
 .serviceCard h3 {
   font-size: 2rem;
   margin: 1.5rem 0;
-  color: black;
   line-height: 1.7rem;
 }
 
 .serviceCard p {
-  color: #7e7f81;
   line-height: 1.8;
   font-size: 1.1rem;
   text-align: justify;
@@ -248,33 +240,27 @@
 }
 
 .reasonCard {
-  background: white;
   padding: 2rem;
   border-radius: 30px;
   transition: 0.4s;
-  border: 1px solid #f88940f8;
 }
 
 .reasonCard:hover {
-  border-color: #f88940f8;
   transform: translateY(-8px);
 }
 
 .reasonCard span {
   font-size: 4rem;
   font-weight: 800;
-  color: #f88940f8;
 }
 
 .reasonCard h3 {
   margin: 1rem 0;
   font-size: 2rem;
-  color: black;
   line-height: 2rem;
 }
 
 .reasonCard p {
-  color: #787a7b;
   line-height: 1.4;
   font-size: 1.1rem;
   text-align: justify;
@@ -300,8 +286,6 @@
   margin-top: 2rem;
   color: #575858;
   font-size: 1.2rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .cta button {

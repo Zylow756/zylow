@@ -1,105 +1,171 @@
-import React from "react";
 import styles from "../assets/css/About.module.css";
-import Nav from '../components/Nav/Nav';
-import Footer from '../components/Footer/Footer';
+import Enquiry from './Enquiry';
+import React, { useState } from "react";
+import {
+  FaLaptopCode,
+  FaMobileAlt,
+  FaPalette,
+  FaBullhorn,
+  FaSearch,
+  FaWhatsapp,
+  FaPenNib,
+  FaChartLine,
+  FaRocket,
+  FaHandshake
+} from "react-icons/fa";
 
 const About = () => {
+  const [showEnquiry, setShowEnquiry] = useState(false);
+
   return (
-    <div className={styles.aboutContainer}>
+    <div className={styles.aboutPage}>
+
       {/* HERO */}
       <section className={styles.hero}>
-        <h1>Zylow — A Digital Journey from Local to Global</h1>
-        <p>Empowering Local, Connecting Global</p>
+        <div className={styles.heroContent}>
+          <h1>We Build The Digital Engines</h1>
+            <h2> That Power Modern Business Growth</h2>
+          <p>
+            At Zylow Web Solutions, we don't just write code or design screens—we engineer
+            digital experiences that turn clicks into customers and ideas into
+            scalable realities.
+          <br/>
+            Whether you're a startup launching your first product or an
+            established business ready to dominate your market, we integrate
+            strategy, design, and aggressive marketing to make it happen.
+          </p>
+        </div>
       </section>
 
-      {/* EVOLUTION */}
-      <section className={styles.section}>
-        <h2>The Evolution of a Vision</h2>
+      {/* COMPANY INTRO */}
+      <section className={styles.intro}>
+          <h2>Who We Are</h2>
+          <p>
+            We bridge the gap between complex technology and high-impact
+            marketing. Our mission is simple: help businesses grow faster,
+            convert better, and scale smarter through technology-driven
+            solutions.
+          </p>
+      </section>
+
+      {/* SERVICES */}
+      <section className={styles.services}>
+        <div className={styles.container}>
+          <h2>What We Do</h2>
+          <div className={styles.serviceGrid}>
+            <div className={styles.serviceCard} style={{backgroundColor: "#EEF2FF",color: "#4F46E5",border: "3px solid #312E81"}}>
+              <FaLaptopCode style={{color: "#312E81"}} />
+              <h3>Digital Engineering</h3>
+              <ul>
+                <li>Custom Website Development</li>
+                <li>Responsive Business Websites</li>
+                <li>Custom App Development</li>
+              </ul>
+            </div>
+
+            <div className={styles.serviceCard} style={{backgroundColor: "#ECFEFF",color: "#0891B2",border: "3px solid #155E75"}}>
+              <FaPalette style={{color: "#155E75"}} />
+              <h3>Design & Experience</h3>
+              <ul>
+                <li>UI Design</li>
+                <li>UX Research</li>
+                <li>Brand Experience Design</li>
+              </ul>
+            </div>
+
+            <div className={styles.serviceCard} style={{backgroundColor: "#FDF4FF",color: "#C026D3",border: "3px solid #86198F"}}>
+              <FaChartLine style={{color: "#86198F"}} />
+              <h3>Growth & Visibility</h3>
+              <ul className={styles.serviceList}>
+                <li>Paid Advertisement</li>
+                <li> SEO Optimization</li>
+                <li>WhatsApp Marketing</li>
+                <li>Content Marketing</li>
+                <li>Lead Generation Campaigns</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* WHY US */}
+      <section className={styles.whyUs}>
+        <div className={styles.container}>
+          <h2>Why Partner With Us?</h2>
+
+          <div className={styles.whyGrid}>
+            <div className={styles.whyCard} style={{ backgroundColor: "#F0FDF4",color: "#16A34A",border: "3px solid #14532D" }}>
+              <FaRocket style={{color: "#14532D"}}  />
+              <h3>Full-Funnel Advantage</h3>
+              <p style={{color: "#14532D"}} >
+                We handle the complete ecosystem—from development and design
+                to SEO, paid advertising, and customer acquisition.
+              </p>
+            </div>
+
+            <div className={styles.whyCard} style={{ backgroundColor: "#EFF6FF",color: "#2563EB",border: "3px solid #1E3A8A" }}>
+              <FaChartLine style={{color: "#1E3A8A"}}  />
+              <h3>Data Over Guesswork</h3>
+              <p style={{color: "#1E3A8A"}} >
+                Every decision is backed by analytics, measurable KPIs,
+                and user behavior insights.
+              </p>
+            </div>
+
+            <div className={styles.whyCard} style={{ backgroundColor: "#FFF1F2",color: "#E11D48",border: "3px solid #9F1239" }}>
+              <FaHandshake  style={{color: "#9F1239"}} />
+              <h3>True Customization</h3>
+              <p style={{color: "#9F1239"}} >
+                No rigid templates. Every solution is designed specifically
+                around your business goals and growth strategy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* VALUES */}
+      <section className={styles.values}>
+        <div className={styles.container}>
+          <h2>Our Values</h2>
+
+          <div className={styles.valueGrid}>
+            <div className={styles.valueCard} style={{ backgroundColor: "#FEF2F2",color: "#DC2626",border: "3px solid #991B1B" }}>
+              <h3>Radical Transparency</h3>
+              <p style={{color: "#991B1B"}} >
+                Clear communication, transparent reporting, and real business
+                metrics—not vanity numbers.
+              </p>
+            </div>
+
+            <div className={styles.valueCard} style={{ backgroundColor: "#ECFEFF",color: "#0891B2",border: "3px solid #155E75" }}>
+              <h3>Velocity & Quality</h3>
+              <p style={{color: "#155E75"}} >
+                Fast execution without compromising scalability,
+                performance, or maintainability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className={styles.cta}>
+        <h2>Let's Build Something Remarkable</h2>
+
         <p>
-          In today’s rapidly changing era, this is truly the age of startups.
-          The world of E-Commerce and Online Marketing is constantly evolving 
-          with new innovations.
-          One such innovation began in 2013 with <strong>“Look8Us”</strong>, 
-          marking the start of a remarkable journey. In 2025, that vision took 
-          its full and evolved form as <strong>Zylow</strong>.
-          Unlike ordinary e-commerce platforms, Zylow represents a revolutionary 
-          approach. We empower local entrepreneurs, strengthen the Indian economy, 
-          and bridge the gap between traditional business and modern technology.
+          Ready to take your digital presence to the next level?
+          Let's discuss your project goals and create a strategy
+          that drives measurable growth.
         </p>
-      </section>
 
-      {/* CURRENT REALITY */}
-      <section className={styles.section}>
-        <h2>The Current Reality</h2>
-        <p>
-          Most online platforms prioritize global corporations, while local 
-          businesses struggle due to lack of digital presence.
-          Many shopkeepers and small business owners find it difficult to survive 
-          as customers increasingly look beyond their own cities, ignoring local markets.
-        </p>
+        <button className={styles.ctaBtn} onClick={() => setShowEnquiry(true)}>
+         Get in Touch
+        </button>
       </section>
+      {showEnquiry && <Enquiry onClose={() => setShowEnquiry(false)} />}
 
-      {/* SOLUTION */}
-      <section className={styles.section}>
-        <h2>The Solution — Zylow</h2>
-        <p>
-          Zylow is a multi-purpose ecosystem designed to help customers find what 
-          they need within their own local area—often at better prices than large platforms.
-          We don’t just list businesses—we empower them to own their digital future.
-        </p>
-      </section>
-
-      {/* WEBSITE DEV */}
-      <section className={styles.highlight}>
-        <h2>Professional Website Development</h2>
-        <p>
-          Every business deserves a powerful digital presence. Zylow provides expert 
-          website development services to help local traders, professionals, and startups 
-          go online.
-          We create high-performance, customized websites that make your business visible 
-          not just locally—but globally.
-        </p>
-      </section>
-
-      {/* FEATURES */}
-      <section className={styles.section}>
-        <h2>Features & Services</h2>
-        <ul className={styles.list}>
-          <li>Custom Website Development</li>
-          <li>Deals and Discounts</li>
-          <li>B2B Module</li>
-          <li>Job Upload & Search</li>
-          <li>Rental & Second-Hand Marketplace</li>
-          <li>Homemade Items Platform</li>
-          <li>Digital Marketing Place</li>
-        </ul>
-      </section>
-
-      {/* SOCIAL */}
-      <section className={styles.section}>
-        <h2>Beyond Commerce: A Social Mission</h2>
-        <ul className={styles.list}>
-          <li>Social Welfare Initiatives</li>
-          <li>Emergency Support (Blood/Plasma Assistance)</li>
-        </ul>
-      </section>
-
-      {/* MISSION */}
-      <section className={styles.section}>
-        <h2>Empowering India, Empowering People</h2>
-        <p>
-          Zylow’s mission is national progress. From students to homemakers, 
-          we enable individuals to become self-reliant and digitally empowered.
-          Every business can build its identity, and every local market can grow 
-          from <strong>Local to Global</strong>.
-        </p>
-      </section>
-
-      {/* FOOTER LINE */}
-      <section className={styles.footerNote}>
-        <h3>Thank You</h3>
-        <p>Zylow — Empowering Local, Connecting Global.</p>
-      </section>
     </div>
   );
 };

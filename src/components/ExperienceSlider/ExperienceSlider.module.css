@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   padding: 60px 20px;
-    border-top: 1px solid #aaa;
+  background-color: #fdf9f6f8;
 }
 
 .heading {
@@ -13,33 +13,26 @@
 }
 
 .card {
-  background: linear-gradient(135deg, #f28237f8, #ffbe93ca);
-  color: black;
-  padding: 40px 30px;
+  padding: 40px 20px;
   border-radius: 20px;
   text-align: center;
   transition: 0.4s ease;
   transform: scale(0.9);
-  opacity: 0.6;
 }
 
 /* Active center card */
 .swiper-slide-active .card {
   transform: scale(1.1);
-  opacity: 1;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
 /* Side cards */
 .swiper-slide-prev .card,
 .swiper-slide-next .card {
   transform: scale(0.95);
-  opacity: 0.8;
 }
 
 .card h3 {
   font-size: 24px;
-  color: black;
 }
 
 .card p {
@@ -49,7 +42,6 @@
 /* Pagination dots */
 .swiper-pagination-bullet {
   background: #888;
-  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {

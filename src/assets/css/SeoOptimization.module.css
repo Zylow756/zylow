@@ -20,10 +20,8 @@ body {
 /* HERO SECTION */
 .hero {
   padding: 2rem 2rem;
-  display: flex;
-  align-items: center;
+  text-align: center;
   background: linear-gradient(135deg, #ffbe93f8 0%, #ffbe9375 100%);
-  position: relative;
 }
 
 .heroContent {
@@ -51,16 +49,16 @@ body {
 }
 
 .heroText {
+  text-align: center;
   font-size: 1.3rem;
   line-height: 2rem;
   color: #4b5563;
-  max-width: 750px;
 }
 
 /* SECTION COMMON */
 .sectionHeading {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .sectionHeading h2 {
@@ -73,8 +71,6 @@ body {
 .sectionHeading p {
   font-size: 1.1rem;
   color: #424242;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 /* PLANS SECTION */

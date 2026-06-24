@@ -1,22 +1,85 @@
 import React, { useState } from "react";
 import styles from '../assets/css/Home.module.css';
 import Rectangle8 from '../assets/images/Rectangle 8.png';
-import ExperienceSlider from '../components/Slider/Slider';
+import ExperienceSlider from '../components/ExperienceSlider/ExperienceSlider';
 import ShowCase from '../components/ShowCase/ShowCase';
 import { motion as Motion } from "framer-motion";
 import Enquiry from './Enquiry';
 import { Link } from "react-router-dom";
+import { FaGlobe, FaLaptop, FaHandsHelping } from "react-icons/fa";
+
 
 const Home = () => {
   const [showEnquiry, setShowEnquiry] = useState(false);
+
+  const features = [
+    {
+      icon: <FaGlobe />,
+      heading: "Local to Global",
+      subheading: "Giving local businesses a powerful online presence to compete globally.",
+      bg: "#F0F9FF",
+      iconColor: "#0284C7",
+      textColor: "#0C4A6E",
+    },
+    {
+      icon: <FaLaptop />,
+      heading: "Expert Web Dev",
+      subheading: "High-performance, customized websites for traders, professionals, and startups.",
+      bg: "#FFF1F2",
+      iconColor: "#E11D48",
+      textColor: "#9F1239",
+    },
+    {
+      icon: <FaHandsHelping />,
+      heading: "Social Mission",
+      subheading: "Supporting communities with welfare initiatives and emergency assistance.",
+      bg: "#F0FDF4",
+      iconColor: "#16A34A",
+      textColor: "#14532D",
+    },
+  ];
+
+  const services = [
+    {
+      title: "Website Development",
+      desc: "Modern & responsive websites",
+      path: "/websiteDevelopment",
+      bg: "#EEF2FF",
+      iconColor: "#4F46E5",
+      textColor: "#312E81",
+    },
+    {
+      title: "App Development",
+      desc: "Powerful mobile & web applications",
+      path: "/appDevelopment",
+      bg: "#FEF2F2",
+      iconColor: "#DC2626",
+      textColor: "#991B1B",
+    },
+    {
+      title: "UI/UX Design",
+      desc: "Beautiful and user-friendly interfaces",
+      path: "/uiDesign",
+      bg: "#ECFEFF",
+      iconColor: "#0891B2",
+      textColor: "#155E75",
+    },
+    {
+      title: "SEO Optimization",
+      desc: "Improve visibility and rankings",
+      path: "/seoOptimization",
+      bg: "#FDF4FF",
+      iconColor: "#C026D3",
+      textColor: "#86198F",
+    },
+
+  ];
 
   const handleRedirect = () => {
     const destination = encodeURIComponent(
       "267, Ganesh Nagar, Near Khade Ganesh Ji Temple, Kota Rajasthan 324010"
     );
-
     const url = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${destination}&travelmode=driving`;
-
     window.open(url, "_blank");
   };
 
@@ -63,7 +126,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            We Build Your Website With Zylow Web
+            We Build Your Website With Zylow Web Solutions
           </Motion.h2>
 
           <Motion.p
@@ -120,18 +183,13 @@ const Home = () => {
 
             {/* Quick Highlights / Mini Features Grid */}
             <div className={styles.featuresSide}>
-              <div className={styles.featureCard}>
-                <h4>🌐 Local to Global</h4>
-                <p>Giving local businesses a powerful online presence to compete globally.</p>
-              </div>
-              <div className={styles.featureCard}>
-                <h4>💻 Expert Web Dev</h4>
-                <p>High-performance, customized websites for traders, professionals, and startups.</p>
-              </div>
-              <div className={styles.featureCard}>
-                <h4>🤝 Social Mission</h4>
-                <p>Supporting communities with welfare initiatives and emergency assistance.</p>
-              </div>
+              {features.map((feature) => (
+                <div className={styles.featureCard}
+                  style={{ backgroundColor: feature.bg, color: feature.textColor, borderLeft: `5px solid ${feature.iconColor}`, }}>
+                  <h4 style={{ color: feature.textColor, }}>{feature.icon} {feature.heading}</h4>
+                  <p style={{ color: feature.textColor, }}>{feature.subheading}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -144,38 +202,18 @@ const Home = () => {
           </div>
 
           <div className={styles.servicesGrid}>
-            {[
-              {
-                title: "Website Development",
-                desc: "Modern & responsive websites",
-                path: "/websiteDevelopment",
-              },
-              {
-                title: "App Development",
-                desc: "Powerful mobile & web applications",
-                path: "/appDevelopment",
-              },
-              {
-                title: "UI/UX Design",
-                desc: "Beautiful and user-friendly interfaces",
-                path: "/uiDesign",
-              },
-              {
-                title: "SEO Optimization",
-                desc: "Improve visibility and rankings",
-                path: "/seoOptimization",
-              },
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <Motion.div
                 key={index}
                 className={styles.serviceCard}
+                 style={{ backgroundColor: service.bg, color: service.textColor,border: `3px solid ${service.textColor}` }}
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3>{service.title}</h3>
-                <p>{service.desc}</p>
+                <h3 style={{ color: service.textColor }}>{service.title}</h3>
+                <p style={{ color: service.textColor }}>{service.desc}</p>
 
-                <Link to={service.path} className={styles.serviceBtn}>
+                <Link to={service.path} className={styles.serviceBtn} style={{ backgroundColor: service.textColor, color: service.bg }}>
                   Learn More
                 </Link>
               </Motion.div>
