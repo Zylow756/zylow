@@ -4,6 +4,7 @@ import Rectangle11 from '../../assets/images/Rectangle11.jfif';
 import Rectangle12 from '../../assets/images/Rectangle 12.png';
 import Rectangle13 from '../../assets/images/Rectangle13.jpg';
 import Rectangle14 from '../../assets/images/Rectangle14.jfif';
+import Rectangle15 from '../../assets/images/Rectangle15.jfif';
 import coaching from '../../assets/images/showcase-coaching.png';
 import ecommerse from '../../assets/images/zylow.png';
 import { Link } from 'react-router-dom';
@@ -52,6 +53,12 @@ const services = [
     img: Rectangle11,
     bg: "#FEF2F2",
     textColor: "#DC2626",
+  },
+  {
+    title: <>Hospital<br /> Website</>,
+    img: Rectangle15,
+    bg: "#f7f0fc",
+    textColor: "#9c0afc",
   },
 ];
 
