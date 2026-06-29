@@ -109,6 +109,7 @@
   flex-wrap: nowrap; /* Prevent wrapping */
   gap: 15px;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .socialIcons a {
