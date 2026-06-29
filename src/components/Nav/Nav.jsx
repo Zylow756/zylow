@@ -4,16 +4,73 @@ import logoImage from '../../assets/images/logo.png';
 import React, { useState } from "react";
 import Enquiry from '../../pages/Enquiry';
 import { motion as Motion } from "framer-motion";
+import {
+  FaGlobe,
+  FaMobileAlt,
+  FaPaintBrush,
+  FaSearch,
+  FaBullhorn,
+  FaWhatsapp,
+  FaPenNib,
+  FaChevronDown,
+  FaChevronUp,
+} from "react-icons/fa";
 const text = "Zylow-Web-Solution";
 
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showEnquiry, setShowEnquiry] = useState(false);
+  const [showPlans, setShowPlans] = useState(false);
 
   const handleNavClick = () => {
     setMenuOpen(false);
   };
+
+  const plans = [
+    {
+      title: "Website Development",
+      desc: "Modern responsive websites",
+      icon: <FaGlobe />,
+      path: "/websiteDevelopment",
+    },
+    {
+      title: "App Development",
+      desc: "Android & iOS Applications",
+      icon: <FaMobileAlt />,
+      path: "/appDevelopment",
+    },
+    {
+      title: "UI / UX Design",
+      desc: "Beautiful user experiences",
+      icon: <FaPaintBrush />,
+      path: "/uiDesign",
+    },
+    {
+      title: "SEO Optimization",
+      desc: "Rank higher on Google",
+      icon: <FaSearch />,
+      path: "/seoOptimization",
+    },
+    {
+      title: "Paid Advertisement",
+      desc: "Google & Meta Ads",
+      icon: <FaBullhorn />,
+      path: "/paidAdvertisement",
+    },
+    {
+      title: "Content Marketing",
+      desc: "Grow with engaging content",
+      icon: <FaPenNib />,
+      path: "/contentMarketing",
+    },
+    {
+      title: "Bulk WhatsApp Marketing",
+      desc: "Reach thousands instantly",
+      icon: <FaWhatsapp />,
+      path: "/bulkWhatsappMarketing",
+    },
+  ];
 
   return (
     <header className={styles.heroHeader}>
@@ -68,7 +125,48 @@ const Nav = () => {
       <nav className={`${styles.navbar} ${menuOpen ? styles["active"] : ""}`}>
         <Link to="/" onClick={handleNavClick}>Home</Link>
         <Link to="/about" onClick={handleNavClick}>About Us</Link>
-        <Link to="/services" onClick={handleNavClick}>Services</Link>
+        <div
+          className={styles.dropdown}
+          onMouseEnter={() => setShowPlans(true)}
+          onMouseLeave={() => setShowPlans(false)}
+        >
+          <button className={styles.dropdownBtn}>
+            Plans
+            {showPlans ? (
+              <FaChevronUp className={styles.dropdownIcon} />
+            ) : (
+              <FaChevronDown className={styles.dropdownIcon} />
+            )}
+          </button>
+          {showPlans && (
+            <Motion.div
+              className={styles.megaMenu}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25 }}
+            >
+              {plans.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className={styles.serviceCard}
+                  onClick={handleNavClick}
+                >
+                  <div className={styles.icon}>
+                    {item.icon}
+                  </div>
+
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p>{item.desc}</p>
+                  </div>
+
+                  <span className={styles.arrow}>→</span>
+                </Link>
+              ))}
+            </Motion.div>
+          )}
+        </div>
         <Link to="/showCasePage" onClick={handleNavClick}>Show Case</Link>
         <span
           onClick={() => {

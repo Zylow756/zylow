@@ -49,37 +49,22 @@ const coreFeatures = [
     {
         title: "Mobile-First Design",
         desc: "Fully responsive and optimized for all devices.",
-        bg: "#F0FDF4",
-        headingColor: "#16A34A",
-        subHeadingColor: "#14532D",
     },
     {
         title: "Secure HTTPS",
         desc: "SSL integration for better trust and security.",
-        bg: "#FFF1F2",
-        headingColor: "#E11D48",
-        subHeadingColor: "#9F1239",
     },
     {
         title: "Analytics Setup",
         desc: "GA4 and Google Search Console integration.",
-        bg: "#FDF4FF",
-        headingColor: "#C026D3",
-        subHeadingColor: "#86198F",
     },
     {
         title: "Zero-Click SEO",
         desc: "Featured snippets & AI answer optimization.",
-        bg: "#EFF6FF",
-        headingColor: "#2563EB",
-        subHeadingColor: "#1E3A8A",
     },
     {
         title: "Competitor Tracking",
         desc: "Track top competitors and improve strategy.",
-        bg: "#ECFEFF",
-        headingColor: "#0891B2",
-        subHeadingColor: "#155E75",
     },
 ];
 
@@ -91,11 +76,10 @@ const SeoOptimization = () => {
             {/* HERO SECTION */}
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <p className={styles.tag}>Zylow Web Solution</p>
                     <h1>
                         Smart SEO Solutions For 2026 Businesses
                     </h1>
-                    <p className={styles.heroText}>
+                    <p>
                         Rank higher, generate quality leads, dominate AI search results, and grow your business with modern SEO strategies.
                     </p>
                 </div>
@@ -145,9 +129,9 @@ const SeoOptimization = () => {
 
                 <div className={styles.coreGrid}>
                     {coreFeatures.map((item, index) => (
-                        <div className={styles.coreCard} key={index} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
-                            <h3 style={{color: item.headingColor}}>{item.title}</h3>
-                            <p style={{color: item.subHeadingColor}}>{item.desc}</p>
+                        <div className={styles.coreCard} key={index}>
+                            <h3>{item.title}</h3>
+                            <p>{item.desc}</p>
                         </div>
                     ))}
                 </div>

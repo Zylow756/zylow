@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import styles from '../assets/css/Home.module.css';
-import Rectangle8 from '../assets/images/Rectangle 8.png';
+import Rectangle8 from '../assets/images/Rectangle8.jfif';
 import ExperienceSlider from '../components/ExperienceSlider/ExperienceSlider';
+import Services from '../components/Services/Services';
 import ShowCase from '../components/ShowCase/ShowCase';
 import { motion as Motion } from "framer-motion";
 import Enquiry from './Enquiry';
 import { Link } from "react-router-dom";
 import { FaGlobe, FaLaptop, FaHandsHelping } from "react-icons/fa";
+import {
+  FaChartLine,
+  FaRocket,
+  FaLayerGroup,
+  FaHandshake,
+} from "react-icons/fa";
 
 
 const Home = () => {
@@ -14,65 +21,29 @@ const Home = () => {
 
   const features = [
     {
-      icon: <FaGlobe />,
-      heading: "Local to Global",
-      subheading: "Giving local businesses a powerful online presence to compete globally.",
-      bg: "#F0F9FF",
-      iconColor: "#0284C7",
-      textColor: "#0C4A6E",
+      icon: <FaChartLine />,
+      title: "Build for Business Growth",
+      description:
+        "We don't just build websites—we engineer digital experiences that generate leads, streamline operations, and maximize your ROI. Every design decision and every line of code is focused on measurable business growth.",
     },
     {
-      icon: <FaLaptop />,
-      heading: "Expert Web Dev",
-      subheading: "High-performance, customized websites for traders, professionals, and startups.",
-      bg: "#FFF1F2",
-      iconColor: "#E11D48",
-      textColor: "#9F1239",
+      icon: <FaRocket />,
+      title: "Modern Stack. Zero Technical Debt.",
+      description:
+        "Using cutting-edge technologies like React, Next.js, Flutter, Node.js, and cloud-native architectures, we create lightning-fast, secure, and scalable solutions that are built for the future.",
     },
     {
-      icon: <FaHandsHelping />,
-      heading: "Social Mission",
-      subheading: "Supporting communities with welfare initiatives and emergency assistance.",
-      bg: "#F0FDF4",
-      iconColor: "#16A34A",
-      textColor: "#14532D",
-    },
-  ];
-
-  const services = [
-    {
-      title: "Website Development",
-      desc: "Modern & responsive websites",
-      path: "/websiteDevelopment",
-      bg: "#EEF2FF",
-      iconColor: "#4F46E5",
-      textColor: "#312E81",
+      icon: <FaLayerGroup />,
+      title: "Complete Digital Ecosystem",
+      description:
+        "From UI/UX design and custom software development to API integrations, cloud deployment, hosting, automation, and marketing systems—we manage your entire digital journey under one roof.",
     },
     {
-      title: "App Development",
-      desc: "Powerful mobile & web applications",
-      path: "/appDevelopment",
-      bg: "#FEF2F2",
-      iconColor: "#DC2626",
-      textColor: "#991B1B",
+      icon: <FaHandshake />,
+      title: "Transparent Execution",
+      description:
+        "No hidden costs. No missed deadlines. No confusing technical jargon. You'll receive clear project milestones, regular updates, and a dedicated team committed to delivering exceptional results.",
     },
-    {
-      title: "UI/UX Design",
-      desc: "Beautiful and user-friendly interfaces",
-      path: "/uiDesign",
-      bg: "#ECFEFF",
-      iconColor: "#0891B2",
-      textColor: "#155E75",
-    },
-    {
-      title: "SEO Optimization",
-      desc: "Improve visibility and rankings",
-      path: "/seoOptimization",
-      bg: "#FDF4FF",
-      iconColor: "#C026D3",
-      textColor: "#86198F",
-    },
-
   ];
 
   const handleRedirect = () => {
@@ -126,7 +97,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            We Build Your Website With Zylow Web Solutions
+            We Build the Digital Products That Scale Your Business.
           </Motion.h2>
 
           <Motion.p
@@ -134,8 +105,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            "We craft aesthetic, high-performance websites designed with your
-            users in mind to scale your business"
+            From high-converting e-commerce web portals to seamless Android & iOS mobile applications, we engineer the complete technology ecosystem your business needs to grow.
           </Motion.p>
 
           <Motion.button
@@ -150,84 +120,37 @@ const Home = () => {
           </Motion.button>
         </Motion.div>
       </section>
-      <section className={styles.homeAboutSection}>
+
+      <section className={styles.aboutSection} id="about">
         <div className={styles.container}>
-          {/* Header Block */}
-          <div className={styles.header}>
-            <span className={styles.subHeading}>Who We Are</span>
-            <h2>Zylow — A Digital Journey from Local to Global</h2>
-            <p className={styles.tagline}>Empowering Local, Connecting Global</p>
+          <div className={styles.heading}>
+            <span>WHY PARTNER WITH US</span>
+            <h2>Moving Your Business Forward With Technology That Delivers</h2>
+            <p>
+              We combine strategy, design, development, and innovation to create
+              digital products that drive real business outcomes. Our mission is
+              simple: build scalable solutions that help your business grow
+              faster, operate smarter, and outperform the competition.
+            </p>
           </div>
 
-          {/* Content Block */}
-          <div className={styles.contentGrid}>
-            <div className={styles.textSide}>
-              <p>
-                Born from a vision that started in 2013 with <strong>“Look8Us”</strong> and evolved into
-                <strong> Zylow</strong>, we are a revolutionary multi-purpose ecosystem.
-                Unlike ordinary e-commerce platforms, we bridge the gap between traditional
-                business and modern technology—helping local traders, startups, and professionals
-                own their digital future.
-              </p>
-              <p>
-                From professional website development and hyper-local marketplaces to social
-                welfare and employment search, Zylow is dedicated to building a self-reliant,
-                digitally empowered India.
-              </p>
-
-              {/* CTA Button */}
-              <a href="/about" className={styles.readMoreBtn}>
-                Discover Our Story &rarr;
-              </a>
-            </div>
-
-            {/* Quick Highlights / Mini Features Grid */}
-            <div className={styles.featuresSide}>
-              {features.map((feature) => (
-                <div className={styles.featureCard}
-                  style={{ backgroundColor: feature.bg, color: feature.textColor, borderLeft: `5px solid ${feature.iconColor}`, }}>
-                  <h4 style={{ color: feature.textColor, }}>{feature.icon} {feature.heading}</h4>
-                  <p style={{ color: feature.textColor, }}>{feature.subheading}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className={styles.servicesPreview}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2>Our Services</h2>
-            <p>Digital solutions designed to grow your business</p>
-          </div>
-
-          <div className={styles.servicesGrid}>
-            {services.map((service, index) => (
-              <Motion.div
-                key={index}
-                className={styles.serviceCard}
-                 style={{ backgroundColor: service.bg, color: service.textColor,border: `3px solid ${service.textColor}` }}
-                whileHover={{ y: -8 }}
-                transition={{ duration: 0.3 }}
-              >
-                <h3 style={{ color: service.textColor }}>{service.title}</h3>
-                <p style={{ color: service.textColor }}>{service.desc}</p>
-
-                <Link to={service.path} className={styles.serviceBtn} style={{ backgroundColor: service.textColor, color: service.bg }}>
-                  Learn More
-                </Link>
-              </Motion.div>
+          <div className={styles.grid}>
+            {features.map((item, index) => (
+              <div className={styles.card} key={index}>
+                <div className={styles.icon}>{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
             ))}
           </div>
-
-          <div className={styles.viewAllWrapper}>
-            <Link to="/services" className={styles.viewAllBtn}>
-              View All Services
-            </Link>
-          </div>
         </div>
+        <a href="/about" className={styles.readMoreBtn}>
+          Discover Our Story &rarr;
+        </a>
       </section>
-      <ShowCase />
+
+      <Services />
+      <ShowCase showAll={false} />
       <ExperienceSlider />
       {showEnquiry && <Enquiry onClose={() => setShowEnquiry(false)} />}
     </>

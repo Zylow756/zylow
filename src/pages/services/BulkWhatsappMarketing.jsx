@@ -47,81 +47,50 @@ const features = [
     icon: <FaWhatsapp />,
     title: <>Massive<br /> Reach</>,
     desc: "Send promotional campaigns, updates, and alerts to thousands instantly.",
-    bg: "#FEF2F2",
-    headingColor: "#DC2626",
-    subHeadingColor: "#991B1B",
   },
   {
     icon: <FaChartLine />,
     title: "Real-time Analytics",
     desc: "Track message delivery, open rates, and customer engagement in real time.",
-    bg: "#EEF2FF",
-    headingColor: "#4F46E5",
-    subHeadingColor: "#312E81",
   },
   {
     icon: <FaRobot />,
     title: "Smart Automation",
     desc: "Automate customer interactions with AI-powered WhatsApp chatbots.",
-    bg: "#ECFEFF",
-    headingColor: "#0891B2",
-    subHeadingColor: "#155E75",
   },
   {
     icon: <FaShieldAlt />,
     title: "Official API Integration",
     desc: "Safe and secure messaging through official WhatsApp Business API.",
-    bg: "#FDF4FF",
-    headingColor: "#C026D3",
-    subHeadingColor: "#86198F",
   },
   {
     icon: <FaUsers />,
     title: "Audience Segmentation",
     desc: "Target customers based on interests, location, and buying behavior.",
-    bg: "#F0FDF4",
-    headingColor: "#16A34A",
-    subHeadingColor: "#14532D",
   },
   {
     icon: <FaCheckCircle />,
     title: "Compliance & Security",
     desc: "100% compliant with Meta Policies, TRAI, and DPDP Act 2023.",
-    bg: "#EFF6FF",
-    headingColor: "#2563EB",
-    subHeadingColor: "#1E3A8A",
   },
 ];
 
 const keyCard = [
-
   {
     title: "Interactive Buttons",
     desc: "Add direct CTA buttons like “Visit Website” or “Call Now”.",
-    bg: "#FDF4FF",
-    headingColor: "#C026D3",
-    subHeadingColor: "#86198F",
   },
   {
     title: "Green Tick Verification",
     desc: "Assistance for official WhatsApp verification badge.",
-    bg: "#F0FDF4",
-    headingColor: "#16A34A",
-    subHeadingColor: "#14532D",
   },
   {
     title: "Schedule & Forget",
     desc: "Schedule campaigns in advance with automated delivery.",
-    bg: "#EFF6FF",
-    headingColor: "#2563EB",
-    subHeadingColor: "#1E3A8A",
   },
   {
     title: "Rich Media Support",
     desc: "Send PDFs, images, videos, and interactive messages.",
-    bg: "#FFF1F2",
-    headingColor: "#E11D48",
-    subHeadingColor: "#9F1239",
   },
 ]
 
@@ -135,7 +104,6 @@ const BulkWhatsappMarketing = () => {
             <h1>
               Bulk WhatsApp Marketing Services
             </h1>
-
             <p>
               Empower your business with high-conversion WhatsApp marketing
               solutions by Zylow Web Solution. Reach customers instantly with
@@ -155,13 +123,13 @@ const BulkWhatsappMarketing = () => {
 
           <div className={styles.featureGrid}>
             {features.map((item, index) => (
-              <div className={styles.featureCard} key={index} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
-                <div className={styles.icon} style={{ color: item.headingColor }}>
+              <div className={styles.featureCard} key={index}>
+                <div className={styles.icon}>
                   {item.icon}
-                  <h3 style={{ color: item.headingColor }}>{item.title}</h3>
+                  <h3>{item.title}</h3>
                 </div>
 
-                <p style={{ color: item.subHeadingColor }}>{item.desc}</p>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -206,9 +174,9 @@ const BulkWhatsappMarketing = () => {
 
           <div className={styles.keyGrid}>
             {keyCard.map((item, i) => (
-              <div className={styles.keyCard} key={i} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
-                <h3 style={{ color: item.headingColor }}>{item.title}</h3>
-                <p style={{ color: item.subHeadingColor }}>{item.desc}</p>
+              <div className={styles.keyCard} key={i}>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -218,23 +186,19 @@ const BulkWhatsappMarketing = () => {
         <section className={styles.compliance}>
           <div className={styles.complianceBox}>
             <h2>Compliance & Security</h2>
-
             <p>
               We ensure every campaign follows the latest regulations and
               privacy standards.
             </p>
-
             <div className={styles.complianceList}>
               <div>
                 <span>1</span>
                 <p>TRAI Regulations with DND filtering</p>
               </div>
-
               <div>
                 <span>2</span>
                 <p>DPDP Act 2023 compliant data handling</p>
               </div>
-
               <div>
                 <span>3</span>
                 <p>Official Meta-approved channels only</p>

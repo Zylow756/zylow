@@ -1,13 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .container {
   width: 100%;
-  background: #ffbe939e;
-  color: white;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -15,24 +7,15 @@
 /* HERO */
 .hero {
   position: relative;
-  min-height: 60vh;
-  background: linear-gradient(90deg, #ffbe93f8, #ffbe9375),
-    url("https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2073&auto=format&fit=crop")
-      center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 6rem;
+  padding: 2rem 2rem;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at top right,
-    rgba(255, 170, 0, 0.15),
-    transparent 35%
-  );
 }
 
 .heroContent {
@@ -42,15 +25,6 @@
   text-align: center;
 }
 
-.tag {
-  color: white;
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-}
-
 .heroContent h1 {
   font-size: 3rem;
   line-height: 1.1;
@@ -58,14 +32,30 @@
   margin-bottom: 2rem;
 }
 
-.heroContent h1 span {
-  display: block;
-  color: white;
+.heroContent h1,
+.sectionHeader span,
+.sectionHeader h2,
+.cardNumber,
+.serviceCard h3,
+.planCard h3,
+.planCard h1,
+.reasonCard h3,
+.cta h2,.reasonCard span {
+  color: #0d2d77;
+}
+
+.subtitle,
+.intro p,
+.serviceCard p,
+.reasonCard p,
+.cta p,.planCard ul  {
+  color: #672c9e;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .subtitle {
   font-size: 1.3rem;
-  color: #242424;
   line-height: 1.8;
   max-width: 1100px;
   margin: auto;
@@ -77,7 +67,6 @@
 }
 
 .sectionHeader span {
-  color: white;
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -87,7 +76,6 @@
 .sectionHeader h2 {
   font-size: 3rem;
   font-weight: 700;
-  color: black;
 }
 
 /* INTRO */
@@ -99,17 +87,13 @@
 .intro p {
   max-width: 1200px;
   margin: auto;
-  color: #3d3d3d;
   line-height: 2;
   font-size: 1.4rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 /* SERVICES */
 .services {
   padding: 2rem 2rem;
-  background-color: #ffbe93f8;
 }
 
 .serviceGrid {
@@ -123,6 +107,8 @@
   border-radius: 30px;
   transition: 0.4s;
   backdrop-filter: blur(10px);
+  background-color: #e7ecf898;
+  border: 2px solid #0d2d77;
 }
 
 .serviceCard:hover {
@@ -143,14 +129,11 @@
 .serviceCard p {
   line-height: 1.8;
   font-size: 1.1rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 /* PRICING */
 .pricing {
   padding: 4rem 6rem;
-  background-color: #fbc9a775;
 }
 
 .pricingGrid {
@@ -162,11 +145,11 @@
 
 .planCard {
   position: relative;
-  background: white;
+  background-color: #e7ecf898;
+  border: 2px solid #0d2d77;
   border-radius: 30px;
   padding: 4rem 1rem;
   transition: 0.4s;
-  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .planCard:hover {
@@ -174,7 +157,7 @@
 }
 
 .featured {
-  border: 2px solid #f26f18e3;
+  border: 2px solid #0d2d77;
   transform: scale(1.05);
 }
 
@@ -182,8 +165,8 @@
   position: absolute;
   top: -15px;
   right: 30px;
-  background: #f5904ee1;
-  color: black;
+  background: #0d2d77;
+  color: white;
   padding: 0.7rem 1.5rem;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -193,14 +176,13 @@
 .planCard h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color:#f3ad7ef8;
 }
 
 .planCard h1 {
-  color: #f5904ee1;
   font-size: 4rem;
   margin-bottom: 2rem;
   line-height: 0.8;
+  font-weight: 800;
 }
 
 .planCard ul {
@@ -209,7 +191,6 @@
 
 .planCard ul li {
   margin-bottom: 0.4rem;
-  color: black;
   line-height: 1.8;
   font-size: 1.1rem;
 }
@@ -220,7 +201,7 @@
   padding: 1.2rem;
   border-radius: 50px;
   border: none;
-  background: #f5904ee1;
+  background: #0d2d77;
   color: white;
   font-size: 1rem;
   font-weight: 700;
@@ -230,7 +211,6 @@
 /* WHY CHOOSE */
 .whyChoose {
   padding: 5rem 6rem;
-  background-color: #f8ab77e1;
 }
 
 .reasonGrid {
@@ -243,10 +223,13 @@
   padding: 2rem;
   border-radius: 30px;
   transition: 0.4s;
+  background-color: #e7ecf898;
+  border: 2px solid #0d2d77;
 }
 
 .reasonCard:hover {
   transform: translateY(-8px);
+  border: 3px solid #0d2d77;
 }
 
 .reasonCard span {
@@ -263,29 +246,25 @@
 .reasonCard p {
   line-height: 1.4;
   font-size: 1.1rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 /* CTA */
 .cta {
   padding: 2rem 2rem;
   text-align: center;
-  background: #f6c4a2f8;
 }
 
 .cta h2 {
   font-size: 2.5rem;
   max-width: 1200px;
   margin: auto;
-  color: black;
   font-weight: 700;
 }
 
 .cta p {
   margin-top: 2rem;
-  color: #575858;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .cta button {
@@ -293,8 +272,8 @@
   padding: 1.2rem 3rem;
   border-radius: 50px;
   border: none;
-  background: white;
-  color: #f88940f8;
+  background: #0d2d77;
+  color: white;
   font-weight: 700;
   font-size: 1.1rem;
   cursor: pointer;
@@ -333,8 +312,8 @@
 }
 
 /* TABLET */
-
 @media (max-width: 1024px) {
+
   .serviceGrid,
   .pricingGrid,
   .reasonGrid {

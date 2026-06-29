@@ -12,10 +12,11 @@
 
 /* CARD */
 .card {
-  background: #fff;
   padding: clamp(20px, 2vw, 40px);
   border-radius: clamp(10px, 1vw, 20px);
   transition: 0.3s;
+  background-color: #e7ecf898;
+  border: 2px solid #0d2d77;
 }
 
 .card:hover {
@@ -26,12 +27,14 @@
   margin-top: 0;
   margin-bottom: 10px;
   font-size: clamp(18px, 1.5vw, 32px);
+  color: #0d2d77;
 }
 
 .card p {
   line-height: 1.6;
   margin: 5px 0;
   font-size: clamp(14px, 1vw, 20px);
+  color: #672c9e;
 }
 
 .directionBtn {

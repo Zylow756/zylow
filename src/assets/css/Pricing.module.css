@@ -1,6 +1,6 @@
 .pricingContainer {
   padding: 20px 20px;
-  background: #fbb6858b;
+  background: linear-gradient( 135deg, #040b18 0%, #08172d 40%, #0c2140 100% );
   text-align: center;
 }
 
@@ -8,7 +8,7 @@
 .title {
   font-size: 42px;
   font-weight: 700;
-  color: #0a2540;
+  color: white;
   margin-bottom: 60px;
 }
 
@@ -22,7 +22,7 @@
 
 /* CARD */
 .card {
-  background: #f7f9fc;
+  background: white;
   width: 320px;
   padding: 40px 30px;
   border-radius: 16px;
@@ -36,12 +36,12 @@
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  border: 2px solid #ffbe93f8;
+  border: 2px solid #672c9e;
 }
 
 /* POPULAR */
 .popular {
-  border: 2px solid #ffbe93f8;
+  border: 2px solid white;
 }
 
 /* RIBBON */
@@ -49,7 +49,7 @@
   position: absolute;
   top: -12px;
   left: 20px;
-  background: #ffbe93f8;
+  background: #672c9e;
   color: #fff;
   padding: 4px 10px;
   font-size: 12px;
@@ -60,27 +60,28 @@
 .planTitle {
   font-size: 18px;
   font-weight: 600;
-  color: #0a2540;
+  color: #0d2d77;
 }
 
 .price {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 800;
   margin: 10px 0;
-  color: #0a2540;
+  color: #0d2d77;
   text-align: center;
   line-height: 1.2;
 }
 
 .price span {
   font-size: 14px;
-  color: #6b7c93;
+  color: #672c9e;
   margin-left: 5px;
 }
 
 .subtitle {
-  color: #6b7c93;
+  color: #672c9e;
   margin-bottom: 20px;
+  font-weight: 800;
 }
 
 /* BUTTON */
@@ -89,7 +90,7 @@
   padding: 12px;
   border-radius: 8px;
   border: none;
-  background: #ffbe93f8;
+  background: #0d2d77;
   color: white;
   font-weight: 600;
   margin-bottom: 20px;
@@ -97,7 +98,7 @@
 }
 
 .primaryBtn:hover {
-  background: #ffbe93f8;
+  background: #0d2d7760;
 }
 
 /* FEATURES */
@@ -108,7 +109,7 @@
 
 .card ul li {
   margin: 10px 0;
-  color: #425466;
+  color: #672c9e;
   font-size: 15px;
 }
 
@@ -142,14 +143,18 @@
 }
 
 .detailCardWide h3, .detailCard h3 {
-  color: #0a2540;
+  color: #0d2d77;
+}
+
+.detailCard span {
+  color: #672c9e;
 }
 
 /* TEXT */
 .bigText {
   font-size: 24px;
-  font-weight: 700;
-  color: #0a2540;
+  font-weight: 800;
+  color: #0d2d77;
   margin: 10px 0;
 }
 
@@ -161,7 +166,7 @@
 
 .detailCard ul li {
   margin: 8px 0;
-  color: #425466;
+  color: #672c9e;
 }
 
 /* GRID */
@@ -172,6 +177,7 @@
 
 .grid ul {
   list-style: none;
+  color: #672c9e;
 }
 
 @media (max-width: 768px) {

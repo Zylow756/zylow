@@ -43,16 +43,11 @@ const Footer = () => {
                 <div className={styles.links}>
                     <h3>Quick Links</h3>
                     <div className={styles.linkList}>
-                        <div className={styles.linkSeparatorLeft}>
                             <Link to="/">Home</Link>
                             <Link to="/about">About Us</Link>
-                            <Link to="/services">Services</Link>
-                        </div>
-                        <div className={styles.linkSeparatorRight}>
                             <Link to="/showCasePage">Show Case</Link>
                             <Link to="/contact">Contact Us</Link>
                             <Link to="/jobVacancies">Job Vacancies</Link>
-                        </div>
                     </div>
                 </div>
                 <section className={styles.footerCTA}>

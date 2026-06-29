@@ -1,6 +1,6 @@
 .footer {
   padding: clamp(5px, 4vw, 20px);
-  background: #f28237cb;
+  background: #0d2d77;
   display: flex;
   flex-direction: column;
   align-items: center;   
@@ -62,7 +62,7 @@
 
 .links {
   text-align: left;
-  flex: 1.5;
+  flex: 1;
 }
 
 .links h3,
@@ -100,13 +100,8 @@
 }
 
 .linkList {
-  display: flex;
-  gap: 1rem;
-}
-
-.linkSeparatorLeft,
-.linkSeparatorRight {
-  flex: 1;
+  display:  column;
+  gap: 0.5rem;
 }
 
 .socialIcons {
@@ -124,16 +119,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f28237cb;
+  color: #0d2d77;
   font-size: clamp(16px, 1.2vw, 24px);
   transition: 0.3s;
 }
 
 .socialIcons a:hover {
   transform: translateY(-6px);
-  background: #f7cbafcb;
+  background: #0d2d77;
   color: white;
-  box-shadow: 0 10px 20px rgba(255, 204, 51, 0.3);
+  box-shadow: 0 10px 20px #f0f2f8;
 }
 
 .bottomBar {
@@ -153,19 +148,19 @@
   max-height: 180px;
   text-align: center;
   padding: 0.8rem;
-  background: #fff7f2;
+  background: white;
   border-radius: 1rem;
 }
 
 .footerCTA h2 {
-  color: #f86c0fcb;
+  color: #0d2d77;
   font-size: 1.2rem;
   line-height: 1.4;
   margin-bottom: 0.8rem;
 }
 
 .footerCTA button {
-  background: #f28237cb;
+  background: #0d2d77;
   color: white;
   border: none;
   padding: 10px 20px;

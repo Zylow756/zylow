@@ -53,8 +53,8 @@ const About = () => {
         <div className={styles.container}>
           <h2>What We Do</h2>
           <div className={styles.serviceGrid}>
-            <div className={styles.serviceCard} style={{backgroundColor: "#EEF2FF",color: "#4F46E5",border: "3px solid #312E81"}}>
-              <FaLaptopCode style={{color: "#312E81"}} />
+            <div className={styles.serviceCard}>
+              <FaLaptopCode />
               <h3>Digital Engineering</h3>
               <ul>
                 <li>Custom Website Development</li>
@@ -63,8 +63,8 @@ const About = () => {
               </ul>
             </div>
 
-            <div className={styles.serviceCard} style={{backgroundColor: "#ECFEFF",color: "#0891B2",border: "3px solid #155E75"}}>
-              <FaPalette style={{color: "#155E75"}} />
+            <div className={styles.serviceCard}>
+              <FaPalette />
               <h3>Design & Experience</h3>
               <ul>
                 <li>UI Design</li>
@@ -73,8 +73,8 @@ const About = () => {
               </ul>
             </div>
 
-            <div className={styles.serviceCard} style={{backgroundColor: "#FDF4FF",color: "#C026D3",border: "3px solid #86198F"}}>
-              <FaChartLine style={{color: "#86198F"}} />
+            <div className={styles.serviceCard}>
+              <FaChartLine />
               <h3>Growth & Visibility</h3>
               <ul className={styles.serviceList}>
                 <li>Paid Advertisement</li>
@@ -95,28 +95,28 @@ const About = () => {
           <h2>Why Partner With Us?</h2>
 
           <div className={styles.whyGrid}>
-            <div className={styles.whyCard} style={{ backgroundColor: "#F0FDF4",color: "#16A34A",border: "3px solid #14532D" }}>
-              <FaRocket style={{color: "#14532D"}}  />
+            <div className={styles.whyCard}>
+              <FaRocket />
               <h3>Full-Funnel Advantage</h3>
-              <p style={{color: "#14532D"}} >
+              <p>
                 We handle the complete ecosystem—from development and design
                 to SEO, paid advertising, and customer acquisition.
               </p>
             </div>
 
-            <div className={styles.whyCard} style={{ backgroundColor: "#EFF6FF",color: "#2563EB",border: "3px solid #1E3A8A" }}>
-              <FaChartLine style={{color: "#1E3A8A"}}  />
+            <div className={styles.whyCard}>
+              <FaChartLine />
               <h3>Data Over Guesswork</h3>
-              <p style={{color: "#1E3A8A"}} >
+              <p>
                 Every decision is backed by analytics, measurable KPIs,
                 and user behavior insights.
               </p>
             </div>
 
-            <div className={styles.whyCard} style={{ backgroundColor: "#FFF1F2",color: "#E11D48",border: "3px solid #9F1239" }}>
-              <FaHandshake  style={{color: "#9F1239"}} />
+            <div className={styles.whyCard}>
+              <FaHandshake />
               <h3>True Customization</h3>
-              <p style={{color: "#9F1239"}} >
+              <p>
                 No rigid templates. Every solution is designed specifically
                 around your business goals and growth strategy.
               </p>
@@ -131,17 +131,17 @@ const About = () => {
           <h2>Our Values</h2>
 
           <div className={styles.valueGrid}>
-            <div className={styles.valueCard} style={{ backgroundColor: "#FEF2F2",color: "#DC2626",border: "3px solid #991B1B" }}>
+            <div className={styles.valueCard}>
               <h3>Radical Transparency</h3>
-              <p style={{color: "#991B1B"}} >
+              <p>
                 Clear communication, transparent reporting, and real business
                 metrics—not vanity numbers.
               </p>
             </div>
 
-            <div className={styles.valueCard} style={{ backgroundColor: "#ECFEFF",color: "#0891B2",border: "3px solid #155E75" }}>
+            <div className={styles.valueCard}>
               <h3>Velocity & Quality</h3>
-              <p style={{color: "#155E75"}} >
+              <p>
                 Fast execution without compromising scalability,
                 performance, or maintainability.
               </p>

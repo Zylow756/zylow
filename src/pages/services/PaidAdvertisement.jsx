@@ -8,48 +8,30 @@ const PaidAdvertisement = () => {
     {
       title: "Direct Lead Generation",
       desc: "Capture customer details like names, phone numbers, and emails directly through optimized platform forms.",
-      bg: "#EEF2FF",
-      headingColor: "#4F46E5",
-      subHeadingColor: "#312E81",
-    },
+      },
     {
       title: <>Targeted<br /> Reach</>,
       desc: "Reach the right audience using advanced demographics, geo-targeting, and behavioral segmentation.",
-      bg: "#ECFEFF",
-      headingColor: "#0891B2",
-      subHeadingColor: "#155E75",
-    },
+      },
     {
       title: "Conversion Optimization",
       desc: "High-performance creatives and landing pages designed to turn viewers into paying customers.",
-      bg: "#FDF4FF",
-      headingColor: "#C026D3",
-      subHeadingColor: "#86198F",
-    },
+      },
   ];
 
   const cardDark = [
     {
       title: "Content Management",
       desc: "Creative graphics, reels, and videos aligned with your brand’s identity and audience expectations.",
-      bg: "#F0FDF4",
-      headingColor: "#16A34A",
-      subHeadingColor: "#14532D",
-    },
+      },
     {
       title: "Audience Engagement",
       desc: "Professional handling of comments, messages, and community interaction to strengthen customer relationships.",
-      bg: "#EFF6FF",
-      headingColor: "#2563EB",
-      subHeadingColor: "#1E3A8A",
-    },
+       },
     {
       title: "Brand Awarenes",
       desc: "Maintain consistent visibility across Instagram, Facebook, and WhatsApp for maximum local impact.",
-      bg: "#FFF1F2",
-      headingColor: "#E11D48",
-      subHeadingColor: "#9F1239",
-    },
+      },
   ];
 
   return (
@@ -64,8 +46,6 @@ const PaidAdvertisement = () => {
             viewport={{ once: true }}
             className={styles.heroContent}
           >
-            <span className={styles.tag}>Zylow Digital Growth Solutions</span>
-
             <h1>
               Paid Advertisement & Social Media Marketing
             </h1>
@@ -96,9 +76,9 @@ const PaidAdvertisement = () => {
 
           <div className={styles.cards}>
             {card.map((item, i) => (
-              <div className={styles.card} key={i} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
-                <h3 style={{ color: item.headingColor, }}> {item.title} </h3>
-                <p style={{ color: item.subHeadingColor, }}>{item.desc}</p>
+              <div className={styles.card} key={i}>
+                <h3> {item.title} </h3>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -157,9 +137,9 @@ const PaidAdvertisement = () => {
 
           <div className={styles.cards}>
             {cardDark.map((item, i) => (
-              <div className={styles.cardDark} key={i} style={{ backgroundColor: item.bg, border: `3px solid ${item.subHeadingColor}`, }}>
-                <h3 style={{ color: item.headingColor }}>{item.title}</h3>
-                <p style={{ color: item.subHeadingColor }}>{item.desc}</p>
+              <div className={styles.cardDark} key={i}>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>

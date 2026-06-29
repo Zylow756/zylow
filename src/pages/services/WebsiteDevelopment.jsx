@@ -17,6 +17,46 @@ const cardVariants = {
   })
 };
 
+const cards = [
+  {
+    title: "Static",
+    price: "Starting from ₹4999",
+    subtitle: "Perfect for small websites",
+    features: [
+      "Up to 5 pages",
+      "Responsive design",
+      "Basic SEO",
+      "Free Domain",
+      "Free Hosting",
+    ]
+  },
+  {
+    title: "Dynamic",
+    price: "Starting from ₹8999",
+    subtitle: "Best for growing businesses",
+    features: [
+      "Admin dashboard",
+      "Database integration",
+      "Custom features",
+      "Free Domain",
+      "Free Hosting",
+    ],
+    popular: true
+  },
+  {
+    title: "E-Commerce",
+    price: "Starting from ₹24999",
+    subtitle: "Sell products online",
+    features: [
+      "Payment gateway",
+      "Order management",
+      "Inventory system",
+      "Free Domain",
+      "Free Hosting",
+    ]
+  },
+];
+
 const WebsiteDevelopment = () => {
   return (
     <>
@@ -28,49 +68,10 @@ const WebsiteDevelopment = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Our Pricing Plans
+          Our Website Development Pricing Plans
         </Motion.h1>
         <div className={styles.cards}>
-
-          {[
-            {
-              title: "Static",
-              price: "Starting from ₹4999",
-              subtitle: "Perfect for small websites",
-              features: [
-                "Up to 5 pages",
-                "Responsive design",
-                "Basic SEO",
-                "Free Domain",
-                "Free Hosting",
-              ]
-            },
-            {
-              title: "Dynamic",
-              price: "Starting from ₹8999",
-              subtitle: "Best for growing businesses",
-              features: [
-                "Admin dashboard",
-                "Database integration",
-                "Custom features",
-                "Free Domain",
-                "Free Hosting",
-              ],
-              popular: true
-            },
-            {
-              title: "E-Commerce",
-              price: "Starting from ₹24999",
-              subtitle: "Sell products online",
-              features: [
-                "Payment gateway",
-                "Order management",
-                "Inventory system",
-                "Free Domain",
-                "Free Hosting",
-              ]
-            }
-          ].map((plan, i) => (
+          {cards.map((plan, i) => (
 
             <Motion.div
               key={i}

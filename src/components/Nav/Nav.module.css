@@ -49,26 +49,32 @@
 
 .letter {
   display: inline-block;
-  background: linear-gradient(
-    270deg,
-    #ff6a00,
-    #ff3d77,
-    #7a8cff,
-    #00c6ff,
-    #ff6a00
-  );
+  background: linear-gradient(270deg,
+      #ff6a00,
+      #ff3d77,
+      #7a8cff,
+      #00c6ff,
+      #ff6a00);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientFlow 6s ease infinite;
   /* Glow effect */
-  text-shadow: 0 2px 10px rgba(255, 100, 50, 0.3);
+  text-shadow: 0 2px 10px #0d2d7748;
 }
 
 @keyframes gradientFlow {
-  0% { background-position: 0% }
-  50% { background-position: 100% }
-  100% { background-position: 0% }
+  0% {
+    background-position: 0%
+  }
+
+  50% {
+    background-position: 100%
+  }
+
+  100% {
+    background-position: 0%
+  }
 }
 
 /* Hamburger */
@@ -90,7 +96,6 @@
 .menuIcon span {
   min-height: 3px;
   width: 100%;
-  background: #4c0803;
   border-radius: 2px;
   transition: 0.3s;
 }
@@ -111,6 +116,7 @@
 /* Navbar */
 .navbar {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
@@ -119,15 +125,15 @@
 .navbar a {
   text-decoration: none;
   background: transparent;
-  color: black;
+  color: #0d2d77;
   padding: 2vh 3vh;
   border-radius: 30px;
   font-weight: 600;
 }
 
 .navbar a:hover,
-.navbar span:hover  {
-  color: #f86f13f8;
+.navbar span:hover {
+  color: #672c9e;
   transform: translateY(-3px);
   text-decoration: underline;
 }
@@ -136,7 +142,7 @@
   font-size: 1.1rem;
   text-decoration: none;
   background: transparent;
-  color: black;
+  color: #0d2d77;
   padding: 2vh 3vh;
   border-radius: 30px;
   font-weight: 600;
@@ -150,6 +156,127 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0d2d77;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 2vh 3vh;
+  border-radius: 30px;
+  transition: all .3s ease;
+}
+
+.dropdownBtn:hover {
+  color: #672c9e;
+  transform: translateY(-3px);
+}
+
+.dropdownIcon {
+  font-size: 13px;
+  transition: transform .3s ease;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 80%;
+  transform: translateX(-50%);
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .12);
+  z-index: 1000;
+}
+
+.serviceCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #1d2d50;
+  transition: .35s;
+  border: 1px solid #eef2f8;
+}
+
+.serviceCard:hover {
+  background: #0d2d77;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(13, 45, 119, .25);
+}
+
+.serviceCard h4,
+.serviceCard p,
+.serviceCard .arrow {
+  color: inherit;
+}
+
+.serviceCard:hover h4,
+.serviceCard:hover p,
+.serviceCard:hover .arrow {
+  color: #fff;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #edf5ff;
+  color: #0d2d77;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.serviceCard:hover .icon {
+  background: white;
+  color: #0d2d77;
+}
+
+.serviceCard h4 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.serviceCard p {
+  margin-top: 6px;
+  color: #666;
+  font-size: 14px;
+}
+
+.serviceCard:hover p {
+  color: #f0f0f0;
+}
+
+.arrow {
+  margin-left: auto;
+  font-size: 22px;
+  transition: .3s;
+}
+
+.serviceCard:hover .arrow {
+  transform: translateX(8px);
 }
 
 @media (max-width: 768px) {

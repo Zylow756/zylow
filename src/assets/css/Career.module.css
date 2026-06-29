@@ -35,7 +35,9 @@
 }
 
 .popup h2 {
-  color: black;}
+  color: #0d2d77;
+  font-weight: bold;
+}
 
 /* Inputs */
 .popup textarea,
@@ -50,7 +52,7 @@
   width: 100%;
   padding: 1vw;
   font-size: 1rem;
-  background: #ffbe93f8;
+  background: #0d2d77;
   color: white;
   border: none;
   border-radius: 2vw;
