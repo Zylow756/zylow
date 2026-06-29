@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from './Nav.module.css';
 import logoImage from '../../assets/images/logo.png';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Enquiry from '../../pages/Enquiry';
 import { motion as Motion } from "framer-motion";
 import {
@@ -26,6 +26,18 @@ const Nav = () => {
   const handleNavClick = () => {
     setMenuOpen(false);
   };
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   const plans = [
     {
@@ -127,16 +139,19 @@ const Nav = () => {
         <Link to="/about" onClick={handleNavClick}>About Us</Link>
         <div
           className={styles.dropdown}
-          onMouseEnter={() => setShowPlans(true)}
-          onMouseLeave={() => setShowPlans(false)}
+          onMouseEnter={() => !menuOpen && setShowPlans(true)}
+          onMouseLeave={() => !menuOpen && setShowPlans(false)}
         >
-          <button className={styles.dropdownBtn}>
+          <button
+            className={styles.dropdownBtn}
+            onClick={() => {
+              if (menuOpen) {
+                setShowPlans(prev => !prev);
+              }
+            }}
+          >
             Plans
-            {showPlans ? (
-              <FaChevronUp className={styles.dropdownIcon} />
-            ) : (
-              <FaChevronDown className={styles.dropdownIcon} />
-            )}
+            {showPlans ? <FaChevronUp /> : <FaChevronDown />}
           </button>
           {showPlans && (
             <Motion.div
