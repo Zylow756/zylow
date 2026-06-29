@@ -79,9 +79,16 @@
 
 /* Hamburger */
 .menuIcon {
-  position: fixed;
-  top: 20px;
+  width: 30px;
+  min-height: 25px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
   right: 20px;
+  top: 20px;
   z-index: 1002;
 }
 
@@ -275,7 +282,7 @@
 
 @media (max-width: 768px) {
   .logo {
-    flex-direction: column;
+    flex-direction: wrap;
     align-items: center;
   }
 
@@ -298,28 +305,54 @@
     display: flex;
   }
 
-   .navbar {
+  .navbar {
     position: fixed;
     top: 0;
-    left: 0;              /* use left instead of right */
+    right: -100%;
     width: 100%;
-    height: 100vh;
-    background: #fff;
+    height: 75vh;
+    background: white;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    transform: translateX(100%);
-    transition: transform .35s ease;
+    /* Left align items */
+    align-items: flex-start;
+    justify-content: flex-start;
 
+    padding: 90px 30px 30px;
+    gap: 10px;
+
+    transition: 0.3s ease-in-out;
     z-index: 1001;
   }
 
   .navbar.active {
-    transform: translateX(0);
+    right: 0;
   }
+
+  .navbar a,
+.navbar span,
+.dropdown {
+  width: 100%;
+}
+
+.navbar a,
+.navbar span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 0;
+}
+
+.dropdownBtn {
+  width: 100%;
+  justify-content: space-between;
+  padding: 16px 0;
+}
 
   .heroHeader {
     padding-top: 60px;
