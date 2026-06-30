@@ -22,22 +22,20 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showEnquiry, setShowEnquiry] = useState(false);
   const [showPlans, setShowPlans] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handleNavClick = () => {
     setMenuOpen(false);
   };
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
 
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   const plans = [
     {
@@ -137,51 +135,75 @@ const Nav = () => {
       <nav className={`${styles.navbar} ${menuOpen ? styles["active"] : ""}`}>
         <Link to="/" onClick={handleNavClick}>Home</Link>
         <Link to="/about" onClick={handleNavClick}>About Us</Link>
-        <div
-          className={styles.dropdown}
-          onMouseEnter={() => !menuOpen && setShowPlans(true)}
-          onMouseLeave={() => !menuOpen && setShowPlans(false)}
-        >
-          <button
-            className={styles.dropdownBtn}
-            onClick={() => {
-              if (menuOpen) {
-                setShowPlans(prev => !prev);
-              }
-            }}
+        {!isMobile ? (
+          <div
+            className={styles.dropdown}
+            onMouseEnter={() => setShowPlans(true)}
+            onMouseLeave={() => setShowPlans(false)}
           >
-            Plans
-            {showPlans ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
-          {showPlans && (
-            <Motion.div
-              className={styles.megaMenu}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.25 }}
+            <button className={styles.dropdownBtn}>
+              Plans
+              {showPlans ? <FaChevronUp /> : <FaChevronDown />}
+            </button>
+
+            {showPlans && (
+              <Motion.div
+                className={styles.megaMenu}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                {plans.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.path}
+                    className={styles.serviceCard}
+                    onClick={handleNavClick}
+                  >
+                    <div className={styles.icon}>{item.icon}</div>
+
+                    <div>
+                      <h4>{item.title}</h4>
+                      <p>{item.desc}</p>
+                    </div>
+
+                    <span className={styles.arrow}>→</span>
+                  </Link>
+                ))}
+              </Motion.div>
+            )}
+          </div>
+        ) : (
+          <div className={styles.mobilePlansWrapper}>
+    <button
+        className={styles.mobilePlansBtn}
+        onClick={() => setShowPlans(!showPlans)}
+    >
+        <span>Plans</span>
+
+        {showPlans ? <FaChevronUp /> : <FaChevronDown />}
+    </button>
+
+    <Motion.div
+        className={styles.mobilePlans}
+        initial={false}
+        animate={{
+            height: showPlans ? "auto" : 0,
+            opacity: showPlans ? 1 : 0,
+        }}
+    >
+        {plans.map((item, index) => (
+            <Link
+                key={index}
+                to={item.path}
+                className={styles.mobilePlanItem}
+                onClick={handleNavClick}
             >
-              {plans.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className={styles.serviceCard}
-                  onClick={handleNavClick}
-                >
-                  <div className={styles.icon}>
-                    {item.icon}
-                  </div>
-
-                  <div>
-                    <h4>{item.title}</h4>
-                    <p>{item.desc}</p>
-                  </div>
-
-                  <span className={styles.arrow}>→</span>
-                </Link>
-              ))}
-            </Motion.div>
-          )}
-        </div>
+                {item.title}
+            </Link>
+        ))}
+    </Motion.div>
+</div>
+        )}
         <Link to="/showCasePage" onClick={handleNavClick}>Show Case</Link>
         <span
           onClick={() => {
