@@ -25,6 +25,7 @@ const Nav = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handleNavClick = () => {
+     setShowPlans(false);
     setMenuOpen(false);
   };
 

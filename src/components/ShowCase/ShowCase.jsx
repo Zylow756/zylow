@@ -1,13 +1,13 @@
 import styles from "./ShowCase.module.css";
 import { motion as Motion } from "framer-motion";
-import Rectangle14 from "../../assets/images/Rectangle14.jfif";
-import Rectangle12 from "../../assets/images/Rectangle 12.png";
-import ecommerce from "../../assets/images/zylow.png";
+import Rectangle14 from "../../assets/images/Rectangle14.png";
+import Rectangle12 from "../../assets/images/Rectangle12.png";
+import ecommerce from "../../assets/images/showcase-ecommerse.PNG";
 import coaching from "../../assets/images/showcase-coaching.png";
-import Rectangle10 from "../../assets/images/Rectangle 10.png";
-import Rectangle13 from "../../assets/images/Rectangle13.jpg";
-import Rectangle11 from "../../assets/images/Rectangle11.jfif";
-import Rectangle15 from "../../assets/images/Rectangle15.jfif";
+import Rectangle10 from "../../assets/images/Rectangle10.png";
+import Rectangle13 from "../../assets/images/Rectangle13.png";
+import Rectangle11 from "../../assets/images/Rectangle11.png";
+import Rectangle15 from "../../assets/images/Rectangle15.png";
 import { Link } from 'react-router-dom';
 
 const ShowCase = ({ showAll = false }) => {

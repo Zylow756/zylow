@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from '../assets/css/Home.module.css';
-import Rectangle8 from '../assets/images/Rectangle8.jfif';
+import Rectangle8 from '../assets/images/Rectangle8.png';
 import ExperienceSlider from '../components/ExperienceSlider/ExperienceSlider';
 import Services from '../components/Services/Services';
 import ShowCase from '../components/ShowCase/ShowCase';

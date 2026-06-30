@@ -50,7 +50,7 @@ const Contact = () => {
 
             <div className={styles.card}>
               <h3>Office Address</h3>
-              <p>Zylow</p>
+              <p>Zylow Web Solutions</p>
               <p>267, Ganesh nagar, Near Khade Ganesh Ji Temple, Kota-324010, Rajasthan</p>
               <p>India</p>
             </div>

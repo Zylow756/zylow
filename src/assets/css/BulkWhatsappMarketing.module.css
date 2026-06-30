@@ -128,7 +128,7 @@
 
 .planCard {
   background: white;
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   border-radius: 35px;
   border: 2px solid #0d2d77;
   background-color: #e7ecf898;
@@ -333,7 +333,6 @@
 
 /* TABLET */
 @media (max-width: 1024px) {
-
   .featureGrid,
   .pricingGrid,
   .keyGrid {
@@ -375,7 +374,7 @@
   .sectionTitle h2,
   .cta h2,
   .complianceBox h2 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 
   .complianceList span {
