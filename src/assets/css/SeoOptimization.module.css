@@ -48,6 +48,15 @@
   font-size: 1.1rem;
 }
 
+.coreCard p,
+.successLeft p,
+.ctaSection p,
+.hero p,
+.sectionHeading p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .heroText {
   text-align: center;
   font-size: 1.3rem;
@@ -175,13 +184,6 @@
 
 .coreCard p {
   line-height: 1.4;
-}
-
-.coreCard p,
-.successLeft p,
-.ctaSection p {
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 

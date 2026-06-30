@@ -15,7 +15,7 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
-const text = "Zylow-Web-Solution";
+const text = "Zylow-Web-Solutions";
 
 
 const Nav = () => {

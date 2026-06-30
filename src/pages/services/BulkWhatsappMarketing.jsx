@@ -55,7 +55,7 @@ const features = [
   },
   {
     icon: <FaRobot />,
-    title: "Smart Automation",
+    title: <>Smart<br/> Automation</>,
     desc: "Automate customer interactions with AI-powered WhatsApp chatbots.",
   },
   {

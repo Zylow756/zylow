@@ -49,7 +49,7 @@
   color: #0d2d77;
   text-align: center;
   font-size: 3rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 2rem;
   font-weight: 700;
 }
@@ -243,12 +243,15 @@
   .services h2,
   .marketing h2,
   .plans h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .card,
-  .planCard,
+  .planCard {
+    padding: 1rem;
+  }
+
   .tagline {
-    padding: 0.7rem;
+    padding: 1.8rem;
   }
 }
