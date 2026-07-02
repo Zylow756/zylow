@@ -27,53 +27,33 @@
   padding: 4vh;
 }
 
-.title {
-  font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 0;
-  line-height: 1.4;
-  padding-top: 10px;
+.brand{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    line-height:1;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0%;
-  }
+.brandName{
+    margin:0;
+    font-size:52px;
+    font-weight:800;
+    font-family:'Montserrat',sans-serif;
+    letter-spacing:2px;
 
-  100% {
-    background-position: 300%;
-  }
+    background:linear-gradient(135deg,#2563eb,#06b6d4,#7c3aed);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:0 5px 20px rgba(37,99,235,.25);
 }
 
-.letter {
-  display: inline-block;
-  background: linear-gradient(270deg,
-      #ff6a00,
-      #ff3d77,
-      #7a8cff,
-      #00c6ff,
-      #ff6a00);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientFlow 6s ease infinite;
-  text-shadow: 0 2px 10px #0d2d7748;
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0%
-  }
-
-  50% {
-    background-position: 100%
-  }
-
-  100% {
-    background-position: 0%
-  }
+.brandTag{
+    margin-top:6px;
+    font-size:15px;
+    letter-spacing:7px;
+    color:#64748b;
+    font-weight:600;
 }
 
 /* Hamburger */

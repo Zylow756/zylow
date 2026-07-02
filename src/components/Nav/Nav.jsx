@@ -15,7 +15,6 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
-const text = "Zylow-Web-Solutions";
 
 
 const Nav = () => {
@@ -25,18 +24,18 @@ const Nav = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handleNavClick = () => {
-     setShowPlans(false);
+    setShowPlans(false);
     setMenuOpen(false);
   };
 
   useEffect(() => {
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
-  };
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const plans = [
     {
@@ -86,33 +85,12 @@ const Nav = () => {
   return (
     <header className={styles.heroHeader}>
       <div className={styles.logo}>
-        {/* <Motion.img
-  src={logoImage} // your logo path
-  alt="logo"
-  initial={{ scale: 0, rotate: -180 }}
-  animate={{ scale: 1, rotate: 0 }}
-  transition={{ duration: 1, ease: "easeOut" }}
-  whileHover={{ rotate: 10, scale: 1.1 }}
-  className={styles.logo}
-/>*/}
-        <img src={logoImage}></img>
+        <img src={logoImage} alt="logo" />
         <div className={styles.titleWrapper}>
-          <Motion.h1 className={styles.title}>
-            {text.split("").map((char, index) => (
-              <Motion.span
-                key={index}
-                animate={{ y: [0, -6, 0], }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  delay: index * 0.1
-                }}
-                className={styles.letter}
-              >
-                {char === " " ? "\u00A0" : char}
-              </Motion.span>
-            ))}
-          </Motion.h1>
+          <div className={styles.brand}>
+            <h1 className={styles.brandName}>ZYLOW</h1>
+            <span className={styles.brandTag}>WEB SOLUTIONS</span>
+          </div>
         </div>
       </div>
       {/* Hamburger Menu */}
@@ -175,35 +153,35 @@ const Nav = () => {
           </div>
         ) : (
           <div className={styles.mobilePlansWrapper}>
-    <button
-        className={styles.mobilePlansBtn}
-        onClick={() => setShowPlans(!showPlans)}
-    >
-        <span>Plans</span>
-
-        {showPlans ? <FaChevronUp /> : <FaChevronDown />}
-    </button>
-
-    <Motion.div
-        className={styles.mobilePlans}
-        initial={false}
-        animate={{
-            height: showPlans ? "auto" : 0,
-            opacity: showPlans ? 1 : 0,
-        }}
-    >
-        {plans.map((item, index) => (
-            <Link
-                key={index}
-                to={item.path}
-                className={styles.mobilePlanItem}
-                onClick={handleNavClick}
+            <button
+              className={styles.mobilePlansBtn}
+              onClick={() => setShowPlans(!showPlans)}
             >
-                {item.title}
-            </Link>
-        ))}
-    </Motion.div>
-</div>
+              <span>Plans</span>
+
+              {showPlans ? <FaChevronUp /> : <FaChevronDown />}
+            </button>
+
+            <Motion.div
+              className={styles.mobilePlans}
+              initial={false}
+              animate={{
+                height: showPlans ? "auto" : 0,
+                opacity: showPlans ? 1 : 0,
+              }}
+            >
+              {plans.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className={styles.mobilePlanItem}
+                  onClick={handleNavClick}
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </Motion.div>
+          </div>
         )}
         <Link to="/showCasePage" onClick={handleNavClick}>Show Case</Link>
         <span

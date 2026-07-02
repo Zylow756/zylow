@@ -8,6 +8,8 @@ import Rectangle10 from "../../assets/images/Rectangle10.png";
 import Rectangle13 from "../../assets/images/Rectangle13.png";
 import Rectangle11 from "../../assets/images/Rectangle11.png";
 import Rectangle15 from "../../assets/images/Rectangle15.png";
+import Rectangle16 from "../../assets/images/Rectangle16.png";
+import Rectangle17 from "../../assets/images/Rectangle17.png";
 import { Link } from 'react-router-dom';
 
 const ShowCase = ({ showAll = false }) => {
@@ -78,6 +80,22 @@ const ShowCase = ({ showAll = false }) => {
         "Healthcare website with appointments and doctor profiles.",
       textColor: "#9f39e2",
         descColor: "#6f14ac",
+    },
+    {
+      title: "Legal Website",
+      image: Rectangle16,
+      description:
+        "Professional law firm website showcasing legal services, attorney profiles and consultation booking.",
+      textColor: "#059669",
+        descColor: "#065F46",
+    },
+    {
+      title: "Event Management Website",
+      image: Rectangle17,
+      description:
+        "Professional event website with online registration, schedules, galleries and ticket booking.",
+      textColor: "#F97316",
+        descColor: "#9A3412",
     },
   ];
 

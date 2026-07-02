@@ -202,12 +202,12 @@
 }
 
 .icon {
-  width: 85px;
-  height: 85px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 34px;
+  font-size: 54px;
   color: #00d4ff;
   border-radius: 20px;
   margin-bottom: 25px;
