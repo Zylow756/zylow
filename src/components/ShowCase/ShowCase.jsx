@@ -1,15 +1,15 @@
 import styles from "./ShowCase.module.css";
 import { motion as Motion } from "framer-motion";
-import Rectangle14 from "../../assets/images/Rectangle14.png";
-import Rectangle12 from "../../assets/images/Rectangle12.png";
-import ecommerce from "../../assets/images/showcase-ecommerse.PNG";
-import coaching from "../../assets/images/showcase-coaching.png";
-import Rectangle10 from "../../assets/images/Rectangle10.png";
-import Rectangle13 from "../../assets/images/Rectangle13.png";
-import Rectangle11 from "../../assets/images/Rectangle11.png";
-import Rectangle15 from "../../assets/images/Rectangle15.png";
-import Rectangle16 from "../../assets/images/Rectangle16.png";
-import Rectangle17 from "../../assets/images/Rectangle17.png";
+import Rectangle14 from "../../assets/images/Rectangle14.webp";
+import Rectangle12 from "../../assets/images/Rectangle12.webp";
+import ecommerce from "../../assets/images/showcase-ecommerse.webp";
+import coaching from "../../assets/images/showcase-coaching.webp";
+import Rectangle10 from "../../assets/images/Rectangle10.webp";
+import Rectangle13 from "../../assets/images/Rectangle13.webp";
+import Rectangle11 from "../../assets/images/Rectangle11.webp";
+import Rectangle15 from "../../assets/images/Rectangle15.webp";
+import Rectangle16 from "../../assets/images/Rectangle16.webp";
+import Rectangle17 from "../../assets/images/Rectangle17.webp";
 import { Link } from 'react-router-dom';
 
 const ShowCase = ({ showAll = false }) => {

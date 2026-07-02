@@ -70,7 +70,7 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className={styles.bottomBar}>
-                <p>© 2025 Zylow. All rights reserved.</p>
+                <p>© 2025 Zylow Web Solutions. All rights reserved.</p>
             </div>
             {showEnquiry && (
                 <EnquiryPopup

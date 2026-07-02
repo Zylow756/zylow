@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import styles from '../assets/css/Home.module.css';
-import Rectangle8 from '../assets/images/Rectangle8.png';
+import Rectangle8 from '../assets/images/Rectangle8.webp';
 import ExperienceSlider from '../components/ExperienceSlider/ExperienceSlider';
 import Services from '../components/Services/Services';
 import ShowCase from '../components/ShowCase/ShowCase';
+import FloatingShare from '../components/FloatingShare/FloatingShare';
 import { motion as Motion } from "framer-motion";
 import Enquiry from './Enquiry';
 import { Link } from "react-router-dom";
-import { FaGlobe, FaLaptop, FaHandsHelping } from "react-icons/fa";
 import {
+  FaGlobe, 
+  FaLaptop, 
+  FaHandsHelping,
   FaChartLine,
   FaRocket,
   FaLayerGroup,
@@ -75,7 +78,7 @@ const Home = () => {
           <button onClick={() => setShowEnquiry(true)}>Join Now</button>
         </div>
       </section>*/}
-
+      <FloatingShare />
       <section className={styles.heroSection}>
         <Motion.div
           className={styles.heroImage}
@@ -97,7 +100,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            We Build the Digital Products That Scale Your Business.
+            We build high-converting websites and custom software for growing businesses.
           </Motion.h2>
 
           <Motion.p

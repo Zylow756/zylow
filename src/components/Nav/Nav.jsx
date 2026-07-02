@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from './Nav.module.css';
-import logoImage from '../../assets/images/logo.png';
+import logoImage from '../../assets/images/logo.webp';
 import React, { useState, useEffect } from "react";
 import Enquiry from '../../pages/Enquiry';
 import { motion as Motion } from "framer-motion";

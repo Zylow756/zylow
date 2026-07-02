@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from "./Services.module.css";
-import webImg from "../../assets/images/service-website.jfif";
-import appImg from "../../assets/images/service-app.jfif";
-import uiImg from "../../assets/images/service-ui.jfif";
-import seoImg from "../../assets/images/service-seo.jfif";
-import adsImg from "../../assets/images/service-paid.jfif";
-import contentImg from "../../assets/images/service-content.jfif";
-import whatsappImg from "../../assets/images/service-whatsapp.jfif";
+import webImg from "../../assets/images/service-website.webp";
+import appImg from "../../assets/images/service-app.webp";
+import uiImg from "../../assets/images/service-ui.webp";
+import seoImg from "../../assets/images/service-seo.webp";
+import adsImg from "../../assets/images/service-paid.webp";
+import contentImg from "../../assets/images/service-content.webp";
+import whatsappImg from "../../assets/images/service-whatsapp.webp";
 
 const Services = () => {
       const [active, setActive] = useState(0);

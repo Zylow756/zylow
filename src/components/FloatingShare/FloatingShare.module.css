@@ -1,0 +1,111 @@
+.shareWrapper {
+    position: fixed;
+    right: 28px;
+    bottom: 35px;
+    z-index: 9999;
+}
+
+.mainButton {
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    background: linear-gradient(135deg,#2563eb,#7c3aed);
+    box-shadow:
+        0 12px 30px rgba(37,99,235,.45);
+    transition: .35s;
+}
+
+.mainButton:hover{
+    transform:scale(1.08) rotate(15deg);
+}
+
+.menu{
+    position:absolute;
+    bottom:80px;
+    right:6px;
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+
+    opacity:0;
+    transform:translateY(20px);
+    pointer-events:none;
+    transition:.4s;
+}
+
+.active{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+.menu button{
+
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+
+    color:white;
+    font-size:21px;
+
+    backdrop-filter:blur(18px);
+
+    transition:.3s;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.18);
+}
+
+.menu button:hover{
+    transform:translateX(-10px) scale(1.12);
+}
+
+.copy{
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.facebook{
+    background:#1877F2;
+}
+
+.linkedin{
+    background:#0A66C2;
+}
+
+.twitter{
+    background:#111;
+}
+
+.telegram{
+    background:#229ED9;
+}
+
+@media(max-width:768px){
+
+.mainButton{
+    width:58px;
+    height:58px;
+}
+
+.menu button{
+    width:46px;
+    height:46px;
+    font-size:18px;
+}
+
+.shareWrapper{
+    right:18px;
+    bottom:20px;
+}
+
+}
