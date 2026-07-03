@@ -1,77 +1,73 @@
 .footer {
-  padding: clamp(5px, 4vw, 20px);
-  background: #0d2d77;
-  display: flex;
-  flex-direction: column;
-  align-items: center;   
   width: 100%;
+  background: #0d2d77;
+  padding: clamp(1.5rem, 3vw, 4rem) clamp(1rem, 3vw, 3rem);
+  display: absolute;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
-  width: min(95%, 2200px);
-  margin: 1rem auto 0;
+  width: min(95%, 1800px);
+  margin: auto;
   display: flex;
   justify-content: space-between;
-  gap: clamp(1rem, 3vw, 4rem);
-  border-bottom: 1px solid white;
+  gap: clamp(1.5rem, 3vw, 4rem);
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  padding-bottom: clamp(2rem, 3vw, 4rem);
 }
 
 .left,
+.links,
 .social {
   flex: 1;
 }
 
 .info {
-  width: 100%;
-  max-width: 25rem;
+  max-width: 420px;
 }
 
+/* CONTACT */
 .contactItem {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 .contactIcon {
-  font-size: 1.2rem;
   color: #fff;
-  margin-top: 4px;
+  font-size: clamp(1.1rem, 1vw, 1.5rem);
+  margin-top: .2rem;
   flex-shrink: 0;
 }
 
 .contactText {
   color: #fff;
-  line-height: 1.6;
 }
 
 .contactText strong {
   display: block;
-  margin-bottom: 4px;
-  font-size: 1rem;
+  font-size: clamp(1rem, .9vw, 1.3rem);
+  margin-bottom: .35rem;
 }
 
 .contactText p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.753);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, .8);
+  font-size: clamp(.95rem, .9vw, 1.15rem);
 }
 
-.icon {
-  color: white;
-}
-
-.links {
-  text-align: left;
-  flex: 1;
-}
-
+/* HEADINGS */
 .links h3,
 .social h3,
 .left h3 {
   position: relative;
   display: inline-block;
-  margin-bottom: 1rem;
-  color: white;
+  color: #fff;
+  font-size: clamp(1.2rem, 1.4vw, 2rem);
+  margin-bottom: 1.5rem;
 }
 
 .links h3::after,
@@ -80,167 +76,182 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -8px;
-  width: clamp(50px, 4vw, 80px);
+  bottom: -10px;
+  width: clamp(55px, 4vw, 90px);
   height: 3px;
-  background: white;
+  background: #fff;
+}
+
+/* LINKS */
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
 }
 
 .links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  display: block;
-  margin-bottom: 12px;
-  transition: all 0.3s ease;
+  transition: .3s;
+  font-size: clamp(.95rem, .9vw, 1.15rem);
 }
 
 .links a:hover {
+  transform: translateX(8px);
   text-decoration: underline;
-  transform: translateX(6px);
 }
 
-.linkList {
-  display:  column;
-  gap: 0.5rem;
-}
-
+/* SOCIAL */
 .socialIcons {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
-  gap: 15px;
-  align-items: center;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .socialIcons a {
-  width: clamp(45px, 3vw, 65px);
-  height: clamp(45px, 3vw, 65px);
-  background: white;
+  width: clamp(46px, 3vw, 70px);
+  height: clamp(46px, 3vw, 70px);
   border-radius: 50%;
+  background: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: #0d2d77;
-  font-size: clamp(16px, 1.2vw, 24px);
-  transition: 0.3s;
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  transition: .35s;
 }
 
 .socialIcons a:hover {
   transform: translateY(-6px);
   background: #0d2d77;
-  color: white;
-  box-shadow: 0 10px 20px #f0f2f8;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, .35);
 }
 
-.bottomBar {
-  margin-top: 1rem;
-  padding: 0.8rem 0;
-  text-align: center;
-}
-
-.bottomBar p {
-  color: white;
-  font-size: clamp(14px, 1vw, 20px);
-}
-
+/* CTA */
 .footerCTA {
-  flex: 0 0 260px;
-  max-width: 280px;
-  max-height: 180px;
+  width: min(100%, 300px);
+  background: #fff;
+  border-radius: 20px;
+  padding: clamp(1rem, 2vw, 2rem);
   text-align: center;
-  padding: 0.8rem;
-  background: white;
-  border-radius: 1rem;
 }
 
 .footerCTA h2 {
   color: #0d2d77;
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 1.2vw, 1.6rem);
   line-height: 1.4;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .footerCTA button {
-  background: #0d2d77;
-  color: white;
+  padding: .9rem 1.8rem;
   border: none;
-  padding: 10px 20px;
   border-radius: 50px;
+  background: #0d2d77;
+  color: #fff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: clamp(.9rem, .9vw, 1.1rem);
+  transition: .3s;
 }
 
-@media (max-width: 1024px) {
+.footerCTA button:hover {
+  transform: translateY(-3px);
+}
+
+/* COPYRIGHT */
+.bottomBar {
+  width: 100%;
+  text-align: center;
+  padding-top: clamp(1rem, 2vw, 2rem);
+}
+
+.bottomBar p {
+  color: #fff;
+  font-size: clamp(.9rem, .9vw, 1.15rem);
+}
+
+/*  TABLET */
+@media (max-width:1024px) {
   .container {
-    width: 95%;
-    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .footerCTA {
+    width: 100%;
+    max-width: 400px;
   }
 }
 
-@media (max-width: 768px) {
+/*   MOBILE */
+@media (max-width:768px) {
   .container {
     flex-direction: column;
     text-align: center;
-    width: 95%;
+    gap: 2.5rem;
   }
 
+  .left,
   .links,
-  .social,
-  .left {
+  .social {
     width: 100%;
-  }
-
-  .links {
-    text-align: center;
   }
 
   .info {
     max-width: 100%;
   }
 
-  .left {
+  .contactItem {
+    justify-content: flex-start;
     text-align: left;
   }
 
-  .contactItem {
-    justify-content: flex-start;
+  .links {
+    text-align: center;
+  }
+
+  .links h3::after,
+  .social h3::after,
+  .left h3::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .socialIcons {
     justify-content: center;
   }
 
-  .linkList {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .bottomBar {
-    text-align: center;
-  }
-
   .footerCTA {
-    flex: none;
-    width: fit-content;
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0.8rem 1rem;
+    margin: auto;
   }
 }
 
-@media (min-width: 2560px) {
+/*   4K */
+@media (min-width:2560px) {
   .container {
-    width: min(90%, 2600px);
+    width: min(92%, 2400px);
+    gap: 5rem;
   }
 
-  .links a,
-  .info p {
-    font-size: 1.3rem;
+  .footer {
+    padding: 5rem 4rem;
   }
 
-  .links h3,
-  .social h3,
-  .left h3 {
-    font-size: 2rem;
+  .info {
+    max-width: 600px;
+  }
+
+  .footerCTA {
+    max-width: 420px;
+    padding: 2.5rem;
+  }
+
+  .socialIcons {
+    gap: 1.5rem;
+  }
+
+  .socialIcons a {
+    width: 80px;
+    height: 80px;
   }
 }

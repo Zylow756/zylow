@@ -40,7 +40,8 @@
 .planCard h3,
 .planCard h1,
 .reasonCard h3,
-.cta h2,.reasonCard span {
+.cta h2,
+.reasonCard span {
   color: #0d2d77;
 }
 
@@ -48,7 +49,8 @@
 .intro p,
 .serviceCard p,
 .reasonCard p,
-.cta p,.planCard ul  {
+.cta p,
+.planCard ul {
   color: #672c9e;
   text-align: justify;
   text-justify: inter-word;
@@ -265,6 +267,7 @@
 .cta p {
   margin-top: 2rem;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .cta button {
@@ -279,40 +282,215 @@
   cursor: pointer;
 }
 
-/* 4K RESPONSIVE */
-@media (min-width: 2560px) {
+/*  LARGE DESKTOP (1920px - 2559px) */
+@media (min-width: 1920px) and (max-width:2559px) {
+
+  .hero,
+  .services,
+  .cta {
+    padding: 4rem 6rem;
+  }
+
+  .intro,
+  .pricing,
+  .whyChoose {
+    padding: 5rem 6rem;
+  }
+
+  .heroContent {
+    max-width: 1700px;
+  }
+
   .heroContent h1 {
-    font-size: 8rem;
+    font-size: 4.5rem;
   }
 
   .subtitle {
+    max-width: 1400px;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 3.8rem;
+  }
+
+  .sectionHeader span {
+    font-size: 1.4rem;
+  }
+
+  .intro p {
+    max-width: 1500px;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+
+  .serviceGrid,
+  .pricingGrid,
+  .reasonGrid {
+    gap: 3rem;
+  }
+
+  .serviceCard,
+  .planCard,
+  .reasonCard {
+    padding: 3rem;
+  }
+
+  .cardNumber,
+  .reasonCard span {
+    font-size: 5rem;
+  }
+
+  .serviceCard h3,
+  .reasonCard h3 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
+  .serviceCard p,
+  .reasonCard p,
+  .planCard ul li {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .planCard h3 {
     font-size: 2rem;
+  }
+
+  .planCard h1 {
+    font-size: 4rem;
+  }
+
+  .planCard button {
+    font-size: 1.4rem;
+    padding: 1.5rem;
+  }
+
+  .cta h2 {
+    font-size: 4rem;
+  }
+
+  .cta p {
+    font-size: 1.6rem;
+  }
+
+  .cta button {
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+  }
+}
+
+/*  2K / ULTRAWIDE / 4K (2560px+) */
+@media (min-width:2560px) {
+
+  .hero,
+  .services,
+  .cta {
+    padding: 6rem 10rem;
+  }
+
+  .intro,
+  .pricing,
+  .whyChoose {
+    padding: 7rem 10rem;
+  }
+
+  .heroContent {
+    max-width: 2200px;
+  }
+
+  .heroContent h1 {
+    font-size: 6rem;
+  }
+
+  .subtitle {
+    max-width: 1800px;
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+
+  .sectionHeader span {
+    font-size: 1.8rem;
   }
 
   .sectionHeader h2 {
     font-size: 5rem;
   }
 
+  .intro p {
+    max-width: 1800px;
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+
+  .serviceGrid,
+  .pricingGrid,
+  .reasonGrid {
+    gap: 4rem;
+  }
+
+  .serviceCard,
+  .planCard,
+  .reasonCard {
+    padding: 4rem;
+    border-radius: 40px;
+  }
+
+  .cardNumber,
+  .reasonCard span {
+    font-size: 7rem;
+  }
+
   .serviceCard h3,
-  .reasonCard h3,
-  .planCard h3 {
-    font-size: 2.5rem;
+  .reasonCard h3 {
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
 
   .serviceCard p,
   .reasonCard p,
-  .planCard ul li,
-  .intro p {
-    font-size: 1.5rem;
+  .planCard ul li {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .planCard h3 {
+    font-size: 2.5rem;
   }
 
   .planCard h1 {
     font-size: 5rem;
   }
+
+  .popular {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+  }
+
+  .planCard button {
+    font-size: 1.8rem;
+    padding: 1.8rem;
+  }
+
+  .cta h2 {
+    font-size: 5rem;
+  }
+
+  .cta p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .cta button {
+    padding: 2rem 5rem;
+    font-size: 2rem;
+  }
 }
 
-/* TABLET */
-@media (max-width: 1024px) {
+/* TABLET (768px - 1024px) */
+@media (max-width:1024px) {
 
   .serviceGrid,
   .pricingGrid,
@@ -324,43 +502,89 @@
   .intro,
   .services,
   .pricing,
-  .whyChoose {
-    padding: 2rem 2rem;
+  .whyChoose,
+  .cta {
+    padding: 2rem;
   }
 
   .heroContent h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .sectionHeader h2 {
-    font-size: 3rem;
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .heroContent h1 {
     font-size: 2.8rem;
   }
 
+  .intro p,
   .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+}
+
+/*  MOBILE (767px and below) */
+@media (max-width:767px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .serviceGrid,
+  .pricingGrid,
+  .reasonGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .services,
+  .intro,
+  .pricing,
+  .whyChoose,
+  .cta {
+    padding: 2rem 1rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .sectionHeader span {
+    font-size: 0.9rem;
+  }
+
+  .intro p,
+  .serviceCard p,
+  .reasonCard p,
+  .planCard ul li,
+  .cta p {
+    font-size: 1rem;
+  }
+
+  .serviceCard h3,
+  .reasonCard h3 {
+    font-size: 1.6rem;
+  }
+
+  .planCard h1 {
+    font-size: 2.2rem;
   }
 
   .heroButtons {
     flex-direction: column;
   }
 
-  .sectionHeader h2 {
-    font-size: 2.2rem;
-  }
-
-  .intro p {
-    font-size: 1rem;
-  }
-
   .cta h2 {
     font-size: 2rem;
+  }
+
+  .cta button {
+    width: 100%;
   }
 }

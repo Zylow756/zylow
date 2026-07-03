@@ -84,9 +84,9 @@ const Nav = () => {
 
   return (
     <header className={styles.heroHeader}>
+        <div className={styles.titleWrapper}>
       <div className={styles.logo}>
         <img src={logoImage} alt="logo" />
-        <div className={styles.titleWrapper}>
           <div className={styles.brand}>
             <h1 className={styles.brandName}>ZYLOW</h1>
             <span className={styles.brandTag}>WEB SOLUTIONS</span>

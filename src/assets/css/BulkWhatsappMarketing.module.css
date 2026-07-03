@@ -28,7 +28,8 @@
 .planCard h4,
 .keyCard h3,
 .complianceBox h2,
-.cta h2,.sectionTitle h2 {
+.cta h2,
+.sectionTitle h2 {
   color: #0d2d77;
 }
 
@@ -38,7 +39,9 @@
 .note,
 .keyCard p,
 .complianceBox p,
-.cta p ,.sectionTitle p,.planCard span{
+.cta p,
+.sectionTitle p,
+.planCard span {
   color: #672c9e;
   text-align: justify;
   text-justify: inter-word;
@@ -55,6 +58,7 @@
   font-size: 1.3rem;
   max-width: 1100px;
   line-height: 1.8;
+  text-align: center;
 }
 
 /* SECTION TITLE */
@@ -69,7 +73,7 @@
   font-weight: 700;
 }
 
-.sectionTitle p{
+.sectionTitle p {
   font-size: 1.3rem;
   text-align: center;
 }
@@ -297,47 +301,8 @@
   transform: scale(1.05);
 }
 
-/* 4K RESPONSIVE */
-@media (min-width: 2560px) {
-  .heroContent h1 {
-    font-size: 8rem;
-  }
-
-  .heroContent p {
-    font-size: 2rem;
-  }
-
-  .sectionTitle h2 {
-    font-size: 5rem;
-  }
-
-  .featureCard h3,
-  .keyCard h3 {
-    font-size: 2.5rem;
-  }
-
-  .featureCard p,
-  .keyCard p,
-  .planCard ul li {
-    font-size: 1.4rem;
-  }
-
-  .planCard h4 {
-    font-size: 4rem;
-  }
-
-  .cta h2 {
-    font-size: 5rem;
-  }
-}
-
-/* TABLET */
-@media (max-width: 1024px) {
-  .featureGrid,
-  .pricingGrid,
-  .keyGrid {
-    grid-template-columns: 1fr;
-  }
+/* MOBILE (320px - 767px) */
+@media screen and (max-width:767px) {
 
   .hero,
   .whyChoose,
@@ -345,48 +310,408 @@
   .keyFeatures,
   .compliance,
   .cta {
-    padding: 2rem 2rem;
+    padding: 1.5rem;
+  }
+
+  .hero {
+    min-height: auto;
   }
 
   .heroContent h1 {
-    font-size: 3.5rem;
-  }
-
-  .sectionTitle h2 {
-    font-size: 2.5rem;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .heroButtons {
-    flex-direction: column;
-  }
-
-  .heroContent h1 {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
+    line-height: 1.2;
   }
 
   .heroContent p {
     font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .sectionTitle h2 {
+    font-size: 2rem;
+  }
+
+  .sectionTitle p {
+    font-size: 1rem;
+  }
+
+  .featureGrid,
+  .pricingGrid,
+  .keyGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .featureCard,
+  .planCard,
+  .keyCard {
+    padding: 1.5rem;
+  }
+
+  .featureCard h3,
+  .planCard h3 {
+    font-size: 1.5rem;
   }
 
   .planCard h4 {
-    font-size: 2.4rem;
-  }
-
-  .sectionTitle h2,
-  .cta h2,
-  .complianceBox h2 {
     font-size: 2.2rem;
   }
 
-  .complianceList span {
-    width: 70px;
-    height: 40px;
+  .cta {
+    padding: 3rem 1.5rem;
   }
 
-  .pricing {
-    padding: 1.5rem 1.5rem;
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+}
+
+/*  TABLET (768px -1023px) */
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+  .hero,
+  .whyChoose,
+  .pricing,
+  .keyFeatures,
+  .compliance,
+  .cta {
+    padding: 3rem;
+  }
+
+  .heroContent h1 {
+    font-size: 3.3rem;
+  }
+
+  .heroContent p {
+    font-size: 1.15rem;
+  }
+
+  .featureGrid,
+  .pricingGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .keyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sectionTitle h2 {
+    font-size: 2.6rem;
+  }
+}
+
+/*  SMALL LAPTOP (1024px -1439px) */
+@media screen and (min-width:1024px) and (max-width:1439px) {
+
+  .hero,
+  .whyChoose,
+  .pricing,
+  .keyFeatures,
+  .compliance,
+  .cta {
+    padding: 4rem;
+  }
+
+  .heroContent {
+    max-width: 1200px;
+  }
+
+  .heroContent h1 {
+    font-size: 4rem;
+  }
+
+  .heroContent p {
+    font-size: 1.2rem;
+  }
+
+  .featureGrid {
+    gap: 2rem;
+  }
+
+  .pricingGrid {
+    gap: 2rem;
+  }
+
+  .keyGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* DESKTOP (1440px -1919px) */
+@media screen and (min-width:1440px) and (max-width:1919px) {
+
+  .hero,
+  .whyChoose,
+  .pricing,
+  .keyFeatures,
+  .compliance,
+  .cta {
+    padding: 5rem 6rem;
+  }
+
+  .heroContent {
+    max-width: 1450px;
+  }
+
+  .heroContent h1 {
+    font-size: 4.8rem;
+  }
+
+  .heroContent p {
+    font-size: 1.45rem;
+    max-width: 1400px;
+  }
+
+  .sectionTitle h2 {
+    font-size: 3.3rem;
+  }
+
+  .featureCard {
+    padding: 2.5rem;
+  }
+
+  .planCard {
+    padding: 2.5rem;
+  }
+
+  .keyCard {
+    padding: 2rem;
+  }
+}
+
+/*  FULL HD (1920px -2559px) */
+@media screen and (min-width:1920px) and (max-width:2559px) {
+
+  .hero,
+  .whyChoose,
+  .pricing,
+  .keyFeatures,
+  .compliance,
+  .cta {
+    padding: 6rem 8rem;
+  }
+
+  .hero {
+    min-height: 48vh;
+  }
+
+  .heroContent {
+    max-width: 1700px;
+  }
+
+  .heroContent h1 {
+    font-size: 5.3rem;
+  }
+
+  .heroContent p {
+    max-width: 1500px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .sectionTitle h2 {
+    font-size: 4rem;
+  }
+
+  .sectionTitle p {
+    font-size: 1.7rem;
+  }
+
+  .featureCard {
+    padding: 3rem;
+  }
+
+  .featureCard h3 {
+    font-size: 2.3rem;
+  }
+
+  .featureCard p {
+    font-size: 1.4rem;
+  }
+
+  .planCard {
+    padding: 3rem;
+  }
+
+  .planCard h3 {
+    font-size: 2rem;
+  }
+
+  .planCard h4 {
+    font-size: 4rem;
+  }
+
+  .planCard ul li {
+    font-size: 1.4rem;
+  }
+
+  .keyCard {
+    padding: 2.5rem;
+  }
+
+  .keyCard h3 {
+    font-size: 2rem;
+  }
+
+  .keyCard p {
+    font-size: 1.35rem;
+  }
+
+  .complianceBox {
+    max-width: 1700px;
+    padding: 3.5rem;
+  }
+
+  .complianceBox h2 {
+    font-size: 3.8rem;
+  }
+
+  .cta h2 {
+    font-size: 4.2rem;
+  }
+
+  .cta p {
+    font-size: 1.7rem;
+  }
+}
+
+/* 2K / 4K (2560px+) */
+@media screen and (min-width:2560px) {
+
+  .hero,
+  .whyChoose,
+  .pricing,
+  .keyFeatures,
+  .compliance,
+  .cta {
+    padding: 7rem 10rem;
+  }
+
+  .hero {
+    min-height: 55vh;
+  }
+
+  .heroContent {
+    max-width: 2200px;
+  }
+
+  .heroContent h1 {
+    font-size: 6rem;
+  }
+
+  .heroContent p {
+    max-width: 1800px;
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+
+  .sectionTitle h2 {
+    font-size: 5rem;
+  }
+
+  .sectionTitle p {
+    font-size: 2rem;
+  }
+
+  .featureGrid {
+    gap: 4rem;
+  }
+
+  .featureCard {
+    padding: 4rem;
+    border-radius: 40px;
+  }
+
+  .icon {
+    font-size: 5rem;
+  }
+
+  .featureCard h3 {
+    font-size: 3rem;
+  }
+
+  .featureCard p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .pricingGrid {
+    gap: 4rem;
+  }
+
+  .planCard {
+    padding: 4rem;
+    border-radius: 40px;
+  }
+
+  .planCard h3 {
+    font-size: 2.6rem;
+  }
+
+  .planCard h4 {
+    font-size: 5rem;
+  }
+
+  .planCard span {
+    font-size: 2rem;
+  }
+
+  .planCard ul li {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .planCard button {
+    padding: 1.6rem 4rem;
+    font-size: 1.8rem;
+  }
+
+  .keyGrid {
+    gap: 4rem;
+  }
+
+  .keyCard {
+    padding: 3rem;
+  }
+
+  .keyCard h3 {
+    font-size: 2.5rem;
+  }
+
+  .keyCard p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .complianceBox {
+    max-width: 2200px;
+    padding: 5rem;
+  }
+
+  .complianceBox h2 {
+    font-size: 4.8rem;
+  }
+
+  .complianceBox p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .cta h2 {
+    font-size: 5rem;
+  }
+
+  .cta p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .cta button {
+    padding: 2rem 5rem;
+    font-size: 2rem;
   }
 }

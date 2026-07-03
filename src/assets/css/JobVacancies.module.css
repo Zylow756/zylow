@@ -3,98 +3,184 @@
   flex-direction: row;
   width: 100%;
   min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Left Section - 60% */
+/* =========================
+   Job Listing Section
+========================= */
+
 .jobListingsSection {
   width: 100%;
-  padding: 40px;
+  padding: clamp(16px, 2vw, 60px);
   overflow-y: auto;
   border-right: 1px solid #e9ecef;
 }
 
 .sectionTitle {
-  font-size: 28px;
+  font-size: clamp(1.6rem, 2vw, 3.2rem);
   color: #0d2d77;
-  margin-bottom: 25px;
+  margin-bottom: clamp(20px, 2vw, 40px);
   font-weight: 700;
 }
 
 .jobCard {
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   background-color: #e7ecf898;
   border: 2px solid #0d2d77;
+  border-radius: clamp(16px, 1.2vw, 32px);
+  padding: clamp(18px, 1.6vw, 42px);
+  margin-bottom: clamp(18px, 1.5vw, 35px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .jobCard:hover {
-  transform: translateY(-2px);
+  transform: translateY(-6px);
 }
 
 .jobTitle {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: clamp(1.2rem, 1.5vw, 2.5rem);
   color: #0d2d77;
+  margin-bottom: 0.8rem;
 }
 
 .jobMeta {
   display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: clamp(10px, 1vw, 20px);
+  margin-bottom: clamp(15px, 1.2vw, 28px);
 }
 
 .badge,
 .badgeSalary {
-  padding: 4px 10px;
-  border-radius: 10px;
-  font-size: 13px;
+  padding: clamp(6px, 0.6vw, 12px) clamp(12px, 1vw, 22px);
+  border-radius: 999px;
+  font-size: clamp(0.8rem, 0.8vw, 1.3rem);
   font-weight: 600;
-  background-color: white;
+  background: #fff;
   border: 2px solid #0d2d77;
   color: #0d2d77;
 }
 
 .jobDetails p {
-  font-size: 1rem;
-  margin-bottom: 8px;
-  line-height: 1.5;
+  font-size: clamp(0.95rem, 1vw, 1.6rem);
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
   text-align: justify;
   text-justify: inter-word;
   color: #672c9e;
 }
 
 .applyBtn {
-  margin-top: 12px;
-  padding: 8px 16px;
+  margin-top: 1rem;
+  padding: clamp(10px, 0.8vw, 18px) clamp(20px, 1.5vw, 40px);
   border: none;
-  border-radius: 4px;
-  font-size: 14px;
+  border-radius: clamp(8px, 0.6vw, 16px);
+  background: #0d2d77;
+  color: #fff;
+  font-size: clamp(0.9rem, 0.9vw, 1.4rem);
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
-  color: white;
-  border-radius: 8px;
-  background-color: #0d2d77;
+  transition: all 0.3s ease;
 }
 
-/* Responsive breakpoint for mobile devices */
+.applyBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .jobListingsSection {
+    padding: 24px;
+  }
+
+  .jobMeta {
+    gap: 12px;
+  }
+}
+
+/*  Mobile */
 @media (max-width: 768px) {
   .jobPortalContainer {
     flex-direction: column;
   }
-  
+
   .jobListingsSection {
     width: 100%;
-    height: auto;
-    position: static;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 16px;
+    border-right: none;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .jobCard {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .jobTitle {
+    font-size: 1.3rem;
   }
 
   .jobMeta {
-  flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .badge,
+  .badgeSalary {
+    font-size: 0.85rem;
+  }
+
+  .jobDetails p {
+    font-size: 1rem;
+  }
+
+  .applyBtn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
 }
+
+/* 2K & 4K Displays */
+@media (min-width: 2560px) {
+  .jobListingsSection {
+    padding: 5rem 8rem;
+  }
+
+  .sectionTitle {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .jobCard {
+    padding: 3rem;
+    border-radius: 32px;
+    margin-bottom: 2.5rem;
+  }
+
+  .jobTitle {
+    font-size: 2.6rem;
+  }
+
+  .badge,
+  .badgeSalary {
+    padding: 12px 24px;
+    font-size: 1.3rem;
+  }
+
+  .jobDetails p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .applyBtn {
+    padding: 18px 42px;
+    font-size: 1.6rem;
+    border-radius: 14px;
+  }
 }

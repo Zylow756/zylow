@@ -6,12 +6,8 @@ import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from "react-icons/
 
 const Contact = () => {
   return (
-    <>
       <div className={styles.container}>
-        {/* MAIN SECTION */}
         <div className={styles.contactWrapper}>
-
-          {/* Get Directions Button */}
           <div className={styles.directionBtn}>
             <FaMapMarkerAlt />
             <a
@@ -22,8 +18,6 @@ const Contact = () => {
                Get Directions
             </a>
           </div>
-
-          {/* LEFT INFO */}
           <div className={styles.contactSection}>
             <div className={styles.card}>
               <h3>Customer Support</h3>
@@ -60,7 +54,6 @@ const Contact = () => {
         </div>
 
       </div>
-      </>
   );
 };
 

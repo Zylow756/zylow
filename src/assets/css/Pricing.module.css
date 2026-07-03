@@ -1,105 +1,107 @@
 .pricingContainer {
-  padding: 20px 20px;
-  background: linear-gradient( 135deg, #040b18 0%, #08172d 40%, #0c2140 100% );
+  width: 100%;
+  padding: clamp(2rem, 4vw, 6rem);
+  background: linear-gradient(135deg, #040b18 0%, #08172d 40%, #0c2140 100%);
   text-align: center;
 }
 
 /* TITLE */
 .title {
-  font-size: 42px;
+  font-size: clamp(2rem, 3vw, 4.5rem);
   font-weight: 700;
-  color: white;
-  margin-bottom: 60px;
-  line-height: 1;
+  color: #fff;
+  margin-bottom: clamp(2rem, 4vw, 5rem);
+  line-height: 1.2;
 }
 
-/* GRID */
+/* PRICING GRID */
 .cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  width: min(95%, 2200px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(1.5rem, 2vw, 3rem);
 }
 
 /* CARD */
 .card {
-  background: white;
-  width: 320px;
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  background: #fff;
+  border-radius: clamp(18px, 2vw, 32px);
+  padding: clamp(1.8rem, 2vw, 3rem);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  transition: .35s;
   text-align: left;
   position: relative;
 }
 
-/* HOVER */
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  transform: translateY(-10px);
   border: 2px solid #672c9e;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
 }
 
-/* POPULAR */
 .popular {
-  border: 2px solid white;
+  border: 2px solid #fff;
 }
 
 /* RIBBON */
 .ribbon {
   position: absolute;
   top: -12px;
-  left: 20px;
+  left: 24px;
   background: #672c9e;
   color: #fff;
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 6px;
+  padding: .45rem .9rem;
+  border-radius: 8px;
+  font-size: clamp(.8rem, .9vw, 1rem);
+  font-weight: 600;
 }
 
 /* TEXT */
 .planTitle {
-  font-size: 18px;
-  font-weight: 600;
   color: #0d2d77;
+  font-size: clamp(1.2rem, 1.4vw, 2rem);
+  font-weight: 700;
 }
 
 .price {
-  font-size: 32px;
-  font-weight: 800;
-  margin: 10px 0;
   color: #0d2d77;
   text-align: center;
+  font-size: clamp(2rem, 2.4vw, 4rem);
+  font-weight: 800;
+  margin: 1rem 0;
   line-height: 1.2;
 }
 
 .price span {
-  font-size: 14px;
+  font-size: clamp(.9rem, .9vw, 1.3rem);
   color: #672c9e;
-  margin-left: 5px;
 }
 
 .subtitle {
   color: #672c9e;
-  margin-bottom: 20px;
-  font-weight: 800;
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 /* BUTTON */
 .primaryBtn {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
+  padding: clamp(.9rem, 1vw, 1.3rem);
   border: none;
+  border-radius: 12px;
   background: #0d2d77;
   color: white;
+  font-size: clamp(1rem, 1vw, 1.3rem);
   font-weight: 600;
-  margin-bottom: 20px;
   cursor: pointer;
+  transition: .3s;
+  margin-bottom: 1.8rem;
 }
 
 .primaryBtn:hover {
-  background: #0d2d7760;
+  background: #183d95;
 }
 
 /* FEATURES */
@@ -108,81 +110,130 @@
   padding: 0;
 }
 
-.card ul li {
-  margin: 10px 0;
+.card li {
+  margin: .9rem 0;
   color: #672c9e;
-  font-size: 15px;
+  font-size: clamp(.95rem, .95vw, 1.3rem);
+  line-height: 1.8;
 }
 
-/* SECTION WRAPPER */
+/*  DETAILS SECTION */
 .detailsSection {
-  margin-top: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
+  width: min(95%, 2200px);
+  margin: clamp(3rem, 5vw, 6rem) auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(1.5rem, 2vw, 3rem);
 }
 
-/* SMALL CARDS */
-.detailCard {
-  background: #fff;
-  padding: 25px;
-  width: 280px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  text-align: left;
-}
-
-/* BIG CARD */
+/* DETAIL CARDS */
+.detailCard,
 .detailCardWide {
-  width: 400px;
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: clamp(1.5rem, 2vw, 3rem);
+  border-radius: clamp(18px, 2vw, 28px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
   text-align: left;
+  width: 100%;
 }
 
-.detailCardWide h3, .detailCard h3 {
+.detailCard h3,
+.detailCardWide h3 {
   color: #0d2d77;
+  font-size: clamp(1.3rem, 1.5vw, 2.3rem);
 }
 
 .detailCard span {
   color: #672c9e;
 }
 
-/* TEXT */
+/* BIG TEXT */
 .bigText {
-  font-size: 24px;
+  font-size: clamp(1.8rem, 2vw, 3.2rem);
   font-weight: 800;
   color: #0d2d77;
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
-/* LIST */
-.detailCard ul {
-  padding-left: 0;
+/*  LIST */
+.detailCard ul,
+.detailCardWide ul {
   list-style: none;
+  padding: 0;
 }
 
-.detailCard ul li {
-  margin: 8px 0;
+.detailCard li,
+.detailCardWide li {
   color: #672c9e;
+  margin: .8rem 0;
+  font-size: clamp(.95rem, .95vw, 1.3rem);
+  line-height: 1.8;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  margin-top: 5px;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .grid ul {
   list-style: none;
+  padding: 0;
   color: #672c9e;
 }
 
-@media (max-width: 768px) {
-  .grid {
-    display: column;
+/* TABLET */
+@media (max-width:1024px) {
+
+  .cards,
+  .detailsSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*  MOBILE */
+@media (max-width:768px) {
+  .pricingContainer {
+    padding: 1.5rem;
+  }
+
+  .cards,
+  .detailsSection {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    line-height: 1.3;
+  }
+
+  .card,
+  .detailCard,
+  .detailCardWide {
+    padding: 1.5rem;
+  }
+
+  .primaryBtn {
+    padding: 1rem;
+  }
+}
+
+/* 4K*/
+@media (min-width:2560px) {
+
+  .cards,
+  .detailsSection {
+    width: min(90%, 2400px);
+  }
+
+  .card,
+  .detailCard,
+  .detailCardWide {
+    padding: 4rem;
+  }
+
+  .ribbon {
+    font-size: 1.2rem;
+    padding: .8rem 1.5rem;
   }
 }

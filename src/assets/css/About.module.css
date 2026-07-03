@@ -1,228 +1,278 @@
 .aboutPage {
   width: 100%;
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
-/* HERO */
-.hero {
-  align-items: center;
-  padding: 2rem 2rem;
+/* MAIN CONTAINER */
+.hero,
+.container,
+.intro,
+.cta {
+  width: min(92%, 2200px);
+  margin-inline: auto;
+  padding: clamp(2rem, 3vw, 6rem);
 }
 
 .heroContent {
+  max-width: 1800px;
+  margin: auto;
   text-align: center;
 }
 
+/*  COLORS */
 .hero h1,
 .intro h2,
 .container h2,
-.cta h2,.serviceCard h3  {
+.cta h2,
+.serviceCard h3,
+.valueCard h3,
+.whyCard h3 {
   color: #0d2d77;
-  line-height: 1;
 }
 
 .hero h2,
 .hero p,
 .intro p,
-.cta p,.serviceCard ul,.valueCard p,
-.whyCard p  {
+.cta p,
+.serviceCard ul,
+.valueCard p,
+.whyCard p {
   color: #672c9e;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
+/* HERO */
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-size: clamp(2.2rem, 4vw, 5.8rem);
   font-weight: 800;
+  line-height: 1.1;
 }
 
 .hero h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: 800;
+  font-size: clamp(1.4rem, 2vw, 3rem);
+  margin: 1rem 0;
   text-align: center;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  max-width: 1400px;
+  margin: auto;
+  font-size: clamp(1rem, 1.1vw, 1.8rem);
   line-height: 1.8;
-}
-
-/* COMMON */
-.container {
   text-align: center;
 }
 
-.container,
-.intro {
-  padding: 2rem 2rem;
-}
-
-.intro {
-  text-align: center;
-}
-
+/* TITLES */
 .intro h2,
 .container h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-/* INTRO */
-.intro p {
-  font-size: 1.2rem;
-  line-height: 2rem;
-}
-
-/* SERVICES */
-.serviceGrid {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.serviceCard {
-  background: white;
-  border-radius: 24px;
-  padding: 2rem;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-}
-
-.serviceCard svg {
-  font-size: 60px;
-  margin-bottom: 20px;
-  color: #0d2d77;
-}
-
-.serviceCard h3 {
-  font-size: 2rem;
-  line-height: 1.8rem;
-}
-
-.serviceCard ul {
-  list-style: none;
-  text-align: left;
-  padding: 2rem;
-}
-
-.serviceCard li {
-  list-style: '✓  ';
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-
-/* WHY US */
-.whyUs h2,
-.values h2 {
+  font-size: clamp(2rem, 2.8vw, 4.2rem);
   margin-bottom: 2rem;
 }
 
-.whyGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+.intro p {
+  max-width: 1500px;
+  margin: auto;
+  font-size: clamp(1rem, 1.1vw, 1.6rem);
+  line-height: 2;
 }
 
-.whyCard, .valueCard {
+/*  SERVICE GRID */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 2vw, 3rem);
+  margin-top: 3rem;
+}
+
+.serviceCard {
+  background: #fff;
+  border-radius: clamp(20px, 2vw, 35px);
+  padding: clamp(1.5rem, 2vw, 3rem);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  transition: .35s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+}
+
+.serviceCard svg {
+  font-size: clamp(3rem, 3vw, 6rem);
   color: #0d2d77;
-  background-color: #e7ecf898;
-  border: 2px solid #0d2d77;
+  margin-bottom: 1.5rem;
+}
+
+.serviceCard h3 {
+  font-size: clamp(1.5rem, 1.8vw, 2.8rem);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.serviceCard ul {
+  padding-left: 1.2rem;
+}
+
+.serviceCard li {
+  font-size: clamp(1rem, .95vw, 1.45rem);
+  line-height: 1.8;
+  margin-bottom: .8rem;
+}
+
+/* WHY GRID */
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 2vw, 3rem);
 }
 
 .whyCard {
-  padding: 40px;
-  border-radius: 24px;
-  text-align: center;
+  background: #e7ecf898;
+  border: 2px solid #0d2d77;
+  border-radius: clamp(20px, 2vw, 30px);
+  padding: clamp(1.5rem, 2vw, 3rem);
 }
 
 .whyCard svg {
-  font-size: 55px;
-  margin-bottom: 20px;
+  font-size: clamp(3rem, 3vw, 5rem);
+  color: #0d2d77;
 }
 
 .whyCard h3 {
-  margin-bottom: 15px;
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 1.8vw, 2.5rem);
 }
 
-/* VALUES */
+.whyCard p {
+  font-size: clamp(1rem, .95vw, 1.35rem);
+  line-height: 1.8;
+}
+
+/*  VALUE GRID */
 .valueGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 2vw, 3rem);
 }
 
 .valueCard {
-  padding: 2rem;
-  border-radius: 24px;
+  background: #e7ecf898;
+  border: 2px solid #0d2d77;
+  border-radius: clamp(20px, 2vw, 30px);
+  padding: clamp(1.5rem, 2vw, 3rem);
 }
 
 .valueCard h3 {
-  margin-bottom: 15px;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1.8vw, 2.8rem);
 }
 
-.valueCard p,
-.whyCard p {
-  font-size: 1.2rem;
+.valueCard p {
+  font-size: clamp(1rem, .95vw, 1.35rem);
+  line-height: 1.8;
 }
 
-/* CTA */
+/*  CTA */
 .cta {
-  text-align: center;
-  margin: 2rem;
   background: #EFF6FF;
-  padding: 2rem 2rem;
-  border-radius: 2rem;
   border: 3px solid #0d2d77;
+  border-radius: clamp(20px, 2vw, 40px);
+  text-align: center;
 }
 
 .cta h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: clamp(2rem, 3vw, 4.5rem);
 }
 
 .cta p {
-  font-size: 1.3rem;
-  line-height: 1.5rem;
+  max-width: 1500px;
+  margin: 1.5rem auto;
+  font-size: clamp(1rem, 1.1vw, 1.7rem);
+  line-height: 1.9;
+  text-align: center;
 }
 
 .ctaBtn {
-  margin-top: 40px;
-  padding: 18px 40px;
+  padding: clamp(14px, 1vw, 24px) clamp(32px, 2vw, 70px);
+  font-size: clamp(1rem, 1vw, 1.5rem);
   border: none;
-  border-radius: 12px;
+  border-radius: 15px;
   background: #0d2d77;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
+  color: #fff;
   cursor: pointer;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1200px) {
+/*  LAPTOP */
+@media (max-width:1200px) {
 
   .serviceGrid,
   .whyGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .valueGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width: 768px) {
+/* TABLET */
+@media (max-width:992px) {
+
+  .hero,
+  .container,
+  .intro,
+  .cta {
+    width: 95%;
+  }
 
   .serviceGrid,
   .whyGrid,
   .valueGrid {
     grid-template-columns: 1fr;
   }
+}
 
-  section {
-    padding: 10px 0;
+/*  MOBILE */
+@media (max-width:768px) {
+
+  .hero,
+  .container,
+  .intro,
+  .cta {
+    width: 100%;
+    padding: 1.25rem;
   }
 
-  .hero {
-    padding: 20px 5%;
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p,
+  .intro p {
+    text-align: left;
+  }
+
+  .serviceCard,
+  .whyCard,
+  .valueCard {
+    padding: 1.4rem;
+  }
+}
+
+/*  4K */
+@media (min-width:2560px) {
+
+  .hero,
+  .container,
+  .intro,
+  .cta {
+    width: min(90%, 2400px);
+  }
+
+  .serviceCard,
+  .whyCard,
+  .valueCard {
+    padding: 4rem;
   }
 }

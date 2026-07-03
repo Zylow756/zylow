@@ -139,7 +139,6 @@ const ShowCase = ({ showAll = false }) => {
                   {item.title}
                 </h3>
                 <p style={{ color:item.descColor }}>{item.description}</p>
-                {item.link ? (
                   <a
                     href={item.link}
                     target="_blank"
@@ -149,17 +148,6 @@ const ShowCase = ({ showAll = false }) => {
                   >
                     Visit Website →
                   </a>
-                ) : (
-                  <a
-                    /*href={item.link}*/
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.btn}
-                    style={{ background: item.textColor }}
-                  >
-                    View Project →
-                  </a>
-                )}
               </div>
             </Motion.div>
           ))}

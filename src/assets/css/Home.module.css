@@ -4,8 +4,8 @@
   margin: auto;
   padding: var(--section-padding);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--gap);
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(30px, 4vw, 80px);
   align-items: center;
 }
 
@@ -32,7 +32,7 @@
 
 /* HEADING */
 .heroContent h2 {
-  font-size: clamp(28px, 6vw, 40px);
+  font-size: clamp(2rem, 3vw, 3.4rem);
   line-height: 1.2;
   color: #0d2d77;
   font-family: Georgia, serif;
@@ -130,11 +130,6 @@
       #08172d 40%,
       #0c2140 100%);
   overflow: hidden;
-}
-
-.container {
-  max-width: 1900px;
-  margin: auto;
 }
 
 .heading {
@@ -253,14 +248,193 @@
   font-weight: 400;
 }
 
-@media (max-width: 1400px) {
+/*   LARGE DESKTOP (1440px - 2559px) */
+@media screen and (min-width:1440px) {
+  .heroSection {
+    max-width: 1800px;
+    gap: 5rem;
+    padding: 5rem 6rem;
+  }
+
+  .heroImage img {
+    max-height: 600px;
+  }
+
+  .heroContent p {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+  }
+
+  .heroContent button {
+    padding: 18px 50px;
+    font-size: 1.2rem;
+  }
+
+  .heading {
+    max-width: 1500px;
+  }
+
+  .heading h2 {
+    font-size: 4.5rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .grid {
+    gap: 40px;
+  }
+
+  .card {
+    padding: 50px 40px;
+  }
+
+  .icon {
+    width: 110px;
+    height: 110px;
+    font-size: 60px;
+  }
+
+  .card h3 {
+    font-size: 2rem;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
+
+/* 2K & 4K (2560px+) */
+@media screen and (min-width:2560px) {
+  .heroSection {
+    max-width: 2400px;
+    padding: 7rem 10rem;
+    gap: 8rem;
+  }
+
+  .heroImage img {
+    max-height: 850px;
+    border-radius: 40px;
+  }
+
+  .heroContent h2 {
+    line-height: 1.15;
+  }
+
+  .heroContent p {
+    max-width: 1200px;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .heroContent button {
+    padding: 24px 70px;
+    font-size: 2rem;
+    border-radius: 20px;
+  }
+
+  .aboutSection {
+    padding: 120px 5%;
+  }
+
+  .container {
+    max-width: 2400px;
+  }
+
+  .heading {
+    max-width: 1800px;
+    margin-bottom: 120px;
+  }
+
+  .heading span {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  .heading h2 {
+    font-size: 6rem;
+  }
+
+  .heading p {
+    font-size: 2rem;
+    line-height: 3.3rem;
+  }
+
+  .grid {
+    gap: 60px;
+  }
+
+  .card {
+    padding: 70px 55px;
+    border-radius: 36px;
+  }
+
+  .icon {
+    width: 150px;
+    height: 150px;
+    font-size: 80px;
+    border-radius: 28px;
+    margin-bottom: 35px;
+  }
+
+  .card h3 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+  }
+
+  .card p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .readMoreBtn {
+    margin-top: 3rem;
+    padding: 18px 42px;
+    font-size: 1.5rem;
+    border-radius: 14px;
+  }
+}
+
+/*  TABLETS */
+@media screen and (max-width:1024px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .heroContent {
+    align-items: center;
+  }
+
+  .heroContent button {
+    align-self: center;
+  }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Responsive adjustment for mobile devices */
-@media (max-width: 768px) {
+/*  MOBILE */
+@media screen and (max-width:768px) {
+  .heroSection {
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  .heroImage img {
+    max-height: 300px;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
   .heroContent {
     align-items: center;
     text-align: center;
@@ -268,20 +442,12 @@
 
   .heroContent button {
     align-self: center;
-    /* fix button position */
-  }
-
-  .heroSection {
-    padding: 30px 20px;
-    gap: 20px;
-  }
-
-  .rootImage {
-    padding-bottom: 40px;
+    width: 100%;
+    max-width: 320px;
   }
 
   .aboutSection {
-    padding: 80px 6%;
+    padding: 70px 6%;
   }
 
   .grid {
@@ -289,18 +455,25 @@
   }
 
   .heading h2 {
-    font-size: 38px;
+    font-size: 2.4rem;
   }
 
   .heading p {
-    font-size: 17px;
+    font-size: 1rem;
   }
 
   .card {
-    padding: 35px 25px;
+    padding: 30px 24px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    font-size: 42px;
   }
 
   .card h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
+
 }

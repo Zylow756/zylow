@@ -276,15 +276,108 @@
   cursor: pointer;
 }
 
-/* 4K Screens */
-@media screen and (min-width: 2560px) {
+/*  Large Desktop (1600px - 2559px)*/
+@media screen and (min-width: 1600px) and (max-width: 2559px) {
+
+  .hero,
+  .section,
+  .sectionDark,
+  .membership {
+    padding: 4rem 6rem;
+  }
+
+  .heroContent,
+  .sectionHeader {
+    max-width: 1800px;
+  }
+
   .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .hero p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
+  }
+
+  .sectionHeader h2,
+  .membership h2 {
+    font-size: 3.8rem;
+  }
+
+  .sectionHeader p,
+  .membership p {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+
+  .cards,
+  .planWrapper,
+  .membershipCards {
+    gap: 3rem;
+  }
+
+  .card,
+  .cardDark,
+  .planCard,
+  .planCardFeatured,
+  .memberCard,
+  .memberCardGold {
+    padding: 3rem;
+  }
+
+  .card h3,
+  .cardDark h3,
+  .planCard h3,
+  .planCardFeatured h3,
+  .memberCard h3,
+  .memberCardGold h3 {
+    font-size: 2.5rem;
+  }
+
+  .card p,
+  .cardDark p,
+  .planCard ul li,
+  .planCardFeatured ul li,
+  .memberCard ul li,
+  .memberCardGold ul li {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+
+  .memberCard,
+  .memberCardGold {
+    width: 600px;
+  }
+}
+
+/* ==========================================
+   4K / Ultra HD (2560px and above)
+========================================== */
+@media screen and (min-width: 2560px) {
+
+  .hero,
+  .section,
+  .sectionDark,
+  .membership {
+    padding: 6rem 10rem;
+  }
+
+  .heroContent,
+  .sectionHeader {
+    max-width: 2200px;
+  }
+
+  .hero h1 {
+    font-size: 6rem;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+    max-width: 1800px;
+    margin: 2rem auto 0;
   }
 
   .sectionHeader h2,
@@ -292,29 +385,134 @@
     font-size: 5rem;
   }
 
+  .sectionHeader p,
+  .membership p {
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+
+  .cards {
+    gap: 4rem;
+  }
+
+  .card,
+  .cardDark {
+    padding: 4rem;
+    border-radius: 40px;
+  }
+
   .card h3,
-  .cardDark h3,
-  .planCard h3,
-  .planCardFeatured h3 {
+  .cardDark h3 {
     font-size: 3rem;
+    line-height: 3.5rem;
   }
 
   .card p,
-  .cardDark p,
+  .cardDark p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .planWrapper {
+    gap: 4rem;
+  }
+
+  .planCard,
+  .planCardFeatured {
+    padding: 4rem;
+    border-radius: 40px;
+  }
+
+  .badge {
+    top: -22px;
+    right: 40px;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .planCard h3,
+  .planCardFeatured h3 {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+
+  .planCard span,
+  .planCardFeatured span {
+    font-size: 1.8rem;
+  }
+
   .planCard ul li,
   .planCardFeatured ul li {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .planCard button,
+  .planCardFeatured button {
+    padding: 1.8rem;
+    font-size: 1.8rem;
+    border-radius: 18px;
+  }
+
+  .membershipCards {
+    gap: 4rem;
   }
 
   .memberCard,
   .memberCardGold {
-    width: 650px;
+    width: 750px;
+    padding: 4rem;
+    border-radius: 40px;
+  }
+
+  .memberCard h3,
+  .memberCardGold h3 {
+    font-size: 3rem;
+  }
+
+  .memberCard h1,
+  .memberCardGold h1 {
+    font-size: 6rem;
+  }
+
+  .memberCard ul li,
+  .memberCardGold ul li {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .memberCard button,
+  .memberCardGold button {
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    border-radius: 16px;
   }
 }
 
-/* Tablet */
+/* ==========================================
+   Laptop (1025px - 1599px)
+========================================== */
+@media screen and (max-width: 1599px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .planWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================
+   Tablet (769px - 1024px)
+========================================== */
 @media screen and (max-width: 1024px) {
+
+  .hero,
+  .section,
+  .sectionDark,
+  .membership {
+    padding: 3rem 2rem;
+  }
 
   .cards,
   .planWrapper {
@@ -324,12 +522,43 @@
   .hero h1 {
     font-size: 3rem;
   }
+
+  .hero p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .sectionHeader h2,
+  .membership h2 {
+    font-size: 2.8rem;
+  }
+
+  .sectionHeader p,
+  .membership p {
+    font-size: 1.2rem;
+  }
+
+  .memberCard,
+  .memberCardGold {
+    width: 100%;
+    max-width: 650px;
+  }
 }
 
-/* Mobile */
+/* ==========================================
+   Mobile (768px and below)
+========================================== */
 @media screen and (max-width: 768px) {
+
+  .hero,
+  .section,
+  .sectionDark,
+  .membership {
+    padding: 2rem 1.2rem;
+  }
+
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
 
   .hero p {
@@ -337,26 +566,35 @@
     line-height: 1.8rem;
   }
 
-  .heroButtons {
-    flex-direction: column;
-  }
-
   .sectionHeader h2,
   .membership h2 {
     font-size: 2rem;
   }
 
-  .cards {
+  .sectionHeader p,
+  .membership p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .cards,
+  .planWrapper {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .membershipCards {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
   }
 
   .memberCard,
   .memberCardGold {
     width: 100%;
+  }
+
+  .heroButtons {
+    flex-direction: column;
   }
 }

@@ -1,13 +1,15 @@
 .container {
-  font-family: sans-serif;
-  padding: clamp(20px, 4vw, 80px);
+  width: min(96%, 1800px);
+  margin: auto;
+  padding-top: 1rem;
 }
 
 /* CONTACT CARDS GRID */
 .contactSection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 25vw, 420px), 1fr));
-  gap: clamp(15px, 2vw, 40px);
+  grid-template-columns: repeat(3, minmax(380px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
 }
 
 /* CARD */
@@ -17,6 +19,14 @@
   transition: 0.3s;
   background-color: #e7ecf898;
   border: 2px solid #0d2d77;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 380px;
+}
+
+.card>* {
+  max-width: 100%;
 }
 
 .card:hover {
@@ -25,33 +35,239 @@
 
 .card h3 {
   margin-top: 0;
-  margin-bottom: 10px;
-  font-size: clamp(18px, 1.5vw, 32px);
+  font-size: 2.3rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
   color: #0d2d77;
 }
 
 .card p {
   line-height: 1.6;
   margin: 5px 0;
-  font-size: clamp(14px, 1vw, 20px);
+  font-size: clamp(10px, 1vw, 10px);
   color: #672c9e;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .directionBtn {
-  margin-bottom: 3vh;
-  color: #1905f5;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  margin-bottom: 1rem;
 }
 
 /* WRAPPER */
 .contactWrapper {
-  display: flexbox;
-  grid-template-columns: 1fr 3fr;
-  gap: clamp(20px, 4vw, 80px);
+  display: flex;
+  flex-direction: column;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .contactWrapper {
+/*  MOBILE (320px - 767px) */
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .contactSection {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .directionBtn {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactWrapper {
+    gap: 1.5rem;
+  }
+}
+
+/* TABLET (768px - 1023px) */
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .contactSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.8rem;
+  }
+
+  .card h3 {
+    font-size: 1.7rem;
+  }
+
+  .card p {
+    font-size: 1.05rem;
+  }
+
+  .contactWrapper {
+    gap: 2rem;
+  }
+}
+
+/*  SMALL LAPTOP (1024px - 1439px) */
+@media screen and (min-width:1024px) and (max-width:1439px) {
+  .container {
+    padding: 3rem;
+  }
+
+  .contactSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card h3 {
+    font-size: 2rem;
+  }
+
+  .card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}
+
+/*  LARGE DESKTOP (1440px - 1919px) */
+@media screen and (min-width:1440px) and (max-width:1919px) {
+  .container {
+    padding: 4rem 5rem;
+  }
+
+  .contactSection {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .card {
+    padding: 2.5rem;
+    border-radius: 24px;
+  }
+
+  .card h3 {
+    font-size: 2.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .directionBtn {
+    font-size: 1.2rem;
+  }
+
+  .contactWrapper {
+    gap: 3rem;
+  }
+}
+
+/*  FULL HD / QHD (1920px - 2559px) */
+@media screen and (min-width:1920px) and (max-width:2559px) {
+  .container {
+    padding: 5rem 6rem;
+  }
+
+  .contactSection {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+  }
+
+  .card {
+    padding: 3rem;
+    border-radius: 28px;
+  }
+
+  .card:hover {
+    transform: translateY(-10px) scale(1.03);
+  }
+
+  .card h3 {
+    font-size: 2.5rem;
+  }
+
+  .card p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .directionBtn {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .contactWrapper {
+    gap: 4rem;
+  }
+}
+
+/* 2K / ULTRAWIDE / 4K (2560px+) */
+@media screen and (min-width:2560px) {
+  .container {
+    max-width: 2400px;
+    margin: auto;
+    padding: 5rem 3rem;
+  }
+
+  .contactSection {
+    grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+    gap: 4rem;
+  }
+
+  .card {
+    padding: 3.5rem;
+    border-radius: 32px;
+    min-height: 560px;
+  }
+
+  .card:hover {
+    transform: translateY(-12px) scale(1.03);
+  }
+
+  .card h3 {
+    font-size: clamp(1.5rem, 2vw, 2.3rem);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .card p {
+    font-size: clamp(1rem, 1vw, 1.3rem);
+    line-height: 1.7;
+    line-height: 2.8rem;
+    margin: 0.8rem 0;
+  }
+
+  .directionBtn {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .contactWrapper {
+    gap: 5rem;
   }
 }

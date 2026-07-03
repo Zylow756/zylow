@@ -1,25 +1,30 @@
+/* SERVICES SECTION */
 .servicesSection {
-  padding: 60px 7%;
+  width: 100%;
+  padding: clamp(3rem, 5vw, 6rem) clamp(1rem, 6vw, 8rem);
   border-bottom: 3px solid #cbd5e1;
 }
 
 .servicesSection h2 {
-  text-align: center; 
-   color: #2563eb;
+  text-align: center;
+  color: #2563eb;
   font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 50px;
+  letter-spacing: clamp(1px, .15vw, 3px);
+  margin-bottom: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(2rem, 3vw, 4rem);
 }
 
+/* CONTAINER */
 .container {
-  max-width: 1800px;
+  width: min(95%, 1800px);
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(2rem, 5vw, 6rem);
   align-items: center;
 }
 
+/* LEFT SIDE */
 .leftSide {
   display: flex;
   flex-direction: column;
@@ -27,8 +32,8 @@
 
 .imageWrapper {
   width: 100%;
-  height: 420px;
-  border-radius: 30px;
+  aspect-ratio: 16/10;
+  border-radius: clamp(18px, 2vw, 35px);
   overflow: hidden;
 }
 
@@ -40,32 +45,35 @@
 }
 
 .content {
-  margin-top: 30px;
+  margin-top: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .content h3 {
-  font-size: clamp(36px,3vw,58px);
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3vw, 4rem);
   font-weight: 800;
   color: #0d2d77;
-  margin-bottom: 15px;
-  line-height: 1;
+  line-height: 1.15;
 }
 
 .content p {
-  font-size: 20px;
-  line-height: 1.8;
+  max-width: 650px;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  line-height: 1.9;
   color: #672c9e;
-  max-width: 600px;
 }
 
 .learnBtn {
   display: inline-flex;
-  margin-top: 35px;
-  padding: 16px 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(1.5rem, 2vw, 2.5rem);
+  padding: clamp(.9rem, 1vw, 1.3rem) clamp(1.8rem, 2vw, 3rem);
   background: #0d2d77;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  border-radius: 14px;
+  border-radius: clamp(10px, 1vw, 18px);
+  font-size: clamp(.95rem, .9vw, 1.2rem);
   font-weight: 600;
   transition: .3s;
 }
@@ -74,17 +82,18 @@
   transform: translateY(-4px);
 }
 
+/* RIGHT SIDE */
 .rightSide {
   display: flex;
   flex-direction: column;
 }
 
 .serviceItem {
-  font-size: clamp(42px,4vw,45px);
-  line-height: 1.2;
+  font-size: clamp(1.5rem, 2.2vw, 3.2rem);
+  line-height: 1.25;
   font-weight: 800;
   color: #cbd5e1;
-  padding: 25px 0;
+  padding: clamp(1rem, 1.5vw, 2rem) 0;
   border-bottom: 1px solid #e2e8f0;
   cursor: pointer;
   transition: .35s;
@@ -92,14 +101,15 @@
 
 .serviceItem:hover {
   color: #672c9e;
-  padding-left: 20px;
+  padding-left: clamp(.8rem, 1vw, 1.5rem);
 }
 
 .active {
   color: #0d2d77;
-  padding-left: 20px;
+  padding-left: clamp(.8rem, 1vw, 1.5rem);
 }
 
+/* ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -112,36 +122,96 @@
   }
 }
 
-@media (max-width: 1200px) {
+/*  TABLET */
+@media (max-width:1200px) {
   .container {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 4rem;
   }
 
-  .serviceItem {
-    font-size: 48px;
-  }
-}
-
-@media (max-width: 768px) {
-  .servicesSection {
-    padding: 80px 5%;
-  }
-
-  .imageWrapper {
-    height: 260px;
-  }
-
-  .serviceItem {
-    font-size: 30px;
-    padding: 18px 0;
-  }
-
-  .content h3 {
-    font-size: 32px;
+  .content {
+    text-align: center;
   }
 
   .content p {
-    font-size: 16px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .leftSide {
+    align-items: center;
+  }
+
+  .rightSide {
+    margin-top: 1rem;
+  }
+}
+
+/*  MOBILE */
+@media (max-width:768px) {
+  .servicesSection {
+    padding: 3rem 1.2rem;
+  }
+
+  .container {
+    gap: 2.5rem;
+  }
+
+  .imageWrapper {
+    border-radius: 20px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .content h3 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .learnBtn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .serviceItem {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+}
+
+/*   4K */
+@media (min-width:2560px) {
+  .servicesSection {
+    padding: 7rem 8rem;
+  }
+
+  .container {
+    width: min(92%, 2400px);
+    gap: 8rem;
+  }
+
+  .content h3 {
+    font-size: 4.5rem;
+  }
+
+  .content p {
+    font-size: 1.6rem;
+    max-width: 850px;
+  }
+
+  .serviceItem {
+    font-size: 3.5rem;
+    padding: 2rem 0;
+  }
+
+  .learnBtn {
+    font-size: 1.4rem;
+    padding: 1.3rem 3.5rem;
   }
 }
