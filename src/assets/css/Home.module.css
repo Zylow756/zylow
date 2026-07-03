@@ -1,4 +1,4 @@
-/* ===== HERO SECTION ===== */
+/* HERO SECTION  */
 .heroSection {
   max-width: var(--container-width);
   margin: auto;
@@ -24,28 +24,35 @@
 }
 
 .heroContent h2,
-.heroContent p,
+.heroContent p{
+  text-align: left;
+}
+
 .card p {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 /* HEADING */
 .heroContent h2 {
   font-size: clamp(2rem, 3vw, 3.4rem);
-  line-height: 1.2;
+  line-height: 1.25;
   color: #0d2d77;
-  font-family: Georgia, serif;
-  margin-bottom: clamp(20px, 2vw, 0px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-wrap: balance;
+  margin-bottom: 18px;
 }
 
 /* PARAGRAPH */
 .heroContent p {
-  font-size: clamp(14px, 3.5vw, 20px);
-  line-height: 1.7;
+  font-size: clamp(15px, 1.2vw, 20px);
+  line-height: 1.8;
   color: #672c9e;
   max-width: 60ch;
-  margin-bottom: clamp(20px, 2vw, 40px);
+  text-align: left;
+  margin-bottom: 35px;
 }
 
 /* BUTTON */
@@ -430,20 +437,32 @@
     max-height: 300px;
   }
 
-  .heroContent p {
-    font-size: 1rem;
-    line-height: 1.8rem;
+  .heroContent{
+    align-items:flex-start;
+    text-align:left;
   }
 
-  .heroContent {
-    align-items: center;
-    text-align: center;
+  .heroContent h2{
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+    text-align:left;
+    text-wrap: balance;
+    margin-bottom:16px;
   }
 
-  .heroContent button {
-    align-self: center;
-    width: 100%;
-    max-width: 320px;
+  .heroContent p{
+    font-size:16px;
+    line-height:1.8;
+    text-align:left;
+    max-width:100%;
+  }
+
+  .heroContent button{
+    width:100%;
+    max-width:320px;
+    align-self:center;
+    margin-top:10px;
   }
 
   .aboutSection {

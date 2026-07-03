@@ -9,8 +9,8 @@ import { motion as Motion } from "framer-motion";
 import Enquiry from './Enquiry';
 import { Link } from "react-router-dom";
 import {
-  FaGlobe, 
-  FaLaptop, 
+  FaGlobe,
+  FaLaptop,
   FaHandsHelping,
   FaChartLine,
   FaRocket,
@@ -100,7 +100,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            We build high-converting websites and custom software for growing businesses.
+            High-Converting Websites & Custom Software That Grow Your Business
           </Motion.h2>
 
           <Motion.p

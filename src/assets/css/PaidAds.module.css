@@ -52,16 +52,12 @@
 .memberCard ul li,
 .memberCardGold ul li {
   color: #672c9e;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .hero p {
   margin-top: 2rem;
   font-size: 1.5rem;
   line-height: 2.5rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 /* Sections */
@@ -214,8 +210,6 @@
 .membership p {
   margin-top: 1.5rem;
   font-size: 1.3rem;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .membershipCards {
